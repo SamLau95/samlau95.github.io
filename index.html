@@ -3,16 +3,25 @@ layout: default
 ---
 
 <main class="content" role="main">
+  <div class="masthead">
 
-  <div class="wrapper">
-    <h1 class="blog-title">{{ site.title }}</h1>
-    <h2 class="blog-description">{{ site.description }}</h2>
+    <div class="masthead--item masthead--me">
+      <amp-img src="{{ site.baseurl }}assets/images/sam.png" width="226" height="200" />
+    </div>
+
+    <div class="masthead--item masthead--hello">
+      <h1>I'm Sam!</h1>
+    </div>
+
+    <div class="masthead--item masthead--vision">
+      <p>
+        I envision a world where all individuals constantly rediscover the
+        <strong>joy</strong> of learning, where <strong>adventure</strong> and
+        <strong>exploration</strong> are taught by everyone, to everyone.
+      </p>
+    </div>
+
   </div>
-
-  <p>
-    <a href="#">Hello world</a>, I am text.
-  </p>
-
 </main>
 
 {% include footer.html %}

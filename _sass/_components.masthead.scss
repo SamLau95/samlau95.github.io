@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    #MASTHEAD
+\*------------------------------------*/
+
+/**
+ * This is the masthead. It's only shown on the home page and is composed of
+ * three parts: A picture, the welcome message, and a vision statement.
+ *
+ * By default, the picture, welcome mesage, and vision statement are displayed
+ * in that order. On larger screens, they are displayed side-by-side, with the
+ * picture in the center.
+ *
+ * 1. Use flexbox to center-align the items.
+ *
+ * On large screens...
+ *  2. Display in a row.
+ *  3. Move the welcome message to the left of the image.
+ *  4. Give each item an equal amount of space so the image is centered.
+ *  5. Left align the vision text
+ */
+.masthead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* [1] */
+  align-items: center; /* [1] */
+
+  @include media-query(lap-and-up) {
+    flex-direction: row; /* [2] */
+  }
+}
+
+    .masthead--item {
+      flex-basis: 33%; /* [4] */
+    }
+
+        .masthead--me {
+          text-align: center; // Center the image inside
+          margin-bottom: $spacing-unit;
+        }
+
+        .masthead--hello {
+          @include media-query(lap-and-up) {
+            order: -1; /* [3] */
+          }
+        }
+
+        .masthead--vision {
+          text-align: center;
+          @include font-weight(light);
+
+          padding: 0 $spacing-unit;
+
+          @include media-query(lap-and-up) {
+            text-align: left; /* [5] */
+          }
+        }
