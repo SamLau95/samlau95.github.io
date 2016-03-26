@@ -6,16 +6,6 @@
  * Typographical base selectors.
  */
 
-/**
- * Headings 1–6.
- */
-@include headings() {
-    font-family: "Montserrat", sans-serif;
-    @include font-weight(bold);
-}
-
-
-
 
 
 /**
