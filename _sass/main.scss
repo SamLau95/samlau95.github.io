@@ -23,8 +23,8 @@
 /**
  * SETTINGS
  */
-@import 'settings.defaults';
 @import 'settings.colors';
+@import 'settings.defaults';
 @import 'settings.responsive';
 
 
@@ -52,6 +52,11 @@
 /**
  * BASE
  */
+@import 'base.page';
+@import 'base.headings';
+@import 'base.type';
+@import 'base.links';
+@import 'base.lists';
 
 
 @import 'bourbon/bourbon';
