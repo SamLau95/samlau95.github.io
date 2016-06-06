@@ -2,8 +2,9 @@
     #WRAPPERS
 \*------------------------------------*/
 
+// Sets a max-width so that the stuff inside doesn't get stretched out too much
 .wrapper {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-right: $spacing-unit--small;
     padding-left:  $spacing-unit--small;
@@ -12,5 +13,4 @@
         padding-right: $spacing-unit;
         padding-left:  $spacing-unit;
     }
-
 }

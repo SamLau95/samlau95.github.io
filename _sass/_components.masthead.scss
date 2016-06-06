@@ -10,8 +10,6 @@
  * in that order. On larger screens, they are displayed side-by-side, with the
  * picture in the center.
  *
- * 0. Set a max-width so that stuff doesn't get stretched too much on big
- *    screens.
  * 1. Use flexbox to center-align the items.
  *
  * On large screens...
@@ -21,9 +19,6 @@
  *  5. Left align the vision text
  */
 .masthead {
-  max-width: 1000px; /* [0] */
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   justify-content: center; /* [1] */
@@ -58,5 +53,7 @@
 
           @include media-query(lap-and-up) {
             text-align: left; /* [5] */
+            // We don't need padding on the right anymore
+            padding: 0 0 0 $spacing-unit;
           }
         }

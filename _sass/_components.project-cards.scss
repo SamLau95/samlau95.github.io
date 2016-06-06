@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    #PROJECT-CARDS
+\*------------------------------------*/
+
+/**
+ * These provide a brief intro to the project and are shown on the homepage.
+ */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+    .projects--card {
+      display: block;
+      height: 400px;
+      margin-bottom: $spacing-unit;
+    }
+
+        .projects--datascience {
+          background-color: $color-dark-blue;
+        }
+
+        .projects--jupyterhub {
+          background-color: $color-dark-blue;
+        }
+
+        .projects--khan {
+          background-color: $color-dark-blue;
+        }
+
+        .projects--teaching {
+          background-color: $color-dark-blue;
+        }
+
+        .projects--roots {
+          background-color: $color-dark-blue;
+        }
+
+        .projects--blueprint {
+          background-color: $color-dark-blue;
+        }
+
