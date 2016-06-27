@@ -24,24 +24,16 @@ layout: default
   </div>
 
   <div class="projects wrapper">
-    <a href="#" class="projects--card projects--datascience">
-      <h1>Hello1</h1>
-    </a>
-    <a href="#" class="projects--card projects--jupyterhub">
-      <h1>Hello2</h1>
-    </a>
-    <a href="#" class="projects--card projects--khan">
-      <h1>Hello3</h1>
-    </a>
-    <a href="#" class="projects--card projects--teaching">
-      <h1>Hello4</h1>
-    </a>
-    <a href="#" class="projects--card projects--roots">
-      <h1>Hello5</h1>
-    </a>
-    <a href="#" class="projects--card projects--blueprint">
-      <h1>Hello6</h1>
-    </a>
+    {% for post in site.posts %}
+      <a href="{{ post.url }}"
+          class="projects--card projects--{{ post.slug }}"
+      >
+        <h2 class="projects--title">{{ post.title }}</h2>
+        <p class="projects--excerpt">
+          {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+        </p>
+      </a>
+    {% endfor %}
   </div>
 </main>
 
