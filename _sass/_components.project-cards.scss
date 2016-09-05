@@ -12,32 +12,60 @@
 }
 
     .projects--card {
-      display: block;
-      height: 400px;
+      min-height: 400px;
       margin-bottom: $spacing-unit;
+      padding: $spacing-unit;
+
+      display: flex;
+      flex-direction: column;
+      color: $color-white;
+
+      &:active,
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
     }
 
-        .projects--data-science-program {
-          background-color: $color-dark-blue;
+        .projects--title {
+          margin: $spacing-unit 0;
+          border-bottom: 2px solid $color-white;
         }
 
-        .projects--jupyterhub {
-          background-color: $color-dark-blue;
+        .projects--excerpt {
+          @include font-weight(regular);
+          margin-bottom: $spacing-unit;
         }
 
-        .projects--khan {
-          background-color: $color-dark-blue;
+        .projects--read-on {
+          border: 1px solid $color-white;
+          border-radius: $spacing-unit--tiny;
+          padding: $spacing-unit--tiny 0;
+
+          text-align: center;
         }
 
-        .projects--teaching {
-          background-color: $color-dark-blue;
-        }
+    .projects--data-science-program {
+      background-color: $color-dark-blue;
+    }
 
-        .projects--roots {
-          background-color: $color-dark-blue;
-        }
+    .projects--jupyterhub {
+      background-color: $color-dark-blue;
+    }
 
-        .projects--blueprint {
-          background-color: $color-dark-blue;
-        }
+    .projects--khan {
+      background-color: $color-dark-blue;
+    }
+
+    .projects--teaching {
+      background-color: $color-dark-blue;
+    }
+
+    .projects--roots {
+      background-color: $color-dark-blue;
+    }
+
+    .projects--blueprint {
+      background-color: $color-dark-blue;
+    }
 

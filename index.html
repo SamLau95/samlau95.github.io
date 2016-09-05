@@ -6,7 +6,11 @@ layout: default
   <div class="masthead wrapper">
 
     <div class="masthead--item masthead--me">
-      <amp-img src="{{ site.baseurl }}assets/images/sam.png" width="226" height="200" />
+      <amp-img
+        src="{{ site.baseurl }}assets/images/sam.png"
+        width="226"
+        height="200"
+      />
     </div>
 
     <div class="masthead--item masthead--hello">
@@ -21,19 +25,6 @@ layout: default
         <strong>beauty</strong> in the world around them.
       </p>
     </div>
-  </div>
-
-  <div class="projects wrapper">
-    {% for post in site.posts %}
-      <a href="{{ post.url }}"
-          class="projects--card projects--{{ post.slug }}"
-      >
-        <h2 class="projects--title">{{ post.title }}</h2>
-        <p class="projects--excerpt">
-          {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
-        </p>
-      </a>
-    {% endfor %}
   </div>
 </main>
 
