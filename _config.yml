@@ -22,12 +22,18 @@ defaults:
     values:
       permalink: "/:categories/:title"
 
+collections:
+  current_projects:
+    output: true
+    permalink: /projects/:name
+  past_projects:
+    output: true
+    permalink: /projects/:name
+
 name: 'Sam'
 bio: >
-  Mea suas vituperatoribus et, virtute corpora quaestio cum ut.
-  Ne solet nostrum complectitur pri, vis ut inani populo.
-author_image: "/assets/images/author.jpg"
-github_username:  jekyll
+author_image: "/assets/images/sam.jpg"
+github_username: samlau95
 
 # Build settings
 markdown: kramdown

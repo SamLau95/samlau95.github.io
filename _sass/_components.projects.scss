@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    #PROJECTS
+\*------------------------------------*/
+
+/**
+ * These provide a brief intro to the project and are shown on the homepage.
+ */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+    .project__name {
+      @include inuit-font-size(20px, 1);
+      letter-spacing: -1px;
+
+      margin-bottom: $spacing-unit--small;
+    }
+
+    // .projects--card {
+    //   min-height: 400px;
+    //   margin-bottom: $spacing-unit;
+    //   padding: $spacing-unit;
+
+    //   display: flex;
+    //   flex-direction: column;
+    //   color: $color-white;
+
+    //   &:active,
+    //   &:hover,
+    //   &:focus {
+    //     text-decoration: none;
+    //   }
+    // }
+
+    //     .projects--title {
+    //       margin: $spacing-unit 0;
+    //       border-bottom: 2px solid $color-white;
+    //     }
+
+    //     .projects--excerpt {
+    //       @include font-weight(regular);
+    //       margin-bottom: $spacing-unit;
+    //     }
+
+    //     .projects--read-on {
+    //       border: 1px solid $color-white;
+    //       border-radius: $spacing-unit--tiny;
+    //       padding: $spacing-unit--tiny 0;
+
+    //       text-align: center;
+    //     }

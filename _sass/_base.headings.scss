@@ -10,7 +10,7 @@
 @include headings() {
   font-family: "Montserrat", sans-serif;
   @include font-weight(bold);
-  text-align: center;
+  text-align: left;
   letter-spacing: -2px;
 }
 

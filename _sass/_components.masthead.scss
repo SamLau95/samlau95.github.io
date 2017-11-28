@@ -10,7 +10,7 @@
  * in that order. On larger screens, they are displayed side-by-side, with the
  * picture in the center.
  *
- * 1. Use flexbox to center-align the items.
+ * 1. Use flexbox
  *
  * On large screens...
  *  2. Display in a row.
@@ -21,39 +21,38 @@
 .masthead {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* [1] */
-  align-items: center; /* [1] */
 
   @include media-query(lap-and-up) {
     flex-direction: row; /* [2] */
   }
 }
 
-    .masthead--item {
-      flex-basis: 33%; /* [4] */
+    .masthead--me {
+      text-align: center; // Center the image inside
+      margin-bottom: $spacing-unit;
+
+      @include media-query(lap-and-up) {
+        padding: 0 3 * $spacing-unit;
+      }
     }
 
-        .masthead--me {
-          text-align: center; // Center the image inside
-          margin-bottom: $spacing-unit;
-        }
+    .masthead--img {
+      // Keep this in sync with the dimensions in index.html
+      border-radius: 80px;
+    }
 
-        .masthead--hello {
-          @include media-query(lap-and-up) {
-            order: -1; /* [3] */
-          }
-        }
+    .masthead--vision {
+      @include inuit-font-size(20px, 1.5);
 
-        .masthead--vision {
-          text-align: center;
-          @include inuit-font-size(20px, 1.5);
-          @include font-weight(light);
+      padding: 0 $spacing-unit;
 
-          padding: 0 $spacing-unit;
+      @include media-query(lap-and-up) {
+        text-align: left; /* [5] */
+        // We don't need padding on the right anymore
+        padding: 0 0 0 $spacing-unit;
+      }
+    }
 
-          @include media-query(lap-and-up) {
-            text-align: left; /* [5] */
-            // We don't need padding on the right anymore
-            padding: 0 0 0 $spacing-unit;
-          }
-        }
+    .masthead--contact {
+      @include inuit-font-size(16px, 1);
+    }
