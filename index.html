@@ -17,12 +17,13 @@ layout: default
     <div class="masthead--item masthead--vision">
       <h1 class="masthead--tagline">I'm Sam!</h1>
       <p>
-        I'm a MS student at UC Berkeley advised by Josh Hug. I work on tools to
-        make teaching and learning data science better.
+        I'm a MS student at UC Berkeley advised by Josh Hug. I am interested in
+        improving data science education. Currently, I'm building tools to make
+        it easy to create and publish interactive educational content online.
       </p>
 
       <p class="masthead--contact">
-        samlau95@berkeley.edu ·
+        samlau95@berkeley.edu •
         <a href="http://github.com/samlau95/">github.com/samlau95</a>
       </p>
       <!-- <p>
@@ -37,12 +38,8 @@ layout: default
   <div class="wrapper">
     <h2>Current projects</h2>
     <div class="projects">
-      {% for project in site.current_projects %}
-        <div class="project">
-          <h3 class="project__name">{{ project.title }}</h3>
-          <p>{{ project.excerpt }}</p>
-          <p><a href="{{ project.url }}">Read more</a></p>
-        </div>
+      {% for project in site.current_projects reversed %}
+        {% include project.html project=project %}
       {% endfor %}
     </div>
   </div>
@@ -54,12 +51,8 @@ layout: default
   <div class="wrapper">
     <h2>Past projects</h2>
     <div class="projects">
-      {% for project in site.past_projects %}
-        <div class="project">
-          <h3 class="project__name">{{ project.title }}</h3>
-          <p>{{ project.excerpt }}</p>
-          <p><a href="{{ project.url }}">Read more</a></p>
-        </div>
+      {% for project in site.past_projects reversed %}
+        {% include project.html project=project %}
       {% endfor %}
     </div>
   </div>
