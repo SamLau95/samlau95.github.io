@@ -1,16 +1,16 @@
 ---
 layout: post
-title: JupyterHub for Data Science Education Program
+title: Scalable JupyterHub Deployment
 links:
-  - name: website
+  - name: live
+    url: http://datahub.berkeley.edu/
+  - name: docs
     url: http://zero-to-jupyterhub.readthedocs.io/
   - name: code
     url: https://github.com/jupyterhub/zero-to-jupyterhub-k8s
 excerpt: >
-  Scalable JupyterHub deployment used across UC Berkeley; now the
-  Jupyter-endorsed standard.
+  Overhaul of the computing environment used in UC Berkeley's Data 8 course;
+  now the Jupyter-endorsed standard.
 ---
 
-Hello world
 
-Hi

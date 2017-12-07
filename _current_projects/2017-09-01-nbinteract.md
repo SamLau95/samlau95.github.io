@@ -4,10 +4,10 @@ title: nbinteract
 links:
   - name: demo
     url: https://samlau95.gitbooks.io/nbinteract/content/examples/Empirical_Distributions.html
-  - name: code
-    url: https://github.com/samlau95/nbinteract
   - name: docs
     url: https://samlau95.gitbooks.io/nbinteract/content/introduction/
+  - name: code
+    url: https://github.com/samlau95/nbinteract
 excerpt: >
   Easy creation of interactive data science content.
 ---
@@ -75,7 +75,8 @@ with different correlations.
     layout="responsive" />
 </div>
 
-For more information about `ipywidgets`, see [its Github][ipyw].
+For more information about `ipywidgets`, see [its
+Github][ipyw]{:target="_blank"}.
 
 Unfortunately, if you want to show someone else this interactive demo, they
 have to spin up a notebook server themselves and run your notebook before they
@@ -93,7 +94,7 @@ The `nbinteract` package provides add-on functionality to `nbconvert`. It
 performs a notebook-to-HTML conversion that keeps widgets functional. The
 resulting webpage, once put online, can be viewed by anyone with a web browser.
 For example, the animation below was recorded using a computer without Python
-or Jupyter installed by visiting [this URL][reg_textbook].
+or Jupyter installed by visiting [this URL][reg_textbook]{:target="_blank"}.
 
 <div class="post__img">
   <amp-img
@@ -139,7 +140,7 @@ to a Binder notebook server, gets the output, and shows it in the page.
 
 ## Future work
 
-Currently we plan to use `nbinteract` to add interactivity to webpages in
+Currently we plan to use `nbinteract` to add interactivity to pages in
 Berkeley's [Data 8][data8]{:target="_blank"} and [Prob
 140][prob140]{:target="_blank"} textbooks. We also plan to conduct some
 preliminary user studies in order to see whether this tool is useful for
@@ -153,7 +154,7 @@ with explorables but also through constructing mini-explorables themselves in
 the process of problem-solving.
 
 Hope `nbinteract` is useful to you! Feel free to leave comments and questions
-in the `nbinteract` [issue tracker][issues].
+in the `nbinteract` [issue tracker][issues]{:target="_blank"}.
 
 [ev]: http://setosa.io/ev/principal-component-analysis/
 [explorables]: http://explorabl.es/
