@@ -5,27 +5,31 @@ layout: default
 <main class="content" role="main">
   <div class="masthead wrapper">
 
-    <div class="masthead--item masthead--me">
+    <div class="masthead__item masthead__me">
       <amp-img
         src="{{ site.imageurl }}/sam.jpg"
         width="160"
         height="160"
-        class="masthead--img"
+        class="masthead__img"
       />
     </div>
 
-    <div class="masthead--item masthead--vision">
-      <h1 class="masthead--tagline">I'm Sam!</h1>
+    <div class="masthead__item masthead__vision">
+      <h1 class="masthead__tagline">I'm Sam!</h1>
       <p>
         I'm a MS student at UC Berkeley advised by Josh Hug. I am interested in
         improving data science education. Currently, I'm building tools to make
         it easy to create and publish interactive educational content online.
       </p>
 
-      <p class="masthead--contact">
-        samlau95@berkeley.edu •
-        <a href="http://github.com/samlau95/">github.com/samlau95</a>
-      </p>
+      <div class="masthead__contact">
+        <p class="masthead__contact__item">samlau95@berkeley.edu</p>
+        <p class="masthead__contact__item">
+          <a href="http://github.com/samlau95/" target="_blank">
+            github.com/samlau95
+          </a>
+        </p>
+      </div>
       <!-- <p>
         I envision a world where all individuals constantly rediscover the
         <strong>joy</strong> of learning. I hope to use

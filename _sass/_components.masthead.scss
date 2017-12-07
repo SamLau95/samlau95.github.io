@@ -4,22 +4,22 @@
 
 /**
  * This is the masthead. It's only shown on the home page and is composed of
- * three parts: A picture, the welcome message, and a vision statement.
+ * two parts: A picture and the vision statement.
  *
- * By default, the picture, welcome mesage, and vision statement are displayed
- * in that order. On larger screens, they are displayed side-by-side, with the
- * picture in the center.
+ * By default, the picture and vision statement are displayed in a column. On
+ * larger screens, they are displayed side-by-side, with the picture on the
+ * left.
  *
  * 1. Use flexbox
  *
  * On large screens...
  *  2. Display in a row.
- *  3. Move the welcome message to the left of the image.
- *  4. Give each item an equal amount of space so the image is centered.
- *  5. Left align the vision text
+ *  3. Left align the tagline and contact info
+ *  4. Display a bullet in between contact info items
  */
+
 .masthead {
-  display: flex;
+  display: flex; /* [1] */
   flex-direction: column;
 
   margin-bottom: $spacing-unit--large;
@@ -30,32 +30,72 @@
   }
 }
 
-    .masthead--me {
-      text-align: center; // Center the image inside
-      margin-bottom: $spacing-unit;
 
-      @include media-query(lap-and-up) {
-        padding: 0 3 * $spacing-unit;
-      }
-    }
 
-    .masthead--img {
-      // Keep this in sync with the dimensions in index.html
+
+
+.masthead__me {
+  text-align: center; // Center the image inside
+  margin-bottom: $spacing-unit;
+
+  @include media-query(lap-and-up) {
+    padding: 0 3 * $spacing-unit;
+  }
+}
+
+    .masthead__img {
+      // Keep this in sync with the dimensions for the img in index.html
       border-radius: 80px;
     }
 
-    .masthead--vision {
-      @include inuit-font-size(20px, 1.5);
 
-      padding: 0 $spacing-unit;
+
+
+
+.masthead__vision {
+  @include inuit-font-size(20px, 1.5);
+
+  padding: 0 $spacing-unit;
+
+  @include media-query(lap-and-up) {
+    text-align: left; /* [3] */
+    // We don't need padding on the right anymore
+    padding: 0 0 0 $spacing-unit;
+  }
+}
+
+    .masthead__tagline {
+      text-align: center;
 
       @include media-query(lap-and-up) {
-        text-align: left; /* [5] */
-        // We don't need padding on the right anymore
-        padding: 0 0 0 $spacing-unit;
+        text-align: left; /* [3] */
       }
     }
 
-    .masthead--contact {
-      @include inuit-font-size(16px, 1);
+    .masthead__contact {
+      display: flex;
+      flex-direction: column;
+
+      @include inuit-font-size(14px, 1);
+      text-align: center;
+
+      @include media-query(lap-and-up) {
+        flex-direction: row;
+
+        text-align: left; /* [3] */
+      }
+    }
+
+    .masthead__contact__item {
+      margin-bottom: $spacing-unit--small;
+
+      @include media-query(lap-and-up) {
+        margin-right: $spacing-unit--tiny;
+
+        /* [4] */
+        &:not(:last-child)::after {
+          margin-left: $spacing-unit--tiny;
+          content: "•";
+        }
+      }
     }
