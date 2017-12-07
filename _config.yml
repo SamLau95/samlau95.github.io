@@ -46,3 +46,6 @@ gems:
 
 sass:
   style: compressed
+
+ga_id: UA-42949369-4
+
