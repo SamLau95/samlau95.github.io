@@ -8,11 +8,13 @@
 # Site settings
 title: Sam's Site
 email: samlau95@gmail.com
-description: >
-  I'm Sam! This is my website.
+
 logo: "/assets/images/lightbulb.png"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://samlau.me" # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog
+imageurl: "/assets/images"
+
+url: "http://samlau.me/" # the base hostname & protocol for your site
+
 paginate:	5 # The number of posts to show per page on your homepage
 defaults:
   -
