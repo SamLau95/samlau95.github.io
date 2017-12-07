@@ -22,5 +22,8 @@ This partial requires a project param
   {% endif %}
 
   <p>{{ project.excerpt }}</p>
-  <p><a href="{{ project.url }}">Read more</a></p>
+
+  {% if project.no_content != true %}
+    <p><a href="{{ project.url }}">Read more</a></p>
+  {% endif %}
 </div>

@@ -11,6 +11,7 @@ links:
 excerpt: >
   Overhaul of the computing environment used in UC Berkeley's Data 8 course;
   now the Jupyter-endorsed standard.
+no_content: true
 ---
 
 
