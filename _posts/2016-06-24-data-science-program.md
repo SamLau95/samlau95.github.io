@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: UC Berkeley's Data Science Program
 excerpt: >
   I fell down the rabbit hole with this one. What I thought was simply a

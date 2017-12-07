@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: JupyterHub for Data Science Education Program
 links:
   - name: website

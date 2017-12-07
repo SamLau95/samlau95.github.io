@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Khan Academy Interactive Article Builder
 links:
   - name: demo

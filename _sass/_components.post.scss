@@ -1,0 +1,17 @@
+/**
+ * Styles for posts; these are individual project descriptions linked from the
+ * homepage.
+ *
+ * 1. The metadata for the post should be centered
+ */
+
+.post-meta {
+  margin-bottom: 1.5rem;
+}
+
+    .post-meta__title,
+    .post-meta__excerpt,
+    .post-meta__links {
+      text-align: center; /* [1] */
+      margin-bottom: 1rem;
+    }
