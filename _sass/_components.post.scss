@@ -5,6 +5,10 @@
  * 1. The metadata for the post should be centered
  */
 
+.post {
+  margin-bottom: $spacing-unit--huge;
+}
+
 .post-meta {
   margin-bottom: 1.5rem;
 }
@@ -15,3 +19,8 @@
       text-align: center; /* [1] */
       margin-bottom: 1rem;
     }
+
+.post__img {
+  max-width: 400px;
+  margin: 0 auto $spacing-unit;
+}
