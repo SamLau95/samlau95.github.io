@@ -12,10 +12,12 @@ excerpt: >
   Easy creation of interactive data science content.
 ---
 
-**Table of Contents**
+<section class="post__toc">
+  <p class="toc__title">Table of Contents</p>
 
-- TOC
-{:toc}
+  - TOC
+  {:toc}
+</section>
 
 ## tl;dr
 
