@@ -8,10 +8,8 @@
 
 
 @include headings() {
-  font-family: "Montserrat", sans-serif;
   @include font-weight(bold);
   text-align: left;
-  letter-spacing: -2px;
 }
 
 // Predefine the variables below in order to alter and enable specific features.

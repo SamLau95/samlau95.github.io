@@ -109,7 +109,7 @@
 
 }
 
-// Generate Open Sans’ numbered font-weights from their aliases.
+// Generate numbered font-weights from their aliases.
 @mixin font-weight($font-weight) {
 
     @if ($font-weight == "light") {

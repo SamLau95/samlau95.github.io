@@ -16,7 +16,8 @@
  * 5. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  *
- * 6. Set default font to Open Sans.
+ * 6. Use system font stack:
+ *    https://css-tricks.com/snippets/css/system-font-stack/
  */
 html {
     font-size: ($inuit-base-font-size / 16px) * 1em; /* [1] */
@@ -30,7 +31,8 @@ html {
     -moz-osx-font-smoothing: grayscale; /* [5] */
      -webkit-font-smoothing: antialiased; /* [5] */
 
-    font-family: "Open Sans", sans-serif; /* [6] */
+    /* [6] */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     @include font-weight("regular");
     // font-weight: 400; /* [6] */
 }
