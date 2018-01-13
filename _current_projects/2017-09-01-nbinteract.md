@@ -2,17 +2,22 @@
 layout: post
 title: nbinteract
 links:
-  - name: demo
-    url: https://samlau95.gitbooks.io/nbinteract/content/examples/Empirical_Distributions.html
-  - name: docs
-    url: https://samlau95.gitbooks.io/nbinteract/content/introduction/
-  - name: code
+  - name: Demo
+    url: https://samlau95.gitbooks.io/nbinteract/tutorial/tutorial_monty_hall.html
+  - name: Docs
+    url: https://samlau95.gitbooks.io/nbinteract/
+  - name: Code
     url: https://github.com/samlau95/nbinteract
 excerpt: >
   Easy creation of interactive data science content.
 ---
 
-**tl;dr:**
+**Table of Contents**
+
+- TOC
+{:toc}
+
+## tl;dr
 
     pip install nbinteract
     jupyter nbconvert --to interact my_notebook.ipynb

@@ -2,11 +2,11 @@
 layout: post
 title: Khan Academy Interactive Article Builder
 links:
-  - name: live
+  - name: Live
     url: http://bit.ly/triangle-area
-  - name: live 2
+  - name: Live 2
     url: http://bit.ly/ka-slope
-  - name: code
+  - name: Code
     url: https://github.com/Khan/perseus
 excerpt: >
   Project for Khan Academy that allows content creators to author interactive
