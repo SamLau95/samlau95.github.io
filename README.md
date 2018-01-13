@@ -1,7 +1,7 @@
 # [samlau95.github.io](samlau95.github.io)
 
-My personal website. In the works.
+Sam Lau's personal website: http://www.samlau.me/
 
 ## License
 
-MIT. See LICENSE file in repo.
+MIT
