@@ -40,7 +40,7 @@ setup][ds100-setup]{:target="_blank"} that we use in a later course.
 
 We've found that installation problems intimidate students, especially those
 that have had less experience doing technical work. To help make the course
-more approachable for these students, course developers me created a
+more approachable for these students, previous course developers created a
 cloud deployment of Jupyter using a new technology called JupyterHub. The
 deployment allowed students to visit a webpage to work in Jupyter, saving many
 man-hours of installation issues.
@@ -96,17 +96,16 @@ another node. Then, the Hub would proxy the student to that node.
 
 If the Hub failed, all students were locked out of their servers. Sometimes the
 Hub machine would simply go offline. Other times, the NFS server that the Hub
-ran would fail which had the nasty side-effect of causing students to lose
-their work.
+ran would fail with the nasty side-effect of losing student work.
 
 In addition, if a single node failed the Hub would still attempt to proxy
 students to that node, effectively locking out all students that were
 previously assigned to that node.
 
 The original developers created the deployment using a combination of lengthy
-Ansible playbooks, bash scripts, and Docker containers. Because of this,
-making significant changes to this architecture was a difficult process! With
-the limited people resources that we had at the time, we were limited to simple
+Ansible playbooks, bash scripts, and Docker containers. Because of this, making
+and testing significant changes to this architecture was a difficult process.
+With the limited manpower that we had at the time, we were limited to simple
 fixes.
 
 As a first step towards improving the availability of the system, I set up
@@ -162,8 +161,8 @@ We switched to dynamically provisioned [Kubernetes
 Volumes][k8s-vols]{:target="_blank"} to store student files instead of NFS. NFS
 turned out to be a major source of problems for us previously since it was
 quite flaky and a single source of failure. When a student logs into JupyterHub
-for the first time, we create a disk that is then associated with the student's
-account and attached to their pod whenever they start their Jupyter server.
+for the first time, we create a disk, assign the disk to the student's account,
+and attach the disk to their pod whenever they start their Jupyter server.
 
 This prevents a whole class of problems that caused system-wide failures for us
 previously. For example, this scheme restricts disk storage and corruption
@@ -172,11 +171,11 @@ issues to only affect the student the disk belongs to.
 ## Additional Improvements
 
 I oversaw continued development on this project the following semester,
-although another dev handled the day-to-day management.
+although another developer handled the day-to-day management.
 
 We made the following improvements to the system in Spring 2017:
 
-- We automatic create periodic snapshots of student disks.
+- We automatically create periodic snapshots of student disks.
 - We allow students to back up their files onto Google Drive so they can keep
   their files after their semester in Data 8.
 - We implemented cluster autoscaling based on usage. **This cut our operational
