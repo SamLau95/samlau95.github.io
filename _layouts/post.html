@@ -8,9 +8,9 @@ layout: default
 
       <p class="post-meta__excerpt"><em>{{ page.excerpt }}</em></p>
 
-      {% if page.links %}
+      {%- if page.links -%}
         <div class="post-meta__links">
-          {% for link in page.links %}
+          {%- for link in page.links -%}
             <a class="post-meta__link"
               href="{{ link.url }}"
               target="_blank"
@@ -19,9 +19,9 @@ layout: default
             {% if forloop.last == false %}
             •
             {% endif %}
-          {% endfor %}
+          {%- endfor -%}
         </div>
-      {% endif %}
+      {%- endif -%}
     </div>
 
     <section class="post-content">
@@ -30,4 +30,4 @@ layout: default
   </article>
 </main>
 
-{% include footer.html %}
+{%- include footer.html -%}

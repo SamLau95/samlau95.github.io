@@ -11,18 +11,22 @@
   flex-direction: column;
 }
 
-    .project {
-      margin-bottom: $spacing-unit;
-    }
+.project {
+  margin-bottom: $spacing-unit;
+}
 
-    .project__name {
-      @include inuit-font-size(20px, 1);
+.project__name {
+  @include inuit-font-size(20px, 1);
 
-      margin-bottom: 10px;
-    }
+  margin-bottom: 10px;
+}
 
-    .project__links {
-      @include inuit-font-size(14px, 1);
+.project__links {
+  @include inuit-font-size(14px, 1);
 
-      margin-bottom: $spacing-unit--small;
-    }
+  margin-bottom: $spacing-unit--small;
+}
+
+.project__excerpt {
+  margin-bottom: $spacing-unit--small;
+}

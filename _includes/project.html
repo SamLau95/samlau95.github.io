@@ -1,14 +1,14 @@
-{% comment %}
+{%- comment -%}
 This partial requires a param: `project`
-{% endcomment %}
+{%- endcomment -%}
 
-{% assign project = include.project %}
+{%- assign project = include.project -%}
 <div class="project">
   <h3 class="project__name">{{ project.title }}</h3>
 
-  {% if project.links %}
+  {%- if project.links -%}
     <div class="project__links">
-      {% for link in project.links %}
+      {%- for link in project.links -%}
         <a class="project__link"
           href="{{ link.url }}"
           target="_blank"
@@ -17,13 +17,13 @@ This partial requires a param: `project`
         {% if forloop.last == false %}
         •
         {% endif %}
-      {% endfor %}
+      {%- endfor -%}
     </div>
-  {% endif %}
+  {%- endif -%}
 
-  <p>{{ project.excerpt }}</p>
+  <p class="project__excerpt">{{ project.excerpt }}</p>
 
-  {% if project.no_content != true %}
+  {%- if project.no_content != true -%}
     <p><a href="{{ project.url }}">Read more</a></p>
-  {% endif %}
+  {%- endif -%}
 </div>

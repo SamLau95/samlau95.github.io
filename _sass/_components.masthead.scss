@@ -10,12 +10,11 @@
  * larger screens, they are displayed side-by-side, with the picture on the
  * left.
  *
- * 1. Use flexbox
- *
- * On large screens...
- *  2. Display in a row.
- *  3. Left align the tagline and contact info
- *  4. Display a bullet in between contact info items
+ * 1. Use flexbox to layout everything.
+ * 2. Hide contact info until the screen gets large enough where it won't get
+ *    in the way.
+ * 3. Set a magic flex-basis for the contact info section so that text doesn't
+ *    wrap.
  */
 
 .masthead {
@@ -32,16 +31,18 @@
 
 .masthead__me {
   text-align: center; // Center the image inside
-  margin-bottom: $spacing-unit;
 
   @include media-query(lap-and-up) {
-    padding: 0 3 * $spacing-unit;
+    margin-bottom: $spacing-unit;
+    padding: 0 1.5 * $spacing-unit;
+    flex: 0 1 670px; /* [3] */
   }
 }
 
 .masthead__img {
   // Keep this in sync with the dimensions for the img in index.html
   border-radius: 80px;
+  margin-bottom: $spacing-unit--small;
 }
 
 .masthead__vision {
@@ -60,34 +61,19 @@
   text-align: center;
 
   @include media-query(lap-and-up) {
-    text-align: left; /* [3] */
-  }
-}
-
-.masthead__contact {
-  display: flex;
-  flex-direction: column;
-
-  @include inuit-font-size(14px, 1);
-  text-align: center;
-
-  @include media-query(lap-and-up) {
-    flex-direction: row;
-
-    text-align: left; /* [3] */
+    text-align: left;
   }
 }
 
 .masthead__contact__item {
+  display: none; /* [2] */
+
+  @include inuit-font-size(14px, 1);
+  text-align: center;
+
   margin-bottom: $spacing-unit--small;
 
   @include media-query(lap-and-up) {
-    margin-right: $spacing-unit--tiny;
-
-    /* [4] */
-    &:not(:last-child)::after {
-      margin-left: $spacing-unit--tiny;
-      content: '•';
-    }
+    display: block;
   }
 }

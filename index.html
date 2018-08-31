@@ -11,7 +11,16 @@ layout: default
         width="160"
         height="160"
         class="masthead__img"
-      />
+      ></amp-img>
+      <p class="masthead__contact__item">{{ site.email }}</p>
+      <p class="masthead__contact__item">
+        <a href="http://github.com/{{ site.github_username }}/" target="_blank">
+          github.com/{{ site.github_username }}
+        </a>
+      </p>
+      <p class="masthead__contact__item">
+        Site last updated: {{ site.time | date: "%b %Y" }}
+      </p>
     </div>
 
     <div class="masthead__item masthead__vision">
@@ -28,40 +37,28 @@ layout: default
       <p>
         I've also made
         <a href="https://much.cooking/" target="_blank">much cooking</a>,
-        a guide to get started cooking :).
+        a guide to start cooking for the busy and frugal.
       </p>
 
-      <div class="masthead__contact">
-        <p class="masthead__contact__item">{{ site.email }}</p>
-        <p class="masthead__contact__item">
-          <a href="http://github.com/{{ site.github_username }}/" target="_blank">
-            github.com/{{ site.github_username }}
-          </a>
-        </p>
-      </div>
-      <div class="masthead__contact">
-        <p class="masthead__contact__item">
-          Site last updated: {{ site.time | date_to_string: "ordinal", "US" }}
-        </p>
-      </div>
-      {% comment %}
+
+      {%- comment -%}
         <p>
           I envision a world where all individuals constantly rediscover the
           <strong>joy</strong> of learning. I hope to use
           <strong>technology</strong> to help students and teachers uncover
           <strong>beauty</strong> in the world around them.
         </p>
-     {% endcomment %}
+     {%- endcomment -%}
     </div>
   </div>
 
   <div class="wrapper">
     <div class="projects">
-      {% for project in site.projects reversed %}
-        {% include project.html project=project %}
-      {% endfor %}
+      {%- for project in site.projects reversed -%}
+        {%- include project.html project=project -%}
+      {%- endfor -%}
     </div>
   </div>
 </main>
 
-{% include footer.html %}
+{%- include footer.html -%}
