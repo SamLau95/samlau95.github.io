@@ -1,8 +1,8 @@
 {% comment %}
-This partial requires a project param
+This partial requires a param: `project`
 {% endcomment %}
 
-{% assign project = include.project  %}
+{% assign project = include.project %}
 <div class="project">
   <h3 class="project__name">{{ project.title }}</h3>
 

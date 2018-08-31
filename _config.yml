@@ -7,9 +7,11 @@
 
 # Site settings
 title: Sam Lau
-email: samlau95@gmail.com
+email: samlau95@ucsd.edu
+github_username: samlau95
 
 logo: "/assets/images/lightbulb.png"
+author_image: "/assets/images/sam.jpg"
 imageurl: "/assets/images"
 
 paginate:	5 # The number of posts to show per page on your homepage
@@ -22,20 +24,9 @@ defaults:
       permalink: "/:categories/:title"
 
 collections:
-  current_projects:
+  projects:
     output: true
     permalink: /projects/:name
-  past_projects:
-    output: true
-    permalink: /projects/:name
-
-name: 'Sam Lau'
-description: >
-  I'm Sam Lau! I'm a MS student at UC Berkeley advised by Josh Hug. I am
-  interested in improving data science education. Currently, I'm building tools
-  to make it easy to create and publish interactive educational content online.
-author_image: "/assets/images/sam.jpg"
-github_username: samlau95
 
 # Build settings
 markdown: kramdown

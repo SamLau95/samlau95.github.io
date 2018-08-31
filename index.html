@@ -17,45 +17,47 @@ layout: default
     <div class="masthead__item masthead__vision">
       <h1 class="masthead__tagline">I'm Sam Lau!</h1>
       <p>
-        I'm a MS student at UC Berkeley advised by Josh Hug. I am interested in
-        improving data science education. Currently, I'm building tools to make
-        it easy to create and publish interactive educational content online.
+        I'm a PhD student at UC San Diego, where I study
+        how people learn data science. I used to attend UC Berkeley, where I
+        <a href="http://data8.org/su17/" target="_blank">taught Data 8</a>
+        and
+        <a href="http://www.textbook.ds100.org/" target="_blank">
+          wrote a textbook for Data 100</a>.
+      </p>
+
+      <p>
+        I've also made
+        <a href="https://much.cooking/" target="_blank">much cooking</a>,
+        a guide to get started cooking :).
       </p>
 
       <div class="masthead__contact">
-        <p class="masthead__contact__item">samlau95@berkeley.edu</p>
+        <p class="masthead__contact__item">{{ site.email }}</p>
         <p class="masthead__contact__item">
-          <a href="http://github.com/samlau95/" target="_blank">
-            github.com/samlau95
+          <a href="http://github.com/{{ site.github_username }}/" target="_blank">
+            github.com/{{ site.github_username }}
           </a>
         </p>
       </div>
-      <!-- <p>
-        I envision a world where all individuals constantly rediscover the
-        <strong>joy</strong> of learning. I hope to use
-        <strong>technology</strong> to help students and teachers uncover
-        <strong>beauty</strong> in the world around them.
-      </p>-->
+      <div class="masthead__contact">
+        <p class="masthead__contact__item">
+          Site last updated: {{ site.time | date_to_string: "ordinal", "US" }}
+        </p>
+      </div>
+      {% comment %}
+        <p>
+          I envision a world where all individuals constantly rediscover the
+          <strong>joy</strong> of learning. I hope to use
+          <strong>technology</strong> to help students and teachers uncover
+          <strong>beauty</strong> in the world around them.
+        </p>
+     {% endcomment %}
     </div>
   </div>
 
   <div class="wrapper">
-    <h2>Current projects</h2>
     <div class="projects">
-      {% for project in site.current_projects reversed %}
-        {% include project.html project=project %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="wrapper">
-    <hr>
-  </div>
-
-  <div class="wrapper">
-    <h2>Past projects</h2>
-    <div class="projects">
-      {% for project in site.past_projects reversed %}
+      {% for project in site.projects reversed %}
         {% include project.html project=project %}
       {% endfor %}
     </div>

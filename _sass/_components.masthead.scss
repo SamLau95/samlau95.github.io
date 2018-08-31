@@ -30,10 +30,6 @@
   }
 }
 
-
-
-
-
 .masthead__me {
   text-align: center; // Center the image inside
   margin-bottom: $spacing-unit;
@@ -43,19 +39,15 @@
   }
 }
 
-    .masthead__img {
-      // Keep this in sync with the dimensions for the img in index.html
-      border-radius: 80px;
-    }
-
-
-
-
+.masthead__img {
+  // Keep this in sync with the dimensions for the img in index.html
+  border-radius: 80px;
+}
 
 .masthead__vision {
   @include inuit-font-size(20px, 1.5);
 
-  padding: 0 $spacing-unit;
+  padding: 0 $spacing-unit--tiny;
 
   @include media-query(lap-and-up) {
     text-align: left; /* [3] */
@@ -64,38 +56,38 @@
   }
 }
 
-    .masthead__tagline {
-      text-align: center;
+.masthead__tagline {
+  text-align: center;
 
-      @include media-query(lap-and-up) {
-        text-align: left; /* [3] */
-      }
+  @include media-query(lap-and-up) {
+    text-align: left; /* [3] */
+  }
+}
+
+.masthead__contact {
+  display: flex;
+  flex-direction: column;
+
+  @include inuit-font-size(14px, 1);
+  text-align: center;
+
+  @include media-query(lap-and-up) {
+    flex-direction: row;
+
+    text-align: left; /* [3] */
+  }
+}
+
+.masthead__contact__item {
+  margin-bottom: $spacing-unit--small;
+
+  @include media-query(lap-and-up) {
+    margin-right: $spacing-unit--tiny;
+
+    /* [4] */
+    &:not(:last-child)::after {
+      margin-left: $spacing-unit--tiny;
+      content: '•';
     }
-
-    .masthead__contact {
-      display: flex;
-      flex-direction: column;
-
-      @include inuit-font-size(14px, 1);
-      text-align: center;
-
-      @include media-query(lap-and-up) {
-        flex-direction: row;
-
-        text-align: left; /* [3] */
-      }
-    }
-
-    .masthead__contact__item {
-      margin-bottom: $spacing-unit--small;
-
-      @include media-query(lap-and-up) {
-        margin-right: $spacing-unit--tiny;
-
-        /* [4] */
-        &:not(:last-child)::after {
-          margin-left: $spacing-unit--tiny;
-          content: "•";
-        }
-      }
-    }
+  }
+}

@@ -1,23 +1,5 @@
 /*********************************************************
  * samlau.me
- *
- * CONTENTS
- * ========
- *
- * SETTINGS
- *
- * TOOLS
- *
- * GENERIC
- *
- * BASE
- *
- * OBJECTS
- *
- * COMPONENTS
- *
- * TRUMPS
- *
  *********************************************************/
 
 /**
@@ -26,8 +8,6 @@
 @import 'settings.colors';
 @import 'settings.defaults';
 @import 'settings.responsive';
-
-
 
 /**
  * TOOLS
@@ -39,7 +19,6 @@
 
 @import 'bourbon/bourbon';
 
-
 /**
  * GENERIC
  */
@@ -47,8 +26,6 @@
 @import 'generic.reset';
 @import 'generic.box-sizing';
 @import 'generic.shared';
-
-
 
 /**
  * BASE
@@ -61,13 +38,10 @@
 
 @import 'syntax-highlighting';
 
-
 /**
  * OBJECTS
  */
 @import 'objects.wrappers';
-
-
 
 /**
  * COMPONENTS
