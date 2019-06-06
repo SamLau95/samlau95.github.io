@@ -3,9 +3,9 @@ layout: post
 title: nbinteract
 links:
   - name: Demo
-    url: https://samlau95.gitbooks.io/nbinteract/tutorial/tutorial_monty_hall.html
+    url: https://www.nbinteract.com/tutorial/tutorial_monty_hall.html
   - name: Docs
-    url: https://samlau95.gitbooks.io/nbinteract/
+    url: https://www.nbinteract.com/
   - name: Code
     url: https://github.com/samlau95/nbinteract
 excerpt: >
@@ -15,9 +15,9 @@ excerpt: >
 <section class="post__toc">
   <p class="toc__title">Table of Contents</p>
 
-  - TOC
+- TOC
   {:toc}
-</section>
+  </section>
 
 ## tl;dr
 
@@ -29,7 +29,7 @@ Creates an interactive webpage from a Jupyter notebook.
 ## Explorables
 
 Through my teaching years I've come across a bunch of helpful interactive demos
-for teaching. For example, [Explained Visually][ev]{:target="_blank"} has a
+for teaching. For example, [Explained Visually][ev]{:target="\_blank"} has a
 neat demo of PCA that I show students when learning PCA for the first time:
 
 <div class="post__img">
@@ -41,8 +41,8 @@ neat demo of PCA that I show students when learning PCA for the first time:
     layout="responsive" />
 </div>
 
-These demos are also known as [explorables][]{:target="_blank"} and they just
-*feel* helpful for learning. I observe that as students interact with these
+These demos are also known as [explorables][]{:target="\_blank"} and they just
+_feel_ helpful for learning. I observe that as students interact with these
 types of interactive explanations they implicitly create and test their own
 hypotheses about the concept. For example, in the example above I asked myself:
 "How influential can one point be for PCA?". To me, these explorables encourage
@@ -68,7 +68,7 @@ interactive web pages.
 ## Interactive Jupyter Notebooks?
 
 Turns out that Jupyter notebooks have an easy way to add interactivity using a
-Python library called [`ipywidgets`][ipyw]{:target="_blank"}. `ipywidgets`
+Python library called [`ipywidgets`][ipyw]{:target="\_blank"}. `ipywidgets`
 creates an interactive interface to call a function with different arguments.
 For example, the slider in the below animation calls a function to draw points
 with different correlations.
@@ -83,7 +83,7 @@ with different correlations.
 </div>
 
 For more information about `ipywidgets`, see [its
-Github][ipyw]{:target="_blank"}.
+Github][ipyw]{:target="\_blank"}.
 
 Unfortunately, if you want to show someone else this interactive demo, they
 have to spin up a notebook server themselves and run your notebook before they
@@ -101,7 +101,7 @@ The `nbinteract` package provides add-on functionality to `nbconvert`. It
 performs a notebook-to-HTML conversion that keeps widgets functional. The
 resulting webpage, once put online, can be viewed by anyone with a web browser.
 For example, the animation below was recorded using a computer without Python
-or Jupyter installed by visiting [this URL][reg_textbook]{:target="_blank"}.
+or Jupyter installed by visiting [this URL][reg_textbook]{:target="\_blank"}.
 
 <div class="post__img">
   <amp-img
@@ -141,15 +141,15 @@ setup. Normally, Jupyter notebooks perform this setup for you, but many
 internet viewers don't have Jupyter installed.
 
 `nbinteract` enables widgets to function by running a Jupyter notebook using
-the [Binder][binder]{:target="_blank"} service in the background. When a user
+the [Binder][binder]{:target="\_blank"} service in the background. When a user
 interacts with a widget on an `nbinteract` webpage, the widget sends a request
 to a Binder notebook server, gets the output, and shows it in the page.
 
 ## Future work
 
 Currently we plan to use `nbinteract` to add interactivity to pages in
-Berkeley's [Data 8][data8]{:target="_blank"} and [Prob
-140][prob140]{:target="_blank"} textbooks. We also plan to conduct some
+Berkeley's [Data 8][data8]{:target="\_blank"} and [Prob
+140][prob140]{:target="\_blank"} textbooks. We also plan to conduct some
 preliminary user studies in order to see whether this tool is useful for
 learning.
 
@@ -161,12 +161,12 @@ with explorables but also through constructing mini-explorables themselves in
 the process of problem-solving.
 
 Hope `nbinteract` is useful to you! Feel free to leave comments and questions
-in the `nbinteract` [issue tracker][issues]{:target="_blank"}.
+in the `nbinteract` [issue tracker][issues]{:target="\_blank"}.
 
 [ev]: http://setosa.io/ev/principal-component-analysis/
 [explorables]: http://explorabl.es/
 [ipyw]: https://github.com/jupyter-widgets/ipywidgets
-[reg_textbook]: https://samlau95.gitbooks.io/nbinteract/content/examples/Correlation.html
+[reg_textbook]: https://www.nbinteract.com/examples/examples_correlation.html
 [binder]: https://mybinder.org/
 [data8]: http://data8.org/
 [prob140]: http://prob140.org/
