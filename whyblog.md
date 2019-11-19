@@ -11,9 +11,9 @@ nature of your friendships has changed because you’ve all started working. How
 do you build relationships when physical and emotional distances suddenly seem
 so large?
 
-If I could answer that question, I'd be giving TED talks instead of writing
-here. I don't know the answer to that question, but I’ve found that blogging
-helps.
+If I could answer that question, I'd probably be selling you my self-help books
+instead of writing here. No, I don't know the answer to that question, but I’ve
+found that blogging helps.
 
 To be clear, I don’t mean a blog you’ll show to future recruiters. I’m talking
 about a personal blog. My friends and I have blogs that we only share with each
@@ -61,9 +61,13 @@ respond. But maybe someone will. I can’t tell you the number of conversations
 I’ve had that start with: Hey I read your blog post…
 
 …thanks for sharing! How are you feeling now?
+<br>
 …and I had a question about something you said.
+<br>
 …I relate super hard. Actually I’m going through something similar too.
+<br>
 …I didn’t know you were going through that. Can you tell me more about it?
+<br>
 …I was surprised to hear someone else is going through this too. I thought I was alone.
 
 By having a place to freely write and share, you also invite the people that
