@@ -7,17 +7,16 @@
 
 # Site settings
 title: Sam Lau
-email: samlau95@ucsd.edu
+email: lau@ucsd.edu
 github_username: samlau95
 
 logo: "/assets/images/lightbulb.png"
 author_image: "/assets/images/sam.jpg"
 imageurl: "/assets/images"
 
-paginate:	5 # The number of posts to show per page on your homepage
+paginate: 5 # The number of posts to show per page on your homepage
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
@@ -42,4 +41,3 @@ sass:
   style: compressed
 
 ga_id: UA-42949369-4
-

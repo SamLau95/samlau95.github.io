@@ -2,6 +2,13 @@
 layout: post
 title: Why Blog?
 permalink: /whyblog
+excerpt: >
+  If you’re reading this, you are probably facing the challenge of adjusting to a
+  new lifestyle. Maybe you’ve moved away from your friends and are trying to find
+  your place in a new community. Or perhaps you live around close friends but the
+  nature of your friendships has changed because you’ve all started working. How
+  do you build relationships when physical and emotional distances suddenly seem
+  so large?
 ---
 
 If you’re reading this, you are probably facing the challenge of adjusting to a
@@ -10,6 +17,8 @@ your place in a new community. Or perhaps you live around close friends but the
 nature of your friendships has changed because you’ve all started working. How
 do you build relationships when physical and emotional distances suddenly seem
 so large?
+
+<!--more-->
 
 If I could answer that question, I'd probably be selling you my self-help books
 instead of writing here. No, I don't know the answer to that question, but I’ve
