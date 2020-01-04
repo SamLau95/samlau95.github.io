@@ -2,54 +2,40 @@
 layout: default
 ---
 
-<main class="content" role="main">
-  <div class="masthead wrapper">
+<main class="homepage wrapper" role="main">
+  <div class="masthead">
+    <h1 class="masthead__name">i am sam!</h1>
+    <p class="masthead__intro">
+      I'm a PhD student at UC San Diego advised by
+      <a href="http://pgbovine.net/" target="_blank">Philip Guo</a>.
+      My research mission is to improve the way we teach programming and
+      statistics by designing creative tools for instructors.
+    </p>
 
-    <div class="masthead__item masthead__me">
-      <amp-img
-        src="{{ site.imageurl }}/sam.jpg"
-        width="160"
-        height="160"
-        class="masthead__img"
-      ></amp-img>
-      <p class="masthead__contact__item">{{ site.email }}</p>
-      <p class="masthead__contact__item">
-        <a href="http://github.com/{{ site.github_username }}/" target="_blank">
-          github.com/{{ site.github_username }}
-        </a>
-      </p>
-      <p class="masthead__contact__item">
+    <div class="masthead__contact">
+      <p class="contact__item">{{ site.email }}</p>
+      <a class="contact__item" href="http://github.com/{{ site.github_username }}/" target="_blank">
+        github.com/{{ site.github_username }}
+      </a>
+      <p class="contact__item">
         Site last updated: {{ site.time | date: "%b %Y" }}
       </p>
     </div>
-
-    <div class="masthead__item masthead__vision">
-      <h1 class="masthead__tagline">I'm Sam Lau!</h1>
-      <p>
-        I'm a PhD student at UC San Diego, where I study
-        how people learn data science. I used to attend UC Berkeley, where I
-        <a href="http://data8.org/su17/" target="_blank">taught Data 8</a>
-        and
-        <a href="http://www.textbook.ds100.org/" target="_blank">
-          wrote a textbook for Data 100</a>.
-      </p>
-
-      {%- comment -%}
-        <p>
-          I envision a world where all individuals constantly rediscover the
-          <strong>joy</strong> of learning. I hope to use
-          <strong>technology</strong> to help students and teachers uncover
-          <strong>beauty</strong> in the world around them.
-        </p>
-     {%- endcomment -%}
-    </div>
   </div>
 
-  <div class="wrapper">
-    <div class="projects">
-      {%- for project in site.projects reversed -%}
-        {%- include project.html project=project -%}
-      {%- endfor -%}
+
+
+  <div class="projects">
+    <h2 class="o-section-heading">projects</h2>
+    {%- for project in site.projects reversed -%}
+      {%- include project.html project=project -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="news">
+    <h2 class="o-section-heading">news</h2>
+    <div class="news__item">
+      Hello world
     </div>
   </div>
 </main>

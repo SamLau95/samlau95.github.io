@@ -1,0 +1,83 @@
+/*------------------------------------*\
+    #HOMEPAGE
+\*------------------------------------*/
+
+/**
+ * The homepage has three components to lay out: the masthead, the projects
+ * list, and the news section. We use CSS Grid to have a single column layout
+ * on mobile, expanding to a 2x2 grid on tablet and up.
+ *
+ * 1. When we have space, move the news to a sidebar...
+ * 2. ...and add spacing between masthead and rest of content.
+ * 3. The contact info items use flex-wrap to look good on mobile, so we hack
+ *    the parent margin to account for the extra margin-right when the items
+ *    wrap.
+ */
+
+.homepage {
+  display: grid;
+  grid:
+    "masthead"
+    "projects"
+    "news";
+  grid-gap: $spacing-unit--large $spacing-unit;
+
+  @include media-query(lap-and-up) {
+    grid:
+      "masthead ......."
+      "projects news" // [1]
+      / 3fr minmax(180px, 1fr);
+    grid-gap: 6rem $spacing-unit; // [2]
+  }
+}
+
+/**
+ * Masthead
+ */
+.masthead {
+  grid-area: masthead;
+}
+
+.masthead__name {
+  @include font-size(64px);
+  text-transform: lowercase;
+  letter-spacing: -1px;
+}
+
+.masthead__intro {
+  margin-bottom: $spacing-unit--tiny;
+}
+
+/**
+ * Contact info
+ */
+.masthead__contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: -$spacing-unit; // [3]
+}
+
+.contact__item {
+  display: block;
+
+  margin: 0 $spacing-unit 0 0;
+
+  @include inuit-font-size(12px);
+  @include font-weight(regular);
+  color: $inuit-base-text-color;
+}
+
+/**
+ * Projects
+ */
+.projects {
+  grid-area: projects;
+}
+
+/**
+ * News
+ */
+.news {
+  grid-area: news;
+}
