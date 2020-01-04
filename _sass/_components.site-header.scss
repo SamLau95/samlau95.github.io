@@ -3,12 +3,28 @@
 \*------------------------------------*/
 
 /**
- * Super simple header. All it has is the link to the homepage in an <a> tag,
- * so we just have to...
+ * The site nav is a series of links separated by spacers.
  *
- * 1. Center align that image.
+ * 1. Flex the links to display in a row
+ * 2. Lowercase links for the a e s t h e t i c
  */
-.site-header {
-  padding: $spacing-unit 0;
-  text-align: center; /* [1] */
+.site-nav {
+  margin-bottom: $spacing-unit--large;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+
+  display: flex; // [1]
+
+  @include font-size(20px);
+  text-transform: lowercase; // [2]
+}
+
+.nav__item {
+  color: $inuit-base-text-color;
+  letter-spacing: -0.5px;
+}
+
+.nav__spacer {
+  margin-left: $spacing-unit--small;
+  margin-right: $spacing-unit--small;
 }
