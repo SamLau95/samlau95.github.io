@@ -18,8 +18,8 @@
   display: grid;
   grid:
     "masthead"
-    "projects"
-    "news";
+    "news"
+    "projects";
   grid-gap: $spacing-unit--large $spacing-unit;
 
   @include media-query(lap-and-up) {

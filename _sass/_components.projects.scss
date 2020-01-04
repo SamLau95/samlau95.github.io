@@ -6,23 +6,31 @@
  * These provide a brief intro to the project and are shown on the homepage.
  */
 
-.projects {
+.project {
   display: flex;
   flex-direction: column;
+  margin-bottom: $spacing-unit;
+
+  @include media-query(lap-and-up) {
+    flex-direction: row;
+  }
 }
 
-.project {
-  margin-bottom: $spacing-unit;
+.project__img {
+  @include media-query(lap-and-up) {
+    margin-right: $spacing-unit--small;
+    min-width: 150px;
+  }
 }
 
 .project__name {
-  @include inuit-font-size(16px, 1);
+  @include font-size(16px);
 
   margin-bottom: 10px;
 }
 
 .project__links {
-  @include inuit-font-size(14px, 1);
+  @include font-size(14px);
 
   margin-bottom: $spacing-unit--small;
 }

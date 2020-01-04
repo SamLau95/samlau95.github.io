@@ -27,7 +27,8 @@ layout: default
 
   <div class="projects">
     <h2 class="o-section-heading">projects</h2>
-    {%- for project in site.projects reversed -%}
+    {%- assign featured = site.projects | where: "featured", true | reverse -%}
+    {%- for project in featured -%}
       {%- include project.html project=project -%}
     {%- endfor -%}
   </div>

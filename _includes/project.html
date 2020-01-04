@@ -4,26 +4,37 @@ This partial requires a param: `project`
 
 {%- assign project = include.project -%}
 <div class="project">
-  <h3 class="project__name">{{ project.title }}</h3>
+  <amp-img
+    media="(min-width: 45em)"
+    src="https://placehold.co/150"
+    class="project__img"
+    width="150"
+    height="150"
+    layout="flex-item"
+    ></amp-img>
 
-  {%- if project.links -%}
-    <div class="project__links">
-      {%- for link in project.links -%}
-        <a class="project__link"
-          href="{{ link.url }}"
-          target="_blank"
-        >{{ link.name }}</a>
+  <div class="project__info">
+    <h3 class="project__name">{{ project.title }}</h3>
 
-        {% if forloop.last == false %}
-        •
-        {% endif %}
-      {%- endfor -%}
-    </div>
-  {%- endif -%}
+    {%- if project.links -%}
+      <div class="project__links">
+        {%- for link in project.links -%}
+          <a class="project__link"
+            href="{{ link.url }}"
+            target="_blank"
+          >{{ link.name }}</a>
 
-  <p class="project__excerpt">{{ project.excerpt }}</p>
+          {% if forloop.last == false %}
+          •
+          {% endif %}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
 
-  {%- if project.no_content != true -%}
-    <p><a href="{{ project.url }}">Read more</a></p>
-  {%- endif -%}
+    <p class="project__excerpt">{{ project.excerpt }}</p>
+
+    {%- if project.no_content != true -%}
+      <p><a href="{{ project.url }}">Read more</a></p>
+    {%- endif -%}
+  </div>
 </div>
