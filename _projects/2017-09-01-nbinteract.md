@@ -1,6 +1,7 @@
 ---
 layout: post
 title: nbinteract
+featured: true
 links:
   - name: Demo
     url: https://www.nbinteract.com/tutorial/tutorial_monty_hall.html
@@ -15,9 +16,12 @@ excerpt: >
 <section class="post__toc">
   <p class="toc__title">Table of Contents</p>
 
+
+<!-- The next two lines need to be completely unindented to work. -->
 - TOC
-  {:toc}
-  </section>
+{:toc}
+
+</section>
 
 ## tl;dr
 

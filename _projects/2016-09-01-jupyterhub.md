@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Scalable JupyterHub Deployment
+featured: true
 links:
   - name: Live Deployment
     url: http://datahub.berkeley.edu/
@@ -16,8 +17,10 @@ excerpt: >
 <section class="post__toc">
   <p class="toc__title">Table of Contents</p>
 
-  - TOC
-  {:toc}
+<!-- The next two lines need to be completely unindented to work. -->
+- TOC
+{:toc}
+
 </section>
 
 ## Summary
@@ -30,13 +33,13 @@ standard for deploying JupyterHub.
 
 ## The Problem
 
-[Data 8][]{:target="_blank"}, UC Berkeley flagship data science course for
+[Data 8][]{:target="\_blank"}, UC Berkeley flagship data science course for
 freshman, had an infamously flaky computing environment.
 
-The course uses Jupyter notebooks ([website][jupyter]{:target="_blank"}) for
+The course uses Jupyter notebooks ([website][jupyter]{:target="\_blank"}) for
 all of its content. Although Jupyter notebooks are useful, getting set up is a
 lengthy and error-prone process — consider [these instructions for local
-setup][ds100-setup]{:target="_blank"} that we use in a later course.
+setup][ds100-setup]{:target="\_blank"} that we use in a later course.
 
 We've found that installation problems intimidate students, especially those
 that have had less experience doing technical work. To help make the course
@@ -112,13 +115,13 @@ As a first step towards improving the availability of the system, I set up
 monitoring to notify staff if machines went down. This helped lower downtime
 while we (urgently) explored our long-term options.
 
-To get more help, I pitched this project to [Blueprint][]{:target="_blank"}, a
+To get more help, I pitched this project to [Blueprint][]{:target="\_blank"}, a
 student-run software development organization. In the Fall of 2016, I led a
 team of four other developers to overhaul the JupyterHub deployment for Data 8.
 
 ## Redesigning the Deployment
 
-Fortunately, we came across Google's [Kubernetes][k8s]{:target="_blank"}
+Fortunately, we came across Google's [Kubernetes][k8s]{:target="\_blank"}
 project early on in our search.
 
 Kubernetes gave us a key abstraction: instead of manually assigning containers
@@ -158,7 +161,7 @@ gives us another measure of failure tolerance.
 ### Dynamically Provisioned Disks
 
 We switched to dynamically provisioned [Kubernetes
-Volumes][k8s-vols]{:target="_blank"} to store student files instead of NFS. NFS
+Volumes][k8s-vols]{:target="\_blank"} to store student files instead of NFS. NFS
 turned out to be a major source of problems for us previously since it was
 quite flaky and a single source of failure. When a student logs into JupyterHub
 for the first time, we create a disk, assign the disk to the student's account,
@@ -196,18 +199,18 @@ We made the following improvements to the system in Spring 2017:
 Finally, we abstracted away the Data 8 specific parts of the deployment to
 allow others to reuse our architecture for their own organizations. We have
 since handed the project off to the Jupyter team and the project now lives on
-in Jupyter's official [Zero to JupyterHub][zero-k8s]{:target="_blank"} guide
+in Jupyter's official [Zero to JupyterHub][zero-k8s]{:target="\_blank"} guide
 and as part of a public, cloud-based Jupyter service called
-[Binder][binder]{:target="_blank"}.
+[Binder][binder]{:target="\_blank"}.
 
 The deployment is currently used most heavily by Data 8, serving over 1000
 students in Fall 2017. It is also used for classrooms and research computing
 across UC Berkeley and at other universities.
 
-[Data 8]: https://data.berkeley.edu/education/foundations
+[data 8]: https://data.berkeley.edu/education/foundations
 [jupyter]: http://jupyter.org/
 [ds100-setup]: http://www.ds100.org/fa17/setup
-[Blueprint]: https://www.calblueprint.org/
+[blueprint]: https://www.calblueprint.org/
 [k8s]: https://kubernetes.io/
 [k8s-vols]: https://kubernetes.io/docs/concepts/storage/volumes/
 [zero-k8s]: https://zero-to-jupyterhub.readthedocs.io/en/latest/
