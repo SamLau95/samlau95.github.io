@@ -1,3 +1,6 @@
+// Uses workbox to cache most static resources
+// https://developers.google.com/web/tools/workbox/guides/get-started
+
 importScripts(
   "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js"
 );
