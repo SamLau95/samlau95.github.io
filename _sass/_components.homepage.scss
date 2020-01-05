@@ -63,7 +63,7 @@
 
   margin: 0 $spacing-unit 0 0;
 
-  @include inuit-font-size(12px);
+  @include font-size(12px);
   @include font-weight(regular);
   color: $inuit-base-text-color;
 }
@@ -80,4 +80,14 @@
  */
 .news {
   grid-area: news;
+}
+
+.news__item {
+  margin: $spacing-unit 0;
+}
+
+.news__date {
+  display: block;
+  text-align: right;
+  @include font-size(12px);
 }

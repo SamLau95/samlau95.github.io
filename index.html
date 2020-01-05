@@ -35,9 +35,12 @@ layout: default
 
   <div class="news">
     <h2 class="o-section-heading">news</h2>
-    <div class="news__item">
-      Hello world
-    </div>
+    {%- for news in site.data.news -%}
+      <div class="news__item">
+        {{ news.text }}
+        <span class="news__date">– {{ news.date }}</span>
+      </div>
+    {%- endfor -%}
   </div>
 </main>
 
