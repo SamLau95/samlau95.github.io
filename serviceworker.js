@@ -1,35 +1,34 @@
-var CACHE_NAME = 'samlau.me'
-var urlsToCache = [
-  '/',
-  '/projects/2016-09-01-jupyterhub',
-  '/projects/2017-09-01-nbinteract',
-]
+importScripts(
+  "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js"
+);
 
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(function(cache) {
-      return cache.addAll(urlsToCache)
-    }),
-  )
-})
+workbox.setConfig({ debug: false });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.open(CACHE_NAME).then(function(cache) {
-      return cache.match(event.request).then(function(response) {
-        if (response) {
-          // console.log('Cache hit:', event.request.url)
-          return response
-        }
+workbox.googleAnalytics.initialize();
 
-        return fetch(event.request).then(function(response) {
-          // console.log('Cache miss:', event.request.url)
-          if (event.request.method === 'GET') {
-            cache.put(event.request, response.clone())
-          }
-          return response
-        })
+workbox.core.setCacheNameDetails({
+  prefix: "samlau.me",
+  suffix: "v1"
+});
+
+workbox.routing.registerRoute(
+  new RegExp("(/|/projects/|/about|/cv)"),
+  new workbox.strategies.StaleWhileRevalidate()
+);
+
+workbox.routing.registerRoute(
+  /\.(?:png|gif|jpg|jpeg|webp|svg)$/,
+  new workbox.strategies.CacheFirst({
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
       })
-    }),
-  )
-})
+    ]
+  })
+);
+
+workbox.routing.registerRoute(
+  /\.(?:js|css|pdf)$/,
+  new workbox.strategies.StaleWhileRevalidate()
+);
