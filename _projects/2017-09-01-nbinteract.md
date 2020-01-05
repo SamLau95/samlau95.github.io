@@ -3,6 +3,8 @@ layout: post
 title: nbinteract
 featured: true
 links:
+  - name: Blog Post
+    url: projects/2017-09-01-nbinteract
   - name: Demo
     url: https://www.nbinteract.com/tutorial/tutorial_monty_hall.html
   - name: Docs
@@ -10,14 +12,13 @@ links:
   - name: Code
     url: https://github.com/samlau95/nbinteract
 excerpt: >
-  Easy creation of interactive data science content.
+  Create interactive data science content with a single command.
 ---
 
 <section class="post__toc">
   <p class="toc__title">Table of Contents</p>
 
-
-<!-- The next two lines need to be completely unindented to work. -->
+<!-- prettier-ignore -->
 - TOC
 {:toc}
 

@@ -3,6 +3,8 @@ layout: post
 title: Scalable JupyterHub Deployment
 featured: true
 links:
+  - name: Blog Post
+    url: projects/2016-09-01-jupyterhub
   - name: Live Deployment
     url: http://datahub.berkeley.edu/
   - name: Docs
@@ -17,7 +19,7 @@ excerpt: >
 <section class="post__toc">
   <p class="toc__title">Table of Contents</p>
 
-<!-- The next two lines need to be completely unindented to work. -->
+<!-- prettier-ignore -->
 - TOC
 {:toc}
 

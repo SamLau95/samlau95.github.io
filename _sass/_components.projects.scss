@@ -19,22 +19,24 @@
 .project__img {
   @include media-query(lap-and-up) {
     margin-right: $spacing-unit--small;
-    min-width: 150px;
+    flex: 0 0 150px;
   }
 }
 
 .project__name {
-  @include font-size(16px);
-
-  margin-bottom: 10px;
-}
-
-.project__links {
-  @include font-size(14px);
-
-  margin-bottom: $spacing-unit--small;
+  @include font-size($inuit-base-font-size);
+  margin-bottom: 0;
 }
 
 .project__excerpt {
-  margin-bottom: $spacing-unit--small;
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.project__links {
+  @include font-size(12px);
+}
+
+.project__link--spacer {
+  margin: 0 $spacing-unit--tiny;
 }
