@@ -24,7 +24,9 @@ This partial requires a param: `project`
         {%- for link in project.links -%}
           <a class="project__link"
             href="{{ link.url }}"
-            target="_blank"
+            {%- if link.url contains '://' -%}
+              target="_blank"
+            {%- endif -%}
           >{{ link.name }}</a>
 
           {% if forloop.last == false %}

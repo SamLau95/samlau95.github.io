@@ -30,6 +30,13 @@
 /**
  * BASE
  */
+// The base font size is 16px
+$inuit-heading-size-1: 36px !default;
+$inuit-heading-size-2: 24px !default;
+$inuit-heading-size-3: 24px !default;
+$inuit-heading-size-4: 24px !default;
+$inuit-heading-size-5: 24px !default;
+$inuit-heading-size-6: 24px !default;
 @import "base.page";
 @import "base.headings";
 @import "base.type";
