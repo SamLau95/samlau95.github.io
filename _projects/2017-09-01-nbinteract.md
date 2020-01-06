@@ -2,6 +2,7 @@
 layout: post
 title: nbinteract
 featured: true
+image: /assets/images/nbinteract.png
 links:
   - name: Blog Post
     url: projects/2017-09-01-nbinteract
