@@ -4,27 +4,30 @@ title: about
 permalink: /about
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac augue libero.
-Fusce ac tempor dolor. Ut est dui, gravida a consequat aliquet, fermentum
-sodales risus. Suspendisse eu arcu id mi ornare facilisis non id nisl. Maecenas
-nec congue arcu, non semper neque. Proin mollis nisl diam, eu ultrices diam
-facilisis et. Integer fringilla lorem quis semper venenatis.
+<div class="post__img--left">
+  <amp-img
+    src="{{ site.imageurl }}/me.jpg"
+    width="2"
+    height="3"
+    layout="responsive" />
+</div>
 
-Aliquam vestibulum purus enim. Sed rhoncus interdum erat id consequat. Nulla
-cursus venenatis massa, quis convallis lacus condimentum vel. Etiam mollis,
-orci ac pharetra commodo, diam lectus hendrerit eros, ac elementum magna augue
-sed tellus. Maecenas molestie, nisi ut sodales scelerisque, purus neque
-imperdiet dui, mollis elementum sem augue vel ipsum. Nulla lacinia arcu at quam
-lobortis, vitae interdum tellus fermentum. Cum sociis natoque penatibus et
-magnis dis parturient montes, nascetur ridiculus mus. Fusce sodales semper erat,
-eu fringilla ligula vulputate id. Maecenas quis libero pellentesque lacus
-egestas vehicula sit amet et neque. Nulla nec facilisis sem. Pellentesque rutrum
-elementum molestie. Quisque eget dui ac quam placerat dictum. Suspendisse quis
-ante placerat, efficitur enim ut, commodo tortor. Etiam consequat, eros quis
-consequat congue, augue mauris molestie libero, sed iaculis lectus enim eu magna.
+I am Sam Lau, a Ph.D. student advised by [Philip Guo][pg]{:target="\_blank"} in
+the Cognitive Science department at UC San Diego. I study human-computer
+interaction (HCI), where I prototype new software for programming, statistics,
+and data science instructors to prepare their lessons.
 
-Etiam sapien dolor, mattis vel feugiat nec, egestas eget risus. Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Aenean aliquam massa a est porta
-vehicula. Cras eu gravida massa. Integer non sem ac mi ultrices posuere a
-pretium tortor. Mauris vitae varius sem. Praesent faucibus nec felis et dictum.
-Vestibulum lorem velit, laoreet nec vestibulum in, varius nec enim.
+{% comment %}
+This work draws on recent advances in direct manipulation
+interfaces, creative authoring tools, and data visualization.
+{% endcomment %}
+
+In the past, I was a computer science student at UC Berkeley where I was helped
+launch Data 8 and Data 100, Berkeley's two flagship data science courses. My
+instructor ratings are available on [the HKN
+website][ratings]{:target="\_blank"}. I also wrote a textbook for Data 100,
+which is [freely available online][textbook]{:target="\_blank"}.
+
+[pg]: http://pgbovine.net/
+[ratings]: https://hkn.eecs.berkeley.edu/coursesurveys/instructor/Lau,Samuel
+[textbook]: http://textbook.ds100.org/
