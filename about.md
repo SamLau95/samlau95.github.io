@@ -22,7 +22,7 @@ This work draws on recent advances in direct manipulation
 interfaces, creative authoring tools, and data visualization.
 {% endcomment %}
 
-In the past, I was a computer science student at UC Berkeley where I was helped
+In the past, I was a computer science student at UC Berkeley where I helped
 launch Data 8 and Data 100, Berkeley's two flagship data science courses. My
 instructor ratings are available on [the HKN
 website][ratings]{:target="\_blank"}. I also wrote a textbook for Data 100,
