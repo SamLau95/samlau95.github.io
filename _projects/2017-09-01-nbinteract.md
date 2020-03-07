@@ -12,6 +12,8 @@ links:
     url: https://www.nbinteract.com/
   - name: Code
     url: https://github.com/samlau95/nbinteract
+  - name: Thesis
+    url: pubs/nbinteract_MSthesis-2018.pdf
 excerpt: >
   Create interactive data science content with a single command.
 ---

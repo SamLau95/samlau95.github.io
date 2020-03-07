@@ -8,7 +8,7 @@
  * on mobile, expanding to a 2x2 grid on tablet and up.
  *
  * 1. When we have space, move the news to a sidebar...
- * 2. ...and add spacing between masthead and rest of content.
+ * 2. ...and add extra spacing between masthead and rest of content.
  * 3. The contact info items use flex-wrap to look good on mobile, so we hack
  *    the parent margin to account for the extra margin-right when the items
  *    wrap.
@@ -17,17 +17,19 @@
 .homepage {
   display: grid;
   grid:
-    "masthead"
-    "news"
-    "projects";
+    'masthead'
+    'news'
+    'pubs'
+    'projects';
   grid-gap: $spacing-unit--large $spacing-unit;
 
   @include media-query(lap-and-up) {
     grid:
-      "masthead ......."
-      "projects news" // [1]
+      'masthead .......'
+      'pubs     news' // [1]
+      'projects news'
       / 3fr minmax(180px, 1fr);
-    grid-gap: 6rem $spacing-unit; // [2]
+    grid-gap: $spacing-unit;
   }
 }
 
@@ -36,6 +38,9 @@
  */
 .masthead {
   grid-area: masthead;
+  @include media-query(lap-and-up) {
+    margin-bottom: 3 * $spacing-unit; // [2]
+  }
 }
 
 .masthead__name {
@@ -73,6 +78,34 @@
  */
 .projects {
   grid-area: projects;
+}
+
+/**
+ * Publications
+ */
+.pubs {
+  grid-area: pubs;
+}
+
+.pub {
+  margin-bottom: $spacing-unit;
+
+  &__name,
+  &__authors,
+  &__venue,
+  &__year {
+    display: inline;
+    font-size: 1rem;
+  }
+
+  &__venue {
+    font-style: italic;
+  }
+
+  &__blurb {
+    border-left: 3px solid lightgray;
+    padding-left: $spacing-unit--tiny;
+  }
 }
 
 /**

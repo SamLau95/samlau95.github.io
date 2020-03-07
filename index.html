@@ -23,7 +23,21 @@ layout: default
     </div>
   </div>
 
-
+  <div class="pubs">
+    <h2 class="o-section-heading">publications</h2>
+    {%- for pub in site.data.pubs -%}
+      <div class="pub">
+        <h3 class="pub__name"><a href="{{ pub.pdf }}">{{ pub.title }}</a></h3>.
+        <p class="pub__authors">{{ pub.authors }}</p>.
+        <p class="pub__venue">{{ pub.venue }}</p>,
+        <p class="pub__year">{{ pub.year }}</p>.
+        <div class="pub__blurb">{{ pub.blurb }}</div>
+      </div>
+      {%- comment -%}
+      TODO: Implement multiple links for publications
+      {%- endcomment -%}
+    {%- endfor -%}
+  </div>
 
   <div class="projects">
     <h2 class="o-section-heading">projects</h2>

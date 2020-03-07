@@ -27,12 +27,12 @@
 }
 
 .post__img--left {
-  max-width: 90%;
-  margin: 0 auto $spacing-unit;
+  float: left;
+  width: 40%;
+  margin: 0 $spacing-unit--small 0 0;
 
   @include media-query(lap-and-up) {
-    min-width: 200px;
-    float: left;
+    width: 200px;
     margin: 0 $spacing-unit 0 0;
   }
 }
