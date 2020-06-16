@@ -2,6 +2,18 @@
 #
 # Note that >- is the chomping folded block literal in YAML:
 # http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
+- year: 2020
+  title: >-
+    The Design Space of Computational Notebooks: An
+    Analysis of 60 Systems in Academia and Industry
+  authors: >-
+    Sam Lau, Ian Drosos, Julia M. Markel, Philip J. Guo
+  venue: >-
+    IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)
+  blurb: >-
+    Computational notebooks vary widely in data import, code editing, code
+    execution, and output format.
+  pdf: /pubs/computational-notebooks-design-space_VLHCC-2020.pdf
 - year: 2019
   title: >-
     Experiment Reconstruction Reduces Fixation on Surface Details of
