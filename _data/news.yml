@@ -1,12 +1,13 @@
 # These news items are rendered to the homepage. Only the first three items
 # are shown.
 
-- date: Jan 2, 2020
+- date: June 2020
   text: >
-    I'm TA'ing for <a href="https://github.com/SamLau95/cogs108disc-wi20"
-    target="_blank">COGS 108 Wi20</a>. My sections are Wed 12pm and 1pm; my
-    office hours are Thu 11am. See you in class!
-- date: Dec 20, 2019
+    I started an internship with Microsoft Research! I work with
+    <a href="https://advait.org/" target="_blank">Advait Sarkar</a>
+    in the Calc Intelligence Group to design interfaces for Python in Excel.
+- date: March 2019
   text: >
-    100% (26/26) of my students in COGS 108 Fa19 recommended me as a TA! Thanks
-    for your support :)
+    100% (39/39) of my students in COGS 108 Fa19 recommended me as a TA! Thanks
+    for your support. Favorite comments: "Give Sam a raise!!!"; "He has a cool
+    bike.".
