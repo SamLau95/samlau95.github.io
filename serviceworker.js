@@ -5,7 +5,7 @@ importScripts(
   'https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js',
 )
 
-workbox.setConfig({ debug: true })
+workbox.setConfig({ debug: false })
 
 workbox.googleAnalytics.initialize()
 
@@ -20,7 +20,12 @@ workbox.routing.registerRoute(
 )
 
 workbox.routing.registerRoute(
-  new RegExp('(/|/projects/.*|/about|/cv)$'),
+  new RegExp('(/tweak-it.+)$'),
+  new workbox.strategies.NetworkFirst(),
+)
+
+workbox.routing.registerRoute(
+  new RegExp('(/|/projects.*|/about|/cv)$'),
   new workbox.strategies.StaleWhileRevalidate(),
 )
 
