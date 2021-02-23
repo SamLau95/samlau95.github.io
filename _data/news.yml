@@ -1,11 +1,12 @@
 # These news items are rendered to the homepage. Only the first three items
 # are shown.
 
-- date: June 2020
+- date: Jan 2021
   text: >
-    I started an internship with Microsoft Research! I work with
-    <a href="https://advait.org/" target="_blank">Advait Sarkar</a>
-    in the Calc Intelligence Group to design interfaces for Python in Excel.
+    Our Microsoft Research paper will appear in CHI 2021! I worked with <a
+    href="https://advait.org/" target="_blank">Advait Sarkar</a> in the Calc
+    Intelligence Group on TweakIt, a system that integrates Python outputs
+    directly in spreadsheets for data analysts.
 - date: March 2019
   text: >
     100% (39/39) of my students in COGS 108 Fa19 recommended me as a TA! Thanks

@@ -7,14 +7,18 @@ layout: default
     <h1 class="masthead__name">i am sam!</h1>
     <p class="masthead__intro">
       I'm a PhD student at UC San Diego advised by
-      <a href="http://pgbovine.net/" target="_blank">Philip Guo</a>.
-      My research mission is to improve the way we teach programming and
-      statistics by designing creative tools for instructors.
+      <a href="http://pgbovine.net/" target="_blank">Philip Guo</a>. My research
+      mission is to improve the way we teach programming and statistics by
+      designing creative tools for instructors.
     </p>
 
     <div class="masthead__contact">
       <p class="contact__item">{{ site.email }}</p>
-      <a class="contact__item" href="http://github.com/{{ site.github_username }}/" target="_blank">
+      <a
+        class="contact__item"
+        href="http://github.com/{{ site.github_username }}/"
+        target="_blank"
+      >
         github.com/{{ site.github_username }}
       </a>
       <p class="contact__item">
@@ -24,36 +28,45 @@ layout: default
   </div>
 
   <div class="pubs">
-    <h2 class="o-section-heading">publications</h2>
-    {%- for pub in site.data.pubs -%}
-      <div class="pub">
-        <h3 class="pub__name"><a href="{{ pub.pdf }}">{{ pub.title }}</a></h3>.
-        <p class="pub__authors">{{ pub.authors }}</p>.
-        <p class="pub__venue">{{ pub.venue }}</p>,
-        <p class="pub__year">{{ pub.year }}</p>.
-        <div class="pub__blurb">{{ pub.blurb }}</div>
-      </div>
-      {%- comment -%}
-      TODO: Implement multiple links for publications
-      {%- endcomment -%}
+    <h2 class="o-section-heading">papers</h2>
+    {%- for pub in site.data.papers -%}
+    <div class="pub">
+      <h3 class="pub__name"><a href="{{ pub.pdf }}">{{ pub.title }}</a>.</h3>
+      <p class="pub__authors">{{ pub.authors }}.</p>
+      <p class="pub__venue">{{ pub.venue }},</p>
+      <p class="pub__year">{{ pub.year }}.</p>
+      <div class="pub__blurb">{{ pub.blurb }}</div>
+    </div>
+    {%- endfor -%}
+  </div>
+
+  <div class="short_pubs">
+    <h2 class="o-section-heading">workshop and poster papers</h2>
+    {%- for pub in site.data.short_papers -%}
+    <div class="pub">
+      <h3 class="pub__name"><a href="{{ pub.pdf }}">{{ pub.title }}</a>.</h3>
+      <p class="pub__authors">{{ pub.authors }}.</p>
+      <p class="pub__venue">{{ pub.venue }},</p>
+      <p class="pub__year">{{ pub.year }}.</p>
+      <div class="pub__blurb">{{ pub.blurb }}</div>
+    </div>
     {%- endfor -%}
   </div>
 
   <div class="projects">
     <h2 class="o-section-heading">projects</h2>
     {%- assign featured = site.projects | where: "featured", true | reverse -%}
-    {%- for project in featured -%}
-      {%- include project.html project=project -%}
+    {%- for project in featured -%} {%- include project.html project=project -%}
     {%- endfor -%}
   </div>
 
   <div class="news">
     <h2 class="o-section-heading">news</h2>
     {%- for news in site.data.news -%}
-      <div class="news__item">
-        {{ news.text }}
-        <span class="news__date">– {{ news.date }}</span>
-      </div>
+    <div class="news__item">
+      {{ news.text }}
+      <span class="news__date">– {{ news.date }}</span>
+    </div>
     {%- endfor -%}
   </div>
 </main>

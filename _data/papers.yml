@@ -1,0 +1,28 @@
+# Publications listed on homepage in order of appearance in this file.
+#
+# Note that >- is the chomping folded block literal in YAML:
+# http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
+- year: 2021
+  title: >-
+    TweakIt: Supporting End-User Programmers Who Transmogrify Code
+  authors: >-
+    Sam Lau, Sruti Srinivasa Ragavan, Ken Milne, Titus Barik, Advait Sarkar
+  venue: >-
+    ACM Conference on Human Factors in Computing Systems (CHI)
+  blurb: >-
+    Placing live previews of code outputs directly in spreadsheets enables data
+    analysts to tweak and reuse Python examples without needing Python
+    expertise.
+  pdf: /pubs/tweakit_CHI-2021.pdf
+- year: 2020
+  title: >-
+    The Design Space of Computational Notebooks: An
+    Analysis of 60 Systems in Academia and Industry
+  authors: >-
+    Sam Lau, Ian Drosos, Julia M. Markel, Philip J. Guo
+  venue: >-
+    IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)
+  blurb: >-
+    Computational notebooks vary widely in data import, code editing, code
+    execution, and output format.
+  pdf: /pubs/computational-notebooks-design-space_VLHCC-2020.pdf
