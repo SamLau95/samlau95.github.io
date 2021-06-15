@@ -1,14 +1,9 @@
 # These news items are rendered to the homepage. Only the first three items
 # are shown.
 
-- date: Jan 2021
+- date: May 2021
   text: >
-    Our Microsoft Research paper will appear in CHI 2021! I worked with <a
-    href="https://advait.org/" target="_blank">Advait Sarkar</a> in the Calc
-    Intelligence Group on TweakIt, a system that integrates Python outputs
-    directly in spreadsheets for data analysts.
-- date: March 2019
-  text: >
-    100% (39/39) of my students in COGS 108 Fa19 recommended me as a TA! Thanks
-    for your support. Favorite comments: "Give Sam a raise!!!"; "He has a cool
-    bike.".
+    I presented TweakIt at CHI 2021! TweakIt is a system that integrates Python
+    outputs directly in spreadsheets for data analysts. The 5-min video
+    presentation is <a href="https://youtu.be/wn--JTsvuqA" target="_blank">on
+    YouTube</a>.
