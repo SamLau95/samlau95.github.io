@@ -2,6 +2,18 @@
 #
 # Note that >- is the chomping folded block literal in YAML:
 # http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
+- year: 2022
+  title: >-
+    How Computer Science and Statistics Instructors Approach Data Science
+    Pedagogy Differently: Three Case Studies
+  authors: >-
+    Sam Lau, Deborah Nolan, Joseph Gonzalez, Philip Guo
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Real-world case studies show tradeoffs in balancing computer science and
+    statistics in data science teaching.
+  pdf: /pubs/How-CS-Stat-Approach-Data-Science_SIGCSE-2022.pdf
 - year: 2021
   title: >-
     TweakIt: Supporting End-User Programmers Who Transmogrify Code

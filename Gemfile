@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'jekyll-paginate'
-gem 'jekyll-compose', group: [:jekyll_plugins]
-gem 'jekyll-github-metadata'
+gem 'webrick', '~> 1.7'
+gem 'jekyll', '~> 4.2'
+gem 'jekyll-paginate', '~> 1.1'
+gem 'jekyll-compose', '~> 0.12', group: [:jekyll_plugins]
+gem 'jekyll-github-metadata', '~> 2.13'
 
-gem 'guard'
-gem 'guard-livereload'
+group :development do
+  gem 'guard'
+  gem 'guard-livereload'
+end
