@@ -12,8 +12,8 @@ permalink: /about
     layout="responsive" />
 </div>
 
-I am Sam Lau, a Ph.D. student advised by [Philip Guo][pg]{:target="\_blank"} in
-the Cognitive Science department at UC San Diego. I study human-computer
+I am Sam Lau, a Ph.D. candidate advised by [Philip Guo][pg]{:target="\_blank"}
+in the Cognitive Science department at UC San Diego. I study human-computer
 interaction (HCI), where I prototype new software for programming, statistics,
 and data science instructors to prepare their lessons.
 

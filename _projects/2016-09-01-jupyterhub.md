@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scalable JupyterHub Deployment
-featured: true
+featured: false
 image: /assets/images/jupyterhub.png
 links:
   - name: Blog Post

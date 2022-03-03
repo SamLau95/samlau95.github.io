@@ -1,9 +1,22 @@
 # These news items are rendered to the homepage. Only the first three items
 # are shown.
 
+- date: Mar 2022
+  text: >
+    I'm presenting my paper "How Computer Science and Statistics Instructors
+    Approach Data Science Pedagogy Differently" at SIGCSE 2022. The video
+    presentation is available
+    <a href="https://youtu.be/lx2RP3LvZCI" target="_blank">on YouTube</a>.
+
+- date: Mar 2022
+  text: >
+    Pandas Tutor was featured on Talk Python, the most popular podcast for
+    Python. The video recording is <a href="https://youtu.be/_vPmMYSGAlU"
+    target="_blank">now available</a>.
+
 - date: May 2021
   text: >
-    I presented TweakIt at CHI 2021! TweakIt is a system that integrates Python
+    I presented TweakIt at CHI 2021. TweakIt is a system that integrates Python
     outputs directly in spreadsheets for data analysts. The 5-min video
     presentation is <a href="https://youtu.be/wn--JTsvuqA" target="_blank">on
     YouTube</a>.

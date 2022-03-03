@@ -1,7 +1,7 @@
 ---
 layout: post
 title: nbinteract
-featured: true
+featured: false
 image: /assets/images/nbinteract.png
 links:
   - name: Blog Post

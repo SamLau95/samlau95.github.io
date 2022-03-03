@@ -27,9 +27,9 @@
   @include media-query(lap-and-up) {
     grid:
       'masthead .......'
-      'pubs           news' // [1]
+      'projects       news' // [1]
+      'pubs           news'
       'short_pubs     news'
-      'projects news'
       / 3fr minmax(180px, 1fr);
     grid-gap: $spacing-unit;
   }
