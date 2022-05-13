@@ -120,6 +120,10 @@
         font-weight: 400;
     }
 
+    @if ($font-weight == "semibold") {
+        font-weight: 600;
+    }
+
     @if ($font-weight == "bold") {
         font-weight: 700;
     }

@@ -6,12 +6,23 @@ layout: default
   <div class="masthead">
     <h1 class="masthead__name">i am sam!</h1>
     <p class="masthead__intro">
-      I'm a PhD candidate at UC San Diego advised by Philip Guo. My research
-      mission is to improve the way we teach programming and statistics by
-      designing creative tools for instructors. I'm also writing a textbook
-      called
+      I'm a PhD candidate at UC San Diego advised by Philip Guo. I study
+      human-computer interaction (HCI) and design software tools that help
+      programming, statistics, and data science instructors prepare their
+      lessons. I'm also writing a textbook called
       <a href="http://www.textbook.ds100.org/" target="_blank"
         >Learning Data Science</a
+      >.
+      <br />
+      <br />
+      In the past, I was a computer science student at UC Berkeley where I
+      helped launch Data 8 and Data 100, Berkeley's two flagship data science
+      courses. My instructor ratings are available on
+      <a
+        href="https://hkn.eecs.berkeley.edu/coursesurveys/instructor/Lau,Samuel"
+        target="_blank"
+      >
+        the HKN website</a
       >.
     </p>
 
@@ -24,6 +35,14 @@ layout: default
       >
         github.com/{{ site.github_username }}
       </a>
+      <a
+        class="contact__item"
+        href="https://twitter.com/samlau95"
+        target="_blank"
+      >
+        @samlau95
+      </a>
+      </p>
       <p class="contact__item">
         Site last updated: {{ site.time | date: "%b %Y" }}
       </p>
@@ -35,6 +54,14 @@ layout: default
     {%- assign featured = site.projects | where: "featured", true | reverse -%}
     {%- for project in featured -%} {%- include project.html project=project -%}
     {%- endfor -%}
+  </div>
+
+  <div class="teaching">
+    <h2 class="o-section-heading">teaching</h2>
+    {%- include _teaching.html
+        teaching=site.data.teaching.instructor
+        mark_instructor=true
+        -%}
   </div>
 
   <div class="pubs">

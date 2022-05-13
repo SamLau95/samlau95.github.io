@@ -24,17 +24,20 @@
 }
 
 .project__name {
+  display: inline;
   @include font-size($inuit-base-font-size);
-  margin-bottom: 0;
 }
 
 .project__excerpt {
-  flex: 1;
-  margin-bottom: 0;
+  display: inline;
 }
 
 .project__links {
   @include font-size(12px);
+}
+
+.project__link {
+  @include font-weight(bold);
 }
 
 .project__link--spacer {

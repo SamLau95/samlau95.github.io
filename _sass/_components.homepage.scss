@@ -18,16 +18,18 @@
   display: grid;
   grid:
     'masthead'
-    'news'
+    'projects'
+    'teaching'
     'pubs'
     'short_pubs'
-    'projects';
+    'news';
   grid-gap: $spacing-unit--large $spacing-unit;
 
   @include media-query(lap-and-up) {
     grid:
       'masthead .......'
       'projects       news' // [1]
+      'teaching       news'
       'pubs           news'
       'short_pubs     news'
       / 3fr minmax(180px, 1fr);
@@ -81,6 +83,39 @@
 .projects {
   grid-area: projects;
 }
+
+/**
+ * Teaching
+ */
+.teaching {
+  grid-area: teaching;
+}
+
+.univ {
+  &__name {
+    font-size: 1rem;
+    @include font-weight(semibold);
+  }
+
+  &__courses {
+    margin-left: 2rem;
+    list-style: none;
+  }
+}
+
+.course {
+  margin-bottom: 1.5rem;
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__terms {
+    @include font-size(12px);
+    margin-bottom: 0;
+  }
+}
+
 
 /**
  * Publications

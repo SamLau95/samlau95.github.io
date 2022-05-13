@@ -7,7 +7,7 @@
  */
 
 @include headings() {
-  @include font-weight(bold);
+  @include font-weight(semibold);
   text-align: left;
 }
 

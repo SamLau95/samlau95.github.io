@@ -9,7 +9,7 @@ links:
   - name: Podcast
     url: https://www.youtube.com/watch?v=_vPmMYSGAlU
 excerpt: >
-  Pandas Tutor makes step-by-step diagrams to show how Python pandas code
+  makes step-by-step diagrams to show how Python pandas code
   transforms data.
 no_content: true
 ---
