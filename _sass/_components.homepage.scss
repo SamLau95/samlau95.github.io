@@ -45,17 +45,26 @@
   @include media-query(lap-and-up) {
     margin-bottom: 3 * $spacing-unit; // [2]
   }
+
+  &__name {
+    @include font-size(64px);
+    text-transform: lowercase;
+    letter-spacing: -1px;
+  }
+
+  &__intro {
+    margin-bottom: $spacing-unit--tiny;
+  }
+
+  &__announce {
+    @include font-weight(bold);
+  }
 }
 
-.masthead__name {
-  @include font-size(64px);
-  text-transform: lowercase;
-  letter-spacing: -1px;
-}
-
-.masthead__intro {
-  margin-bottom: $spacing-unit--tiny;
-}
+// .announce-horn {
+//   display: inline-block;
+//   text-align: center;
+// }
 
 /**
  * Contact info

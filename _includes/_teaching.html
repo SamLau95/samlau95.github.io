@@ -1,11 +1,9 @@
 {%- comment -%}
 This partial requires a param: `teaching`
-Optional param: mark_instructor=true
 {%- endcomment -%}
 
 
 {%- assign teaching = include.teaching -%}
-{%- assign mark_instructor = include.mark_instructor | default: false -%}
 {%- for univ in teaching -%}
 
 <div class="univ">
@@ -14,22 +12,45 @@ Optional param: mark_instructor=true
     {%- for course in univ.courses -%}
     <li class="course">
       <p class="course__title">{{ course.code }}: {{ course.name }}</p>
+      {%- if course.terms -%}
       <p class="course__terms">
-        {%- if mark_instructor -%}
-          Instructor:&nbsp;
-        {%- endif -%}
+        Instructor:&nbsp;
 
-        {%- for term in course.terms -%} {%- if term.url -%}
-        <a class="course__link" href="{{ term.url }}" target="_blank"
-          >{{ term.term }}</a
-        >
-        {%- else -%} {{ term.term }} {%- endif -%}
+        {%- for term in course.terms -%}
+          {%- if term.url -%}
+          <a class="course__link" href="{{ term.url }}" target="_blank"
+            >{{ term.term }}</a
+          >
+          {%- else -%}
+          {{ term.term }}
+          {%- endif -%}
 
-        {% if forloop.last == false %}
-          <span class="course__term--spacer">—</span>
-        {% endif %}
+          {% if forloop.last == false %}
+            <span class="course__term--spacer">—</span>
+          {% endif %}
         {%- endfor -%}
       </p>
+      {%- endif -%}
+
+      {%- if course.ta_terms -%}
+      <p class="course__terms">
+        TA:&nbsp;
+
+        {%- for term in course.ta_terms -%}
+          {%- if term.url -%}
+          <a class="course__link" href="{{ term.url }}" target="_blank"
+            >{{ term.term }}</a
+          >
+          {%- else -%}
+          {{ term.term }}
+          {%- endif -%}
+
+          {% if forloop.last == false %}
+            <span class="course__term--spacer">—</span>
+          {% endif %}
+        {%- endfor -%}
+      </p>
+      {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>

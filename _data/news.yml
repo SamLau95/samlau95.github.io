@@ -1,5 +1,4 @@
-# These news items are rendered to the homepage. Only the first three items
-# are shown.
+# These news items are rendered to the homepage.
 
 - date: May 2022
   text: >
@@ -20,9 +19,9 @@
     Python. The video recording is <a href="https://youtu.be/_vPmMYSGAlU"
     target="_blank">now available</a>.
 
-- date: May 2021
-  text: >
-    I presented TweakIt at CHI 2021. TweakIt is a system that integrates Python
-    outputs directly in spreadsheets for data analysts. The 5-min video
-    presentation is <a href="https://youtu.be/wn--JTsvuqA" target="_blank">on
-    YouTube</a>.
+# - date: May 2021
+#   text: >
+#     I presented TweakIt at CHI 2021. TweakIt is a system that integrates Python
+#     outputs directly in spreadsheets for data analysts. The 5-min video
+#     presentation is <a href="https://youtu.be/wn--JTsvuqA" target="_blank">on
+#     YouTube</a>.

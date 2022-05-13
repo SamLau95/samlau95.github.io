@@ -7,14 +7,17 @@ layout: default
     <h1 class="masthead__name">i am sam!</h1>
     <p class="masthead__intro">
       I'm a PhD candidate at UC San Diego advised by Philip Guo. I study
-      human-computer interaction (HCI) and design software tools that help
-      programming, statistics, and data science instructors prepare their
+      human-computer interaction (HCI) and design software tools like
+      <a href="https://pandastutor.com/" target="_blank" >Pandas Tutor</a> that
+      help programming, statistics, and data science instructors prepare their
       lessons. I'm also writing a textbook called
       <a href="http://www.textbook.ds100.org/" target="_blank"
         >Learning Data Science</a
       >.
+
       <br />
       <br />
+
       In the past, I was a computer science student at UC Berkeley where I
       helped launch Data 8 and Data 100, Berkeley's two flagship data science
       courses. My instructor ratings are available on
@@ -24,6 +27,14 @@ layout: default
       >
         the HKN website</a
       >.
+
+      <br /><br />
+
+      <span class="masthead__announce">
+        <span class="announce-horn">📣</span>
+        I'm looking for full-time teaching faculty jobs (for Fall 2023).
+        <span class="announce-horn">📣</span>
+      </span>
     </p>
 
     <div class="masthead__contact">
@@ -58,10 +69,7 @@ layout: default
 
   <div class="teaching">
     <h2 class="o-section-heading">teaching</h2>
-    {%- include _teaching.html
-        teaching=site.data.teaching.instructor
-        mark_instructor=true
-        -%}
+    {%- include _teaching.html teaching=site.data.teaching -%}
   </div>
 
   <div class="pubs">
