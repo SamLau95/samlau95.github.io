@@ -6,7 +6,6 @@
     name: Principles of Data Science
     terms:
     - term: 22su (upcoming)
-
   - code: COGS 18
     name: Introduction to Python
     ta_terms:
@@ -47,7 +46,7 @@
   - code: CS 169
     name: Software Engineering
     ta_terms:
-    - term: 15fa
+    - term: 15sp
   - code: CS 61AS
     name: Structure and Interpretation of Computer Programs
     ta_terms:
