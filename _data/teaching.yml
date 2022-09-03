@@ -5,7 +5,8 @@
   - code: DSC 10
     name: Principles of Data Science
     terms:
-    - term: 22su (upcoming)
+    - term: 22su
+      url: https://dsc10.com/
   - code: COGS 18
     name: Introduction to Python
     ta_terms:
