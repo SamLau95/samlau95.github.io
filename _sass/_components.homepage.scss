@@ -61,6 +61,28 @@
   }
 }
 
+.masthead__applications {
+  display: flex;
+  // TODO: switch to row when statements are up
+  flex-direction: column;
+  flex-wrap: wrap;
+
+
+  @include media-query(palm) {
+    flex-direction: column;
+  }
+
+  &--spacer {
+    margin: 0 0.25rem;
+
+    // TODO: remove when statements are up
+    display: none;
+    // @include media-query(palm) {
+    //   display: none;
+    // }
+  }
+}
+
 // .announce-horn {
 //   display: inline-block;
 //   text-align: center;
