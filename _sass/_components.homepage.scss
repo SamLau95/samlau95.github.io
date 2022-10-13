@@ -63,8 +63,7 @@
 
 .masthead__applications {
   display: flex;
-  // TODO: switch to row when statements are up
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 
 
@@ -75,11 +74,9 @@
   &--spacer {
     margin: 0 0.25rem;
 
-    // TODO: remove when statements are up
-    display: none;
-    // @include media-query(palm) {
-    //   display: none;
-    // }
+    @include media-query(palm) {
+      display: none;
+    }
   }
 }
 
