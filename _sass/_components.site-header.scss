@@ -17,6 +17,11 @@
 
   @include font-size(20px);
   text-transform: lowercase; // [2]
+
+  // shrink margin on mobile
+  @include media-query(palm) {
+    margin-bottom: $spacing-unit;
+  }
 }
 
 .nav__item {
