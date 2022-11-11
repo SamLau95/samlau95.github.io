@@ -4,6 +4,18 @@
 # http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
 - year: 2022
   title: >-
+    Codehound: Helping Instructors Track Pedagogical Code Dependencies in
+    Course Materials
+  authors: >-
+    Sam Lau, Philip Guo
+  venue: >-
+    ACM SIGPLAN SPLASH-E Symposium (SPLASH-E)
+  blurb: >-
+    Tracking code use within course materials enables tools that give automated
+    help while refactoring a course.
+  pdf: /pubs/CodeHound_SPLASHE-2022.pdf
+- year: 2022
+  title: >-
     The Challenges of Evolving Technical Courses at Scale: Four Case Studies of
     Updating Large Data Science Courses
   authors: >-
