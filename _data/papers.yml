@@ -2,12 +2,39 @@
 #
 # Note that >- is the chomping folded block literal in YAML:
 # http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
+- year: 2023
+  title: >-
+    From "Ban It Till We Understand It" to "Resistance is Futile": How
+    University Programming Instructors Plan to Adapt as More Students Use AI
+    Code Generation and Explanation Tools such as ChatGPT and GitHub Copilot
+    (PDF coming soon)
+  authors: >-
+    Sam Lau, Philip J. Guo
+  venue: >-
+    ACM Conference on International Computing Education Research (ICER)
+  blurb: >-
+    Interviews with a diverse range of instructors reveal a broad range of
+    perspectives on how to approach effective teaching with – or in spite of
+    – AI coding tools.
+  # pdf: /pubs/Pandas_R_SQL_Tutors-DataEd_2023.pdf
+- year: 2023
+  title: >-
+    Teaching Data Science by Visualizing Data Table Transformations: Pandas
+    Tutor for Python, Tidy Data Tutor for R, and SQL Tutor
+  authors: >-
+    Sam Lau*, Sean Kross*, Eugene Wu, Philip J. Guo (*equal contribution)
+  venue: >-
+    International Workshop on Data Systems Education (DataEd)
+  blurb: >-
+    The Pandas/Tidy Data/SQL Tutor tools automatically create diagrams for data
+    science code.
+  pdf: /pubs/Pandas_R_SQL_Tutors-DataEd_2023.pdf
 - year: 2022
   title: >-
     Codehound: Helping Instructors Track Pedagogical Code Dependencies in
     Course Materials
   authors: >-
-    Sam Lau, Philip Guo
+    Sam Lau, Philip J. Guo
   venue: >-
     ACM SIGPLAN SPLASH-E Symposium (SPLASH-E)
   blurb: >-
@@ -20,7 +47,7 @@
     Updating Large Data Science Courses
   authors: >-
     Sam Lau, Justin Eldridge, Shannon Ellis, Aaron Fraenkel, Marina Langlois,
-    Suraj Rampure, Janine Tiefenbruck, Philip Guo
+    Suraj Rampure, Janine Tiefenbruck, Philip J. Guo
   venue: >-
     ACM Conference on Learning @ Scale (L@S)
   blurb: >-
@@ -32,7 +59,7 @@
     How Computer Science and Statistics Instructors Approach Data Science
     Pedagogy Differently: Three Case Studies
   authors: >-
-    Sam Lau, Deborah Nolan, Joseph Gonzalez, Philip Guo
+    Sam Lau, Deborah Nolan, Joseph Gonzalez, Philip J. Guo
   venue: >-
     ACM Technical Symposium on Computer Science Education (SIGCSE)
   blurb: >-

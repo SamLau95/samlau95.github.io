@@ -47,22 +47,7 @@
   }
 
   &__name {
-    @include font-size(64px);
-    text-transform: lowercase;
-    letter-spacing: -1px;
-
-    // on mobile, hide big "i am sam!" and display a small one inline instead
-    @include media-query(palm) {
-      display: none;
-    }
-
-    &--mobile {
-      display: none;
-      @include font-weight(bold);
-      @include media-query(palm) {
-        display: initial;
-      }
-    }
+    @include font-weight(bold);
   }
 
   &__intro {

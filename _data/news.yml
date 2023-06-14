@@ -1,23 +1,28 @@
 # These news items are rendered to the homepage.
 
+- date: June 2023
+  text: >
+    Our ICER paper on teaching in the age of AI coding tools was accepted to
+    ICER 2023. Looking forward to Chicago!
+
 - date: May 2022
   text: >
     Pandas Tutor v2 released and featured on
     <a href="https://blog.pyodide.org/posts/pandastutor/" target="_blank">
       the official Pyodide blog</a>.
 
-- date: Mar 2022
-  text: >
-    I presented my paper "How Computer Science and Statistics Instructors
-    Approach Data Science Pedagogy Differently" at SIGCSE 2022. The video
-    presentation is available
-    <a href="https://youtu.be/lx2RP3LvZCI" target="_blank">on YouTube</a>.
+# - date: Mar 2022
+#   text: >
+#     I presented my paper "How Computer Science and Statistics Instructors
+#     Approach Data Science Pedagogy Differently" at SIGCSE 2022. The video
+#     presentation is available
+#     <a href="https://youtu.be/lx2RP3LvZCI" target="_blank">on YouTube</a>.
 
-- date: Mar 2022
-  text: >
-    Pandas Tutor was featured on Talk Python, the most popular podcast for
-    Python. The video recording is <a href="https://youtu.be/_vPmMYSGAlU"
-    target="_blank">now available</a>.
+# - date: Mar 2022
+#   text: >
+#     Pandas Tutor was featured on Talk Python, the most popular podcast for
+#     Python. The video recording is <a href="https://youtu.be/_vPmMYSGAlU"
+#     target="_blank">now available</a>.
 
 # - date: May 2021
 #   text: >
