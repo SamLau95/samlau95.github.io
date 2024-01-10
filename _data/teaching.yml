@@ -2,6 +2,16 @@
 
 - univ: UC San Diego
   courses:
+  - code: DSC 106
+    name: Data Visualization
+    terms:
+    - term: 24wi
+      url: https://dsc106.com/
+  - code: DSC 80
+    name: Practice and Application of Data Science
+    terms:
+    - term: 23fa
+      url: https://dsc-courses.github.io/dsc80-2023-fa/
   - code: DSC 10
     name: Principles of Data Science
     terms:
