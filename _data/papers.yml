@@ -2,6 +2,31 @@
 #
 # Note that >- is the chomping folded block literal in YAML:
 # http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
+- year: 2025
+  title: >-
+    “I’m not sure, but...”: Expert Practices that Enable Effective Code
+    Comprehension in Data Science
+  authors: >-
+    Christopher Lum*, Guoxuan Xu*, Sam Lau (*equal contribution)
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Expert data scientists apply a range of metacognitive practices to develop
+    deeper understanding of complicated dataframe code.
+  pdf: /pubs/2025_sigcse_experts_vs_novices_SIGCSE.pdf
+- year: 2025
+  title: >-
+    How Novices Use Program Visualizations to Understand Code that Manipulates
+    Data Tables
+  authors: >-
+    Ylesia Wu*, Qirui Zheng*, Sam Lau (*equal contribution)
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Program visualization tools like Pandas Tutor can help novices verify
+    assumptions and see salient information, but diagrams can become difficult
+    to understand without methods for managing cognitive load.
+  pdf: /pubs/2025_sigcse_pandas_tutor_SIGCSE.pdf
 - year: 2023
   title: >-
     From "Ban It Till We Understand It" to "Resistance is Futile": How
