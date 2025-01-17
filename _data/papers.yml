@@ -27,6 +27,21 @@
     assumptions and see salient information, but diagrams can become difficult
     to understand without methods for managing cognitive load.
   pdf: /pubs/2025_sigcse_pandas_tutor_SIGCSE.pdf
+- year: 2025
+  title: >-
+    Beyond the Hype: A Comprehensive Review of Current Trends in Generative AI
+    Research, Teaching Practices, and Tools
+  authors: >-
+    James Prather, Juho Leinonen, Natalie Kiesler, Jamie Gorson Benario, Sam
+    Lau, Stephen MacNeil, Narges Norouzi, Simone Opel, Vee Pettit, Leo Porter,
+    Brent N Reeves, Jaromir Savelka, David H Smith IV, Sven Strickroth, Daniel
+    Zingaro
+  venue: >-
+    ACM Innovation and Technology in Computer Science Education Conference
+  blurb: >-
+    A systematic literature review, survey, and interviews with computer science
+    instructors highlight salient trends in GenAI usage and perceptions.
+  pdf: /pubs/beyond-the-hype-comprehensive-review-of-trends-generative-ai_ITICSE-2025.pdf
 - year: 2023
   title: >-
     From "Ban It Till We Understand It" to "Resistance is Futile": How
