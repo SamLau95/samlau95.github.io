@@ -4,6 +4,18 @@
 # http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
 - year: 2025
   title: >-
+    The Design Space of LLM-Based AI Coding Assistants: An Analysis of 90
+    Systems in Academia and Industry
+  authors: >-
+    Sam Lau and Philip J. Guo
+  venue: >-
+    IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)
+  blurb: >-
+    How have AI coding assistants evolved over the past few years, and where is
+    the field headed?
+  pdf: /pubs/2025_analysis-of-90-genai-coding-tools_VLHCC.pdf
+- year: 2025
+  title: >-
     “I’m not sure, but...”: Expert Practices that Enable Effective Code
     Comprehension in Data Science
   authors: >-

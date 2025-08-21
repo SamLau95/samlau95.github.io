@@ -62,11 +62,6 @@ layout: default
     {%- endfor -%}
   </div>
 
-  <div class="teaching">
-    <h2 class="o-section-heading">teaching</h2>
-    {%- include _teaching.html teaching=site.data.teaching -%}
-  </div>
-
   <div class="pubs">
     <h2 class="o-section-heading">papers</h2>
     {%- for pub in site.data.papers -%}
@@ -94,6 +89,11 @@ layout: default
       <div class="pub__blurb">{{ pub.blurb }}</div>
     </div>
     {%- endfor -%}
+  </div>
+
+  <div class="teaching">
+    <h2 class="o-section-heading">teaching</h2>
+    {%- include _teaching.html teaching=site.data.teaching -%}
   </div>
 
   <div class="news">
