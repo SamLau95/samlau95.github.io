@@ -2,6 +2,51 @@
 #
 # Note that >- is the chomping folded block literal in YAML:
 # http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
+- year: 2026
+  title: >-
+    Barriers that Programming Instructors Face While Performing Emergency
+    Pedagogical Design to Shape Student-AI Interactions with Generative AI Tools
+  authors: >-
+    Sam Lau, Kianoosh Boroojeni, Harry Keeling, Jenn Marroquin
+  venue: >-
+    ACM Conference on Human Factors in Computing Systems (CHI)
+  blurb: >-
+    Through interviews with 13 computing instructors and a survey of 169
+    instructors, we identify five key barriers that instructors face when
+    performing "emergency pedagogical design" to reactively reshape their
+    courses around student GenAI use: fragmented buy-in, conflicting policies,
+    implementation challenges, assessment misfit, and lack of resources.
+  pdf: /pubs/2026_emergency-pedagogical-design-genai-faculty_CHI.pdf
+- year: 2026
+  title: >-
+    Improving LLM-Generated Educational Content: A Case Study on Prototyping,
+    Prompt Engineering, and Evaluating a Tool for Generating Programming
+    Problems for Data Science
+  authors: >-
+    Jiaen Yu*, Ylesia Wu*, Gabriel Cha, Ayush Shah, Sam Lau (*equal
+    contribution)
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Iterative prompt engineering and careful context curation substantially
+    improved the correctness, contextual fit, and coherence of auto-generated
+    programming practice problems in a JupyterLab tool (ContentGen).
+  pdf: /pubs/2026_contentgen_SIGCSE.pdf
+- year: 2026
+  title: >-
+    Designing and Implementing Skill Tests at Scale: Frequent, Computer-Based,
+    Proctored Assessments with Minimal Infrastructure Requirements
+  authors: >-
+    Anastasiya Markova, Anish Kasam, Bryce Hackel, Marina Langlois, Sam Lau
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Replacing a midterm with weekly 10-minute proctored programming quizzes
+    ("Skill Tests") run by course staff in ordinary campus rooms reduced
+    student anxiety without compromising final exam performance, offering a
+    practical blueprint for frequent assessment that doesn't require dedicated
+    institutional testing infrastructure.
+  pdf: /pubs/2026_skill-tests-at-scale_SIGCSE.pdf
 - year: 2025
   title: >-
     The Design Space of LLM-Based AI Coding Assistants: An Analysis of 90
