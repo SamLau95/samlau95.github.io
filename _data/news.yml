@@ -1,20 +1,24 @@
 # These news items are rendered to the homepage.
 
-- date: Nov 2024
+- date: Feb 2026
   text: >
-    Congratulations to four members of our lab – Christopher Lum, Guoxuan
-    (Jason) Xu, Ylesia Wu, and Qirui (Sara) Zheng – for getting their very first
-    papers published. See you at SIGCSE 2025!
+    Attending SIGCSE 2026? Check out [our session on teaching CS with AI on Thu
+    Feb
+    19](https://sigcse2026.sigcse.org/details/sigcse-ts-2026-supporter-sessions/9/GenAI-Consortium-Curriculum-Research-and-Best-Practices-for-Teaching-CS-with-AI)!
+    My students will also be presenting on our experiences with [skill
+    tests](https://sigcse2026.sigcse.org/details/sigcse-ts-2026-Papers/72/Designing-and-Implementing-Skill-Tests-at-Scale-Frequent-Computer-Based-Proctored-)
+    and [generating data science practice
+    problems](https://sigcse2026.sigcse.org/details/sigcse-ts-2026-Papers/121/Improving-LLM-Generated-Educational-Content-A-Case-Study-on-Prototyping-Prompt-Engi).
 
-- date: Sep 2023
-  text: >
-    Started as an Assistant Teaching Professor in Data Science at UCSD.
+# - date: Sep 2023
+#   text: >
+#     Started as an Assistant Teaching Professor in Data Science at UCSD.
 
-- date: May 2022
-  text: >
-    Pandas Tutor v2 released and featured on
-    <a href="https://blog.pyodide.org/posts/pandastutor/" target="_blank">
-      the official Pyodide blog</a>.
+# - date: May 2022
+#   text: >
+#     Pandas Tutor v2 released and featured on
+#     <a href="https://blog.pyodide.org/posts/pandastutor/" target="_blank">
+#       the official Pyodide blog</a>.
 
 # - date: Mar 2022
 #   text: >

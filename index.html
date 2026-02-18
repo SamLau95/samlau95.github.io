@@ -100,7 +100,7 @@ layout: default
     <h2 class="o-section-heading">news</h2>
     {%- for news in site.data.news -%}
     <div class="news__item">
-      {{ news.text }}
+      {{ news.text | markdownify }}
       <span class="news__date">– {{ news.date }}</span>
     </div>
     {%- endfor -%}
