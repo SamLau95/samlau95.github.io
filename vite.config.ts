@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite-plus';
+import { defineConfig } from "vite-plus";
 
 export default defineConfig({
   staged: {
-    '*': 'vp check --fix',
+    "*": "vp check --fix",
   },
   lint: { options: { typeAware: true, typeCheck: true } },
   fmt: {
@@ -10,7 +10,7 @@ export default defineConfig({
       sortScripts: true,
     },
     sortTailwindcss: {
-      stylesheet: './src/styles/global.css',
+      stylesheet: "./src/styles/global.css",
     },
   },
 });

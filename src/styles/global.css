@@ -1,4 +1,12 @@
 @import "tailwindcss";
 
+/*
+ * sadly, i can't use oxfmt with astro files yet until
+ * https://github.com/oxc-project/oxc/issues/19715 lands, so i needed to
+ * configure prettier to sort tailwind classnames
+ */
+
 @theme {
-  --color-offwhite: #fcfcfc; --color-offblack: rgb(27, 27, 27); }
+  --color-offblack: oklch(22% 0 0);
+  --color-offwhite: oklch(99% 0 0);
+}
