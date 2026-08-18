@@ -1,0 +1,30 @@
+{
+  "name": "samlau95.github.io",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && astro build",
+    "dev": "astro dev",
+    "format": "vp fmt",
+    "prepare": "vp config",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/react": "^6.0.3",
+    "@tailwindcss/vite": "^4.2.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^7.2.3",
+    "prettier": "^3.9.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "typescript": "~5.9.3",
+    "vite-plus": "latest"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

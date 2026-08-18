@@ -1,0 +1,355 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Lau - UC San Diego</title>
+</head>
+<body class="bradley-body">
+  <div class="bradley-shell">
+    <nav class="bradley-nav" aria-label="Primary">
+      <menu>
+        <li><a href="#about" aria-current="page"><em>about</em></a></li>
+        <li><a href="#work"><em>work</em></a></li>
+        <li><a href="#writing"><em>writing</em></a></li>
+        <li><a href="#teaching"><em>teaching</em></a></li>
+        <li><a href="#links"><em>links</em></a></li>
+      </menu>
+    </nav>
+
+    <main class="bradley-main">
+      <div class="bradley-rule" aria-hidden="true"></div>
+
+      <article class="bradley-article">
+        <section id="about" class="intro-block" aria-labelledby="page-title">
+          <img src="/sam_lau_headshot_small.JPG" alt="Sam Lau" class="portrait" width="96" height="96" />
+          <h1 id="page-title">Sam Lau</h1>
+          <p>
+            I am an Assistant Teaching Professor in the Halıcıoğlu Data Science
+            Institute at UC San Diego.
+          </p>
+          <p>
+            I study how people learn data science and programming, then design
+            software tools that make the invisible work of code easier to see,
+            discuss, and teach.
+          </p>
+          <p>
+            I authored <a href="https://learningds.org/">Learning Data Science</a>,
+            published by O'Reilly Media in 2023.
+          </p>
+        </section>
+
+        <hr />
+
+        <section id="work" class="section-block">
+          <h2>Work</h2>
+          <p>
+            My research combines human-computer interaction, computing education,
+            and data science pedagogy. I am especially interested in programming
+            tools, visual explanations, and AI systems that help instructors and
+            students reason about code.
+          </p>
+          <p>
+            <a href="https://pandastutor.com/">Pandas Tutor</a> creates
+            step-by-step diagrams showing how Python pandas code transforms data.
+          </p>
+        </section>
+
+        <hr />
+
+        <section id="writing" class="section-block">
+          <h2>Selected Publications</h2>
+          <ol class="publication-list">
+            <li>
+              Barriers that Programming Instructors Face While Performing Emergency
+              Pedagogical Design to Shape Student-AI Interactions with Generative
+              AI Tools. <span>CHI 2026</span>
+            </li>
+            <li>
+              Improving LLM-Generated Educational Content. <span>SIGCSE 2026</span>
+            </li>
+            <li>
+              Designing and Implementing Skill Tests at Scale. <span>SIGCSE 2026</span>
+            </li>
+            <li>
+              The Design Space of LLM-Based AI Coding Assistants. <span>VL/HCC 2025</span>
+            </li>
+            <li>
+              How Novices Use Program Visualizations. <span>SIGCSE 2025</span>
+            </li>
+            <li>
+              Teaching Data Science by Visualizing Data Table Transformations.
+              <span>DataEd 2023</span>
+            </li>
+          </ol>
+        </section>
+
+        <hr />
+
+        <section id="teaching" class="section-block">
+          <h2>Teaching</h2>
+          <p>
+            At UC San Diego, I teach <strong>DSC 80</strong>, Practice and
+            Application of Data Science, and <strong>DSC 106</strong>, Data
+            Visualization.
+          </p>
+          <p>
+            Previously at UC Berkeley, I taught <strong>Data 100</strong>,
+            Principles and Techniques of Data Science, and <strong>Data 8</strong>,
+            Foundations of Data Science.
+          </p>
+        </section>
+
+        <hr />
+
+        <section id="links" class="link-block" aria-label="Links">
+          <a href="mailto:lau@ucsd.edu">Email</a>
+          <a href="/cv">CV</a>
+          <a href="https://github.com/samlau95">GitHub</a>
+          <a href="https://twitter.com/samlau95">Twitter</a>
+          <a href="https://dstl-lab.github.io/">DSTL Lab</a>
+        </section>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  .bradley-body {
+    margin: 0;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #262626;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .bradley-shell {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 4rem;
+  }
+
+  .bradley-nav {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .bradley-nav menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .bradley-nav a {
+    color: #9a9a9a;
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  .bradley-nav a:hover,
+  .bradley-nav a[aria-current="page"] {
+    color: #171717;
+  }
+
+  .bradley-main {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .bradley-rule {
+    display: none;
+  }
+
+  .bradley-article {
+    max-width: 42rem;
+  }
+
+  .intro-block,
+  .section-block {
+    text-align: left;
+    hyphens: auto;
+  }
+
+  .intro-block {
+    position: relative;
+  }
+
+  .portrait {
+    float: right;
+    width: 4.25rem;
+    height: 4.25rem;
+    margin: 0 0 0.75rem 1rem;
+    border-radius: 50%;
+    filter: grayscale(1);
+    object-fit: cover;
+  }
+
+  h1,
+  h2,
+  p,
+  ol {
+    margin: 0;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    color: #171717;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #171717;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  p + p {
+    margin-top: 1rem;
+  }
+
+  a {
+    color: #262626;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 150ms ease;
+  }
+
+  a:hover {
+    color: #000000;
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .publication-list {
+    padding-left: 1.25rem;
+  }
+
+  .publication-list li + li {
+    margin-top: 0.75rem;
+  }
+
+  .publication-list span {
+    color: #737373;
+    white-space: nowrap;
+  }
+
+  .link-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.78rem;
+  }
+
+  @media (min-width: 480px) {
+    .bradley-shell {
+      flex-direction: row;
+      padding: 1.5rem 1.5rem 5rem;
+    }
+
+    .bradley-nav {
+      flex: 0 0 5.5rem;
+      margin-right: 1.5rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+      text-align: right;
+    }
+
+    .bradley-nav menu {
+      position: sticky;
+      top: 1.5rem;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+    }
+
+    .bradley-main {
+      max-width: 42rem;
+      padding-left: 1.5rem;
+    }
+
+    .intro-block,
+    .section-block {
+      text-align: justify;
+    }
+
+    .bradley-rule {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      border-left: 1px solid #e5e5e5;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .bradley-shell {
+      padding: 3rem 3rem 6rem;
+    }
+
+    .bradley-nav {
+      margin-right: 2rem;
+    }
+
+    .bradley-nav menu {
+      top: 3rem;
+    }
+
+    .bradley-main {
+      padding-left: 2rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bradley-shell {
+      padding: 6rem 6rem 7rem;
+    }
+
+    .bradley-nav {
+      margin-right: 3rem;
+    }
+
+    .bradley-nav menu {
+      top: 6rem;
+    }
+
+    .bradley-main {
+      padding-left: 3rem;
+    }
+  }
+</style>

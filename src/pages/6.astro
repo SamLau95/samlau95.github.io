@@ -1,0 +1,377 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Lau — UC San Diego</title>
+</head>
+<body class="solomenko-body">
+  <div class="solomenko-site">
+    <header class="site-header">
+      <div class="identity">
+        <img src="/sam_lau_headshot_small.JPG" class="avatar" width="100" height="100" alt="Sam Lau" loading="lazy" />
+        <div>
+          <h1><a href="/">Sam Lau</a></h1>
+          <div class="status-line">
+            <span class="status-dot" aria-hidden="true">
+              <span class="status-ping"></span>
+              <span class="status-core"></span>
+            </span>
+            <span>Assistant Teaching Professor</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-links">
+        <nav class="link-row" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="mailto:lau@ucsd.edu">Email</a>
+          <a href="/cv">CV</a>
+        </nav>
+        <div class="link-row external-links">
+          <a href="https://github.com/samlau95">GitHub</a>
+          <a href="https://twitter.com/samlau95">Twitter</a>
+          <a href="https://dstl-lab.github.io/">DSTL Lab</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <article class="cv">
+        <section class="cv-row">
+          <h2>About Me</h2>
+          <div class="cv-copy">
+            <h3>Hello! I'm Sam.</h3>
+            <p>I'm an Assistant Teaching Professor in the Halıcıoğlu Data Science Institute at UC San Diego.</p>
+            <p>I apply methods from human-computer interaction to design software tools for education, with a focus on helping students learn data science and programming.</p>
+            <p>I authored <em>Learning Data Science</em>, published by O'Reilly Media in 2023.</p>
+          </div>
+        </section>
+
+        <section class="cv-row">
+          <h2>Research</h2>
+          <div class="cv-copy">
+            <h3>Human-computer interaction for data science education</h3>
+            <p>My work studies how instructors and students use programming tools, visualizations, and AI systems while learning computing and data science.</p>
+
+            <h3>Software tools for learning</h3>
+            <p><a href="https://pandastutor.com/">Pandas Tutor</a> makes step-by-step diagrams showing how Python pandas code transforms data.</p>
+          </div>
+        </section>
+
+        <section class="cv-row">
+          <h2>News</h2>
+          <div class="cv-copy">
+            <h3>SIGCSE 2026</h3>
+            <p>Attending SIGCSE 2026 with sessions on teaching CS with AI and student presentations on skill tests and practice problems.</p>
+          </div>
+        </section>
+
+        <section class="cv-row">
+          <h2>Selected Publications</h2>
+          <div class="cv-copy publication-list">
+            <h3>Barriers that Programming Instructors Face While Performing Emergency Pedagogical Design to Shape Student-AI Interactions with Generative AI Tools</h3>
+            <p>CHI 2026</p>
+
+            <h3>Improving LLM-Generated Educational Content</h3>
+            <p>SIGCSE 2026</p>
+
+            <h3>Designing and Implementing Skill Tests at Scale</h3>
+            <p>SIGCSE 2026</p>
+
+            <h3>The Design Space of LLM-Based AI Coding Assistants</h3>
+            <p>VL/HCC 2025</p>
+
+            <h3>"I'm not sure, but...": Expert Practices</h3>
+            <p>SIGCSE 2025</p>
+
+            <h3>How Novices Use Program Visualizations</h3>
+            <p>SIGCSE 2025</p>
+
+            <h3>Beyond the Hype: Generative AI Review</h3>
+            <p>ITiCSE 2025</p>
+
+            <h3>Teaching Data Science by Visualizing Data Table Transformations</h3>
+            <p>DataEd 2023</p>
+          </div>
+        </section>
+
+        <section class="cv-row">
+          <h2>Teaching</h2>
+          <div class="cv-copy">
+            <h3>UC San Diego</h3>
+            <p><strong>DSC 80</strong> Practice and Application of Data Science</p>
+            <p><strong>DSC 106</strong> Data Visualization</p>
+
+            <h3>UC Berkeley</h3>
+            <p><strong>Data 100</strong> Principles and Techniques of Data Science</p>
+            <p><strong>Data 8</strong> Foundations of Data Science</p>
+          </div>
+        </section>
+
+        <section class="cv-row">
+          <h2>Education</h2>
+          <div class="cv-copy">
+            <h3>UC Berkeley</h3>
+            <p>Ph.D. in Computer Science</p>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="link-row" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/5">Previous Prototype</a>
+        <a href="mailto:lau@ucsd.edu">Email</a>
+      </nav>
+      <div class="footer-meta">
+        <span>© 2026 Sam Lau</span>
+        <span>UC San Diego</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
+<style>
+  :global(html) {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+  }
+
+  .solomenko-body {
+    margin: 0;
+    min-height: 100vh;
+    background: #fafafa;
+    color: #18181b;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .solomenko-site {
+    min-height: 100vh;
+  }
+
+  .site-header,
+  .site-main,
+  .site-footer {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .site-header {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .identity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .avatar {
+    width: auto;
+    height: 3rem;
+    margin-right: 1rem;
+    border-radius: 9999px;
+    object-fit: cover;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    margin-bottom: 0.125rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+
+  .status-line {
+    display: flex;
+    align-items: center;
+    color: #52525b;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .status-dot {
+    position: relative;
+    display: flex;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .status-ping,
+  .status-core {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: #22c55e;
+  }
+
+  .status-ping {
+    opacity: 0.75;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .header-links,
+  .site-footer {
+    color: #3f3f46;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .header-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-weight: 500;
+  }
+
+  a {
+    color: #27272a;
+    text-decoration-line: underline;
+    text-decoration-color: #334155;
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    color: #18181b;
+    text-decoration-line: none;
+  }
+
+  .site-main {
+    padding-bottom: 3rem;
+  }
+
+  .cv-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .cv-row h2 {
+    color: #18181b;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .cv-copy {
+    color: #3f3f46;
+  }
+
+  .cv-copy h3 {
+    color: #18181b;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+  }
+
+  .cv-copy p {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .cv-copy h3 + p {
+    margin-top: 0.5rem;
+  }
+
+  .cv-copy p + h3 {
+    margin-top: 1.5rem;
+  }
+
+  .publication-list h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .publication-list p {
+    margin-top: 0.25rem;
+    color: #71717a;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .publication-list p + h3 {
+    margin-top: 1.25rem;
+  }
+
+  .site-footer {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    color: #52525b;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .site-header {
+      padding-top: 4rem;
+    }
+
+    .avatar {
+      height: 4rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .header-links,
+    .footer-meta {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .cv-row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+  }
+</style>

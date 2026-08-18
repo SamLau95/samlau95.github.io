@@ -1,0 +1,7 @@
+- my personal academic website. i'm a faculty member at UCSD
+- astro app, rendered to github pages
+- use react when it makes sense, otherwise markdown by default
+- never start the dev server, but if it's already running then use it.
+- when testing new changes, use these tools to verify changes:
+  - `uvx rodney` to work with the browser
+  - `uvx showboat` to create a markdown report for me to verify your work.

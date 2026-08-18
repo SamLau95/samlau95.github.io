@@ -1,0 +1,425 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Lau - UC San Diego</title>
+</head>
+<body class="pi-body">
+  <div class="pi-page">
+    <div class="pi-container">
+      <header class="pi-header">
+        <a href="/" class="wordmark">Sam Lau</a>
+        <nav class="pi-nav" aria-label="Primary">
+          <a href="#home" aria-current="page">Home</a>
+          <a href="#research">Research</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="home">
+        <section class="intro-panel" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">Halıcıoğlu Data Science Institute / UC San Diego</p>
+            <h1 id="page-title">Computing education, data science tools, and human-centered programming systems.</h1>
+          </div>
+          <img src="/sam_lau_headshot_small.JPG" alt="Sam Lau" class="headshot" width="144" height="144" />
+        </section>
+
+        <p class="mission">
+          I am an Assistant Teaching Professor at UC San Diego. I apply methods
+          from human-computer interaction to design software tools for education,
+          with a focus on helping students learn data science and programming.
+          I authored <a href="https://learningds.org/">Learning Data Science</a>,
+          published by O'Reilly Media in 2023.
+        </p>
+
+        <section id="research" class="timeline" aria-label="Research and work">
+          <article class="entry entry-featured">
+            <div class="entry-heading">
+              <h2><a href="https://pandastutor.com/">Pandas Tutor</a></h2>
+              <time>Project</time>
+            </div>
+            <p>
+              Step-by-step diagrams showing how Python pandas code transforms
+              data, designed to make table operations easier to inspect and teach.
+            </p>
+          </article>
+
+          <article class="entry entry-plain">
+            <div class="entry-heading">
+              <h2>Barriers that Programming Instructors Face While Performing Emergency Pedagogical Design</h2>
+              <time>CHI 2026</time>
+            </div>
+            <p>How instructors shape student-AI interactions with generative AI tools.</p>
+          </article>
+
+          <article class="entry entry-plain">
+            <div class="entry-heading">
+              <h2>Improving LLM-Generated Educational Content</h2>
+              <time>SIGCSE 2026</time>
+            </div>
+            <p>Methods for improving the quality of AI-generated materials for computing education.</p>
+          </article>
+
+          <article class="entry entry-featured">
+            <div class="entry-heading">
+              <h2>Designing and Implementing Skill Tests at Scale</h2>
+              <time>SIGCSE 2026</time>
+            </div>
+            <p>
+              Assessment infrastructure and pedagogy for practice-oriented data
+              science courses with many students.
+            </p>
+          </article>
+
+          <article class="entry entry-plain">
+            <div class="entry-heading">
+              <h2>The Design Space of LLM-Based AI Coding Assistants</h2>
+              <time>VL/HCC 2025</time>
+            </div>
+            <p>A map of interaction patterns and tradeoffs for AI tools that help people program.</p>
+          </article>
+
+          <article class="entry entry-plain">
+            <div class="entry-heading">
+              <h2>How Novices Use Program Visualizations</h2>
+              <time>SIGCSE 2025</time>
+            </div>
+            <p>Evidence about how learners interpret visual explanations while programming.</p>
+          </article>
+
+          <article class="entry entry-featured">
+            <div class="entry-heading">
+              <h2>Learning Data Science</h2>
+              <time>O'Reilly 2023</time>
+            </div>
+            <p>
+              A practical textbook for working with data using modern Python,
+              statistical reasoning, and exploratory analysis.
+            </p>
+          </article>
+        </section>
+
+        <section id="teaching" class="teaching-section">
+          <h2>Teaching</h2>
+          <div class="course-list">
+            <p><strong>DSC 80</strong> Practice and Application of Data Science</p>
+            <p><strong>DSC 106</strong> Data Visualization</p>
+            <p><strong>Data 100</strong> Principles and Techniques of Data Science</p>
+            <p><strong>Data 8</strong> Foundations of Data Science</p>
+          </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+          <p>
+            I work with the <a href="https://dstl-lab.github.io/">DSTL Lab</a>
+            on tools for data science teaching and learning.
+          </p>
+          <p class="contact-links">
+            <a href="mailto:lau@ucsd.edu">lau@ucsd.edu</a>
+            <a href="/cv">CV</a>
+            <a href="https://github.com/samlau95">GitHub</a>
+            <a href="https://twitter.com/samlau95">Twitter</a>
+          </p>
+        </section>
+      </main>
+
+      <footer class="pi-footer">
+        <p>Sam Lau</p>
+        <span>UC San Diego</span>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+  .pi-body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f8f7ef;
+    color: #171717;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pi-page {
+    overflow: hidden;
+    padding: 1rem;
+  }
+
+  .pi-container {
+    width: 100%;
+    max-width: 44rem;
+  }
+
+  .pi-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .wordmark {
+    color: #171717;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.875rem;
+    line-height: 1.05;
+    text-decoration: none;
+  }
+
+  .pi-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .pi-nav a {
+    color: #171717;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.45rem;
+    transition: color 150ms ease, text-decoration-thickness 150ms ease;
+  }
+
+  .pi-nav a:not([aria-current="page"]) {
+    color: #777568;
+    text-decoration-thickness: 1px;
+  }
+
+  .pi-nav a:hover {
+    color: #171717;
+    text-decoration-thickness: 2px;
+  }
+
+  .intro-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow,
+  h1,
+  h2,
+  p {
+    margin: 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.75rem;
+    color: #777568;
+    font-size: 0.72rem;
+  }
+
+  h1 {
+    max-width: 34rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.55;
+  }
+
+  .headshot {
+    width: 4.25rem;
+    height: 4.25rem;
+    border: 1px solid #171717;
+    box-shadow: 3px 3px 0 #171717;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.08);
+  }
+
+  .mission {
+    margin: 2rem 0;
+  }
+
+  a {
+    color: #171717;
+    text-decoration: underline;
+    text-underline-offset: 0.18rem;
+  }
+
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 0.5rem;
+    padding: 1rem 0 1rem 1.75rem;
+    border-left: 1px solid #d4d3cb;
+  }
+
+  .timeline::before,
+  .timeline::after {
+    position: absolute;
+    left: -1px;
+    width: 1px;
+    height: 1.5rem;
+    content: "";
+  }
+
+  .timeline::before {
+    top: 0;
+    background: linear-gradient(to top, transparent, #f8f7ef);
+  }
+
+  .timeline::after {
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, #f8f7ef);
+  }
+
+  .entry {
+    position: relative;
+  }
+
+  .entry::before {
+    position: absolute;
+    top: 0.75rem;
+    left: -2.03rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 0.1rem;
+    background: #171717;
+    outline: 2px solid #f8f7ef;
+    content: "";
+  }
+
+  .entry-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .entry h2,
+  .teaching-section h2 {
+    min-width: 0;
+    overflow: hidden;
+    color: #171717;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+  }
+
+  .entry time {
+    flex: 0 0 auto;
+    color: #777568;
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  .entry p {
+    margin-top: 0.45rem;
+    color: #777568;
+    font-size: 0.75rem;
+  }
+
+  .entry-featured {
+    padding: 0.75rem;
+    border: 1px solid #171717;
+    background: #ffffff;
+    box-shadow: 3px 3px 0 #171717;
+    transition: box-shadow 150ms ease, transform 150ms ease;
+  }
+
+  .entry-featured:hover {
+    box-shadow: 5px 5px 0 #171717;
+    transform: translate(-1px, -1px);
+  }
+
+  .entry-plain {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .entry-plain:hover {
+    background: #efeee5;
+  }
+
+  .teaching-section,
+  .contact-section {
+    margin-top: 2rem;
+  }
+
+  .course-list {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .contact-section p + p {
+    margin-top: 1rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.78rem;
+  }
+
+  .pi-footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #171717;
+  }
+
+  .pi-footer p {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.125rem;
+  }
+
+  .pi-footer span {
+    color: #777568;
+    font-size: 0.72rem;
+  }
+
+  @media (min-width: 768px) {
+    .pi-page {
+      padding: 3rem;
+    }
+
+    .pi-header {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .intro-panel {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .headshot {
+      grid-row: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .entry-heading {
+      display: block;
+    }
+
+    .entry time {
+      display: block;
+      margin-top: 0.2rem;
+    }
+  }
+</style>
