@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  fullHeight?: boolean;
+}
+
+const { title, description, fullHeight = false } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {description && <meta name="description" content={description} />}
+    <title>{title}</title>
+  </head>
+  <body
+    class:list={[
+      "min-h-screen bg-white font-sans text-offblack",
+      { "flex h-dvh flex-col overflow-hidden": fullHeight },
+    ]}
+  >
+    <nav
+      class:list={[
+        "mx-auto w-full max-w-4xl shrink-0 px-4",
+        { "mb-10": !fullHeight },
+      ]}
+    >
+      <ul class="flex items-stretch text-lg tracking-tight">
+        <li>
+          <a
+            aria-current={currentPath === "/" ? "page" : undefined}
+            class="flex h-full items-center py-4 hover:underline"
+            href="/"
+            ><strong>samuel lau</strong></a
+          >
+        </li>
+        <li class="ml-auto">
+          <a
+            aria-current={currentPath === "/cv" ? "page" : undefined}
+            class:list={[
+              "flex h-full min-w-10 items-center justify-center py-4 underline transition-colors",
+              currentPath === "/cv"
+                ? "decoration-2 underline-offset-2"
+                : "decoration-offblack/30 hover:decoration-offblack hover:decoration-2",
+            ]}
+            href="/cv"
+            >cv</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="flex h-full min-w-10 items-center justify-end py-4 underline decoration-offblack/30 transition-colors hover:decoration-offblack hover:decoration-2"
+            href="https://dstl.ucsd.edu/">lab</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <slot />
+  </body>
+</html>

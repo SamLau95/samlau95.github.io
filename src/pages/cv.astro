@@ -1,0 +1,21 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+
+<SiteLayout
+  title="CV – Sam Lau – UC San Diego"
+  description="Curriculum vitae for Sam Lau, faculty at UC San Diego."
+  fullHeight
+>
+  <main class="flex min-h-0 w-full flex-1 flex-col">
+    <a
+      class="m-auto my-4 block w-full max-w-4xl shrink-0 border border-offblack/25 bg-offwhite py-2 text-center text-sm font-semibold text-offblack transition-colors hover:bg-offblack hover:text-white focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-offblack"
+      href="/sam-lau-cv.pdf"
+      target="_blank">download cv as pdf</a
+    >
+    <iframe
+      class="m-auto min-h-0 w-full max-w-6xl flex-1 border-0"
+      src="/sam-lau-cv.pdf#view=FitH"
+      title="Sam Lau's curriculum vitae"></iframe>
+  </main>
+</SiteLayout>

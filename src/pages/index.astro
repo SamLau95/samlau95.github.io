@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 
 import PublicationTimeline from "../components/PublicationTimeline";
-import "../styles/global.css";
+import SiteLayout from "../layouts/SiteLayout.astro";
 
 const papers = (await getCollection("papers"))
   .sort((a, b) => a.data.order - b.data.order)
@@ -15,37 +15,8 @@ const lastUpdated = new Intl.DateTimeFormat("en-US", {
 }).format(new Date());
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sam Lau – UC San Diego</title>
-  </head>
-  <body class="min-h-screen bg-white font-sans text-offblack">
-    <nav class="mx-auto mb-10 max-w-4xl px-4">
-      <ul class="flex items-stretch text-lg tracking-tight">
-        <li>
-          <a class="flex h-full items-center py-4 hover:underline" href="/"
-            ><strong>samuel lau</strong></a
-          >
-        </li>
-        <li class="ml-auto">
-          <a
-            class="flex h-full min-w-10 items-center justify-center py-4 underline decoration-offblack/30 transition-colors hover:decoration-offblack hover:decoration-2"
-            href="/cv">cv</a
-          >
-        </li>
-        <li>
-          <a
-            target="_blank"
-            class="flex h-full min-w-10 items-center justify-end py-4 underline decoration-offblack/30 transition-colors hover:decoration-offblack hover:decoration-2"
-            href="https://dstl.ucsd.edu/">lab</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <main class="mx-auto max-w-4xl px-4">
+<SiteLayout title="Sam Lau – UC San Diego">
+  <main class="mx-auto max-w-4xl px-4 [&_strong]:font-semibold">
       <div class="grid items-start gap-6 sm:grid-cols-[minmax(0,1fr)_10rem]">
         <div class="space-y-4">
           <p>
@@ -107,7 +78,7 @@ const lastUpdated = new Intl.DateTimeFormat("en-US", {
           <PublicationTimeline papers={papers} />
         </div>
         <aside
-          class="order-first grid grid-cols-[7rem_minmax(0,1fr)] items-start gap-x-4 gap-y-3 text-xs sm:order-0 sm:block"
+          class="order-first grid grid-cols-[7rem_minmax(0,1fr)] items-start gap-x-4 gap-y-3 text-xs [&_strong]:font-bold! sm:order-0 sm:block"
         >
           <img
             class="row-span-2 aspect-square w-28 shrink-0 object-cover sm:w-full"
@@ -152,6 +123,5 @@ const lastUpdated = new Intl.DateTimeFormat("en-US", {
           </div>
         </aside>
       </div>
-    </main>
-  </body>
-</html>
+  </main>
+</SiteLayout>
