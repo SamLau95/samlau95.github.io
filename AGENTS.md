@@ -2,6 +2,7 @@
 - astro app, rendered to github pages
 - use react when it makes sense, otherwise markdown by default
 - never start the dev server, but if it's already running then use it.
-- when testing new changes, use these tools to verify changes:
+- don't use `pnpm build`, use `pnpm fix` to auto-lint and format.
+- only if requested, use these tools to verify changes:
   - `uvx rodney` to work with the browser
   - `uvx showboat` to create a markdown report for me to verify your work.

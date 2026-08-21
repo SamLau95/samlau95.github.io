@@ -1,5 +1,18 @@
 ---
+import { getCollection } from "astro:content";
+
+import PublicationTimeline from "../components/PublicationTimeline";
 import "../styles/global.css";
+
+const papers = (await getCollection("papers"))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(({ data }) => data);
+
+const lastUpdated = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  year: "numeric",
+  timeZone: "America/Los_Angeles",
+}).format(new Date());
 ---
 
 <html lang="en">
@@ -8,19 +21,109 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sam lau</title>
   </head>
-  <body class="min-h-screen bg-offwhite font-mono text-offblack">
-    <nav>
-      <ul class="flex gap-4 tracking-tight">
+  <body class="min-h-screen bg-white font-sans text-offblack">
+    <nav class="mx-auto mb-10 max-w-4xl px-4">
+      <ul class="flex items-stretch text-lg tracking-tight">
         <li>
-          <a href="/"><strong>samuel lau</strong></a>
+          <a class="flex h-full items-center py-4 hover:underline" href="/"
+            ><strong>samuel lau</strong></a
+          >
         </li>
-        <li><a href="/">//</a></li>
+        <li class="ml-auto">
+          <a
+            class="flex h-full min-w-10 items-center justify-center py-4 underline decoration-offblack/30 transition-colors hover:decoration-offblack hover:decoration-2"
+            href="/cv">cv</a
+          >
+        </li>
         <li>
-          <a href="/">cv</a>
+          <a
+            target="_blank"
+            class="flex h-full min-w-10 items-center justify-end py-4 underline decoration-offblack/30 transition-colors hover:decoration-offblack hover:decoration-2"
+            href="https://dstl.ucsd.edu/">lab</a
+          >
         </li>
-        <li><a href="/">//</a></li>
-        <li><a href="/">lab</a></li>
       </ul>
     </nav>
+
+    <main class="mx-auto max-w-4xl px-4">
+      <div class="grid items-start gap-6 sm:grid-cols-[minmax(0,1fr)_10rem]">
+        <div class="space-y-4">
+          <p>
+            I'm an Assistant Teaching Professor in the Halıcıoğlu Data Science
+            Institute at UC San Diego. I am broadly interested in advancing
+            authentic and responsible data science pedagogy at scale. My
+            research in human-computer interaction (HCI) primarily relies on
+            instructor-centered system design: by understanding challenges that
+            programming and data science instructors face, we can design new
+            systems that support instructors as they create and revise lessons
+            in response to emerging generative artificial intelligence tools. I
+            maintain <a
+              class="underline decoration-offblack/50 transition-colors hover:decoration-offblack hover:decoration-2"
+              target="_blank"
+              href="https://pandastutor.com/">Pandas Tutor</a
+            >, a program visualization tool for introductory data science. I
+            also wrote a textbook with Deb Nolan and Joey Gonzalez called <a
+              class="underline decoration-offblack/50 transition-colors hover:decoration-offblack hover:decoration-2"
+              target="_blank"
+              href="https://learningds.org/">Learning Data Science</a
+            >, published by O'Reilly Media in 2023.
+          </p>
+          <p>
+            I received my PhD from the UCSD Cognitive Science department in 2023
+            advised by Philip Guo. I received an MS in Computer Science in 2018
+            from UC Berkeley advised by Josh Hug, and a BS in Electrical
+            Engineering and Computer Science in 2017 from UC Berkeley.
+          </p>
+
+          <h2 class="mt-8 text-lg font-medium sm:mt-12">Publications</h2>
+          <PublicationTimeline papers={papers} />
+        </div>
+        <aside
+          class="order-first grid grid-cols-[7rem_minmax(0,1fr)] items-start gap-x-4 gap-y-3 text-xs sm:order-0 sm:block"
+        >
+          <img
+            class="row-span-2 aspect-square w-28 shrink-0 object-cover sm:w-full"
+            src="/sam_lau_headshot_xs.JPG"
+            alt="Sam Lau"
+            width="400"
+            height="400"
+          />
+          <div class="text-xs sm:mt-3">
+            <p><strong>News:</strong></p>
+            <p>
+              <time datetime="2026-08">08/2026</time>: I am on parental leave
+              until Spring 2027. 🐣
+            </p>
+            <p class="hidden sm:mt-3 sm:block">
+              Site last updated:<br />{lastUpdated}
+            </p>
+          </div>
+          <div class="text-xs sm:mt-3">
+            <p><strong>Contact:</strong></p>
+            <address class="not-italic">
+              <p>lau@ucsd.edu</p>
+              <p>HDSI Room 342</p>
+            </address>
+          </div>
+
+          <div class="hidden sm:mt-3 sm:block">
+            <p><strong>Office Hours:</strong></p>
+            <p>Will resume in Spring 2027</p>
+          </div>
+
+          <div class="hidden sm:mt-3 sm:block">
+            <p><strong>Teaching:</strong></p>
+            <dl class="grid grid-cols-[auto_1fr] gap-x-3 [&>dt]:text-right">
+              <dt>Fall 2026</dt>
+              <dd>None</dd>
+              <dt>Winter 2027</dt>
+              <dd>None</dd>
+              <dt>Spring 2027</dt>
+              <dd>DSC 106</dd>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </main>
   </body>
 </html>

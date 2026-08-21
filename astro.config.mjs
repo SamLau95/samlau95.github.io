@@ -7,5 +7,8 @@ export default defineConfig({
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ["sam-lau-macbook-pro-cli.tailb2b28e.ts.net"],
+    },
   },
 });
