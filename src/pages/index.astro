@@ -4,8 +4,22 @@ import { getCollection } from "astro:content";
 import PublicationTimeline from "../components/PublicationTimeline";
 import SiteLayout from "../layouts/SiteLayout.astro";
 
+function sortableDate(date: string) {
+  const [month, day, year] = date.split("-");
+
+  return `${year}-${month}-${day}`;
+}
+
+const titleCollator = new Intl.Collator("en", { ignorePunctuation: true });
+
 const papers = (await getCollection("papers"))
-  .sort((a, b) => a.data.order - b.data.order)
+  .sort((a, b) => {
+    const dateComparison = sortableDate(b.data.date).localeCompare(
+      sortableDate(a.data.date),
+    );
+
+    return dateComparison || titleCollator.compare(a.data.title, b.data.title);
+  })
   .map(({ data }) => data);
 
 const lastUpdated = new Intl.DateTimeFormat("en-US", {
@@ -17,111 +31,111 @@ const lastUpdated = new Intl.DateTimeFormat("en-US", {
 
 <SiteLayout title="Sam Lau – UC San Diego">
   <main class="mx-auto max-w-4xl px-4 [&_strong]:font-semibold">
-      <div class="grid items-start gap-6 sm:grid-cols-[minmax(0,1fr)_10rem]">
-        <div class="space-y-4">
-          <p>
-            <strong>I am Sam!</strong> 👋 I'm an Assistant Teaching Professor in the
-            Halıcıoğlu Data Science Institute at UC San Diego. I am broadly interested
-            in advancing authentic and responsible data science pedagogy at scale.
-            My research in human-computer interaction (HCI) primarily relies on instructor-centered
-            system design: by understanding challenges that programming and data science
-            instructors face, we can design new systems that support instructors as
-            they create and revise lessons in response to emerging generative artificial
-            intelligence tools.
-          </p>
-          <p>
-            I received my PhD from the UCSD Cognitive Science department in 2023
-            advised by Philip Guo. I received an MS in Computer Science in 2018
-            from UC Berkeley advised by Josh Hug, and a BS in Electrical
-            Engineering and Computer Science in 2017 from UC Berkeley.
-          </p>
+    <div class="grid items-start gap-6 sm:grid-cols-[minmax(0,1fr)_10rem]">
+      <div class="space-y-4">
+        <p>
+          <strong>I am Sam!</strong> 👋 I'm an Assistant Teaching Professor in the
+          Halıcıoğlu Data Science Institute at UC San Diego. I am broadly interested
+          in advancing authentic and responsible data science pedagogy at scale. My
+          research in human-computer interaction (HCI) primarily applies instructor-centered
+          system design: by understanding challenges that programming and data science
+          instructors face, we can design new systems that support instructors as
+          they create and revise lessons, especially in response to emerging generative
+          artificial intelligence tools.
+        </p>
+        <p>
+          I received my PhD from the UCSD Cognitive Science department in 2023,
+          advised by Philip Guo. I received an MS in Computer Science in 2018
+          from UC Berkeley, advised by Josh Hug. I received a BS in Electrical
+          Engineering and Computer Science in 2017 from UC Berkeley.
+        </p>
 
-          <div>
-            <p>
-              <strong>Teach data science or programming?</strong> Check out:
-            </p>
-            <ul class="pt-1 pl-6">
-              <li>
-                <a
-                  class="font-semibold underline decoration-offblack/50 transition-colors hover:decoration-offblack hover:decoration-2"
-                  target="_blank"
-                  href="https://pandastutor.com/">Pandas Tutor</a
-                >, a program visualization tool for introductory data science.
-              </li>
-              <li>
-                <a
-                  class="font-semibold underline decoration-offblack/50 transition-colors hover:decoration-offblack hover:decoration-2"
-                  target="_blank"
-                  href="https://learningds.org/">Learning Data Science</a
-                >, a textbook I wrote with Deb Nolan and Joey Gonzalez published
-                by O'Reilly Media in 2023.
-              </li>
-              <li>
-                <a
-                  class="font-semibold underline decoration-offblack/50 transition-colors hover:decoration-offblack hover:decoration-2"
-                  target="_blank"
-                  href="https://www.teachcswithai.org/"
-                  >The Consortium for GenAI in CS Education</a
-                >, which hosts open-source, AI-integrated course materials for 6
-                computing courses.
-              </li>
-            </ul>
-          </div>
-
+        <div>
           <p>
-            <strong>UCSD Undergraduate or Masters student?</strong> My lab normally
-            recruits research assistants in the Fall Quarter, but we will not be recruiting
-            during the '26-27 year.
+            <strong>Teach data science or programming?</strong> Check out:
           </p>
-
-          <h2 class="mt-8 text-lg font-medium sm:mt-12">Publications</h2>
-          <PublicationTimeline papers={papers} />
+          <ul class="pt-1 pl-6">
+            <li>
+              <a
+                class="font-semibold underline decoration-offblack/50 transition-colors hover:decoration-offblack hover:decoration-2"
+                target="_blank"
+                href="https://pandastutor.com/">Pandas Tutor</a
+              >, a program visualization tool for introductory data science.
+            </li>
+            <li>
+              <a
+                class="font-semibold underline decoration-offblack/50 transition-colors hover:decoration-offblack hover:decoration-2"
+                target="_blank"
+                href="https://learningds.org/">Learning Data Science</a
+              >, a textbook I wrote with Deb Nolan and Joey Gonzalez published
+              by O'Reilly Media in 2023.
+            </li>
+            <li>
+              <a
+                class="font-semibold underline decoration-offblack/50 transition-colors hover:decoration-offblack hover:decoration-2"
+                target="_blank"
+                href="https://www.teachcswithai.org/"
+                >The Consortium for GenAI in CS Education</a
+              >, which hosts open-source, AI-integrated course materials for 6
+              computing courses.
+            </li>
+          </ul>
         </div>
-        <aside
-          class="order-first grid grid-cols-[7rem_minmax(0,1fr)] items-start gap-x-4 gap-y-3 text-xs [&_strong]:font-bold! sm:order-0 sm:block"
-        >
-          <img
-            class="row-span-2 aspect-square w-28 shrink-0 object-cover sm:w-full"
-            src="/sam_lau_headshot_xs.JPG"
-            alt="Sam Lau"
-            width="400"
-            height="400"
-          />
-          <div class="text-xs sm:mt-3">
-            <p><strong>News:</strong></p>
-            <p>
-              <time datetime="2026-08">08/2026</time>: I am on parental leave
-              until Spring 2027. 🐣
-            </p>
-            <p class="hidden sm:mt-3 sm:block">
-              Site last updated:<br />{lastUpdated}
-            </p>
-          </div>
-          <div class="text-xs sm:mt-3">
-            <p><strong>Contact:</strong></p>
-            <address class="not-italic">
-              <p>lau@ucsd.edu</p>
-              <p>HDSI Room 342</p>
-            </address>
-          </div>
 
-          <div class="hidden sm:mt-3 sm:block">
-            <p><strong>Office Hours:</strong></p>
-            <p>Will resume in Spring 2027</p>
-          </div>
+        <p>
+          <strong>UCSD Undergraduate or Masters student?</strong> My lab normally
+          recruits research assistants in the Fall Quarter, but we will not be recruiting
+          during the '26-27 year.
+        </p>
 
-          <div class="hidden sm:mt-3 sm:block">
-            <p><strong>Teaching:</strong></p>
-            <dl class="grid grid-cols-[auto_1fr] gap-x-3 [&>dt]:text-right">
-              <dt>Fall 2026</dt>
-              <dd>None</dd>
-              <dt>Winter 2027</dt>
-              <dd>None</dd>
-              <dt>Spring 2027</dt>
-              <dd>DSC 106</dd>
-            </dl>
-          </div>
-        </aside>
+        <h2 class="mt-8 text-lg font-medium sm:mt-12">Publications</h2>
+        <PublicationTimeline papers={papers} />
       </div>
+      <aside
+        class="order-first grid grid-cols-[7rem_minmax(0,1fr)] items-start gap-x-4 gap-y-3 text-xs sm:order-0 sm:block [&_strong]:font-bold!"
+      >
+        <img
+          class="row-span-2 aspect-square w-28 shrink-0 object-cover sm:w-full"
+          src="/sam_lau_headshot_xs.JPG"
+          alt="Sam Lau"
+          width="400"
+          height="400"
+        />
+        <div class="text-xs sm:mt-3">
+          <p><strong>News:</strong></p>
+          <p>
+            <time datetime="2026-08">08/2026</time>: I am on parental leave
+            until Spring 2027. 🐣
+          </p>
+          <p class="hidden sm:mt-3 sm:block">
+            Site last updated:<br />{lastUpdated}
+          </p>
+        </div>
+        <div class="text-xs sm:mt-3">
+          <p><strong>Contact:</strong></p>
+          <address class="not-italic">
+            <p>lau@ucsd.edu</p>
+            <p>HDSI Room 342</p>
+          </address>
+        </div>
+
+        <div class="hidden sm:mt-3 sm:block">
+          <p><strong>Office Hours:</strong></p>
+          <p>Will resume in Spring 2027</p>
+        </div>
+
+        <div class="hidden sm:mt-3 sm:block">
+          <p><strong>Teaching:</strong></p>
+          <dl class="grid grid-cols-[auto_1fr] gap-x-3 [&>dt]:text-right">
+            <dt>Fall 2026</dt>
+            <dd>None</dd>
+            <dt>Winter 2027</dt>
+            <dd>None</dd>
+            <dt>Spring 2027</dt>
+            <dd>DSC 106</dd>
+          </dl>
+        </div>
+      </aside>
+    </div>
   </main>
 </SiteLayout>

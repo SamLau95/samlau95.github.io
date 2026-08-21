@@ -5,8 +5,7 @@ type PaperLink = {
 
 export type Paper = {
   id: string;
-  order: number;
-  year: number;
+  date: string;
   title: string;
   authors: string;
   venue: string;
@@ -21,8 +20,15 @@ function shortVenue(venue: string) {
   return venue.match(/\(([^()]*)\)$/)?.[1] ?? venue;
 }
 
+function isoDate(date: string) {
+  const [month, day, year] = date.split("-");
+
+  return `${year}-${month}-${day}`;
+}
+
 type TimelineEntry = {
-  year: number;
+  date: string;
+  year: string;
   title: string;
   authors: string;
   venue: string;
@@ -60,7 +66,8 @@ function TimelineBullet() {
 
 export default function PublicationTimeline({ papers }: PublicationTimelineProps) {
   const entries: TimelineEntry[] = papers.map((paper) => ({
-    year: paper.year,
+    date: paper.date,
+    year: paper.date.slice(-4),
     title: paper.title,
     authors: paper.authors,
     venue: shortVenue(paper.venue),
@@ -82,7 +89,7 @@ export default function PublicationTimeline({ papers }: PublicationTimelineProps
               {entry.year !== entries[index - 1]?.year && (
                 <time
                   className="absolute top-3 right-full mr-3 hidden text-xs font-medium text-stone-500 tabular-nums lg:block"
-                  dateTime={entry.year.toString()}
+                  dateTime={isoDate(entry.date)}
                 >
                   {entry.year}
                 </time>
@@ -107,7 +114,7 @@ export default function PublicationTimeline({ papers }: PublicationTimelineProps
                 <p className="mt-1 text-xs text-stone-600">{entry.authors}</p>
                 <p className="mt-1 text-xs text-stone-600 italic">
                   <span title={entry.fullVenue}>{entry.venue}</span>{" "}
-                  <time className="tabular-nums" dateTime={entry.year.toString()}>
+                  <time className="tabular-nums" dateTime={isoDate(entry.date)}>
                     {entry.year}
                   </time>
                 </p>

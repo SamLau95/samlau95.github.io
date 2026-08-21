@@ -6,8 +6,7 @@ const papers = defineCollection({
   loader: file("src/data/papers.yml"),
   schema: z.object({
     id: z.string(),
-    order: z.number().int().nonnegative(),
-    year: z.number().int(),
+    date: z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
     title: z.string(),
     authors: z.string(),
     venue: z.string(),
