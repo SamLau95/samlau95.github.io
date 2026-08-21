@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc && astro build",
+    "build": "astro sync && tsc && astro build",
     "check": "vp check && astro check",
     "dev": "astro dev",
     "fix": "vp check --fix && astro check",
