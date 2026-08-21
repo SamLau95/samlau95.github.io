@@ -25,16 +25,21 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      sizes="400x400"
+      href={imageUrl}
+    />
+    <link rel="apple-touch-icon" sizes="400x400" href={imageUrl} />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Sam Lau" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={imageUrl} />
-    <meta property="og:image:alt" content="Sam Lau" />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
