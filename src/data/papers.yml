@@ -1,0 +1,269 @@
+# Publications listed on homepage in order of appearance in this file.
+#
+# Note that >- is the chomping folded block literal in YAML:
+# http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
+- id: emergency-pedagogical-design-genai-faculty
+  order: 0
+  year: 2026
+  title: >-
+    Barriers that Programming Instructors Face While Performing Emergency
+    Pedagogical Design to Shape Student-AI Interactions with Generative AI Tools
+  authors: >-
+    Sam Lau, Kianoosh Boroojeni, Harry Keeling, Jenn Marroquin
+  venue: >-
+    ACM Conference on Human Factors in Computing Systems (CHI)
+  blurb: >-
+    Through interviews with 13 computing instructors and a survey of 169
+    instructors, we identify five key barriers that instructors face when
+    performing "emergency pedagogical design" to reactively reshape their
+    courses around student GenAI use: fragmented buy-in, conflicting policies,
+    implementation challenges, assessment misfit, and lack of resources.
+  type: full paper
+  pdf: /pubs/2026_emergency-pedagogical-design-genai-faculty_CHI.pdf
+  links:
+    - name: O'Reilly Radar Article
+      url: https://www.oreilly.com/radar/emergency-pedagogical-design-how-programming-instructors-are-scrambling-to-adapt-to-genai/
+- id: contentgen
+  order: 1
+  year: 2026
+  title: >-
+    Improving LLM-Generated Educational Content: A Case Study on Prototyping,
+    Prompt Engineering, and Evaluating a Tool for Generating Programming
+    Problems for Data Science
+  authors: >-
+    Jiaen Yu*, Ylesia Wu*, Gabriel Cha, Ayush Shah, Sam Lau (*equal
+    contribution)
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Iterative prompt engineering and careful context curation substantially
+    improved the correctness, contextual fit, and coherence of auto-generated
+    programming practice problems in a JupyterLab tool (ContentGen).
+  type: full paper
+  pdf: /pubs/2026_contentgen_SIGCSE.pdf
+- id: skill-tests-at-scale
+  order: 2
+  year: 2026
+  title: >-
+    Designing and Implementing Skill Tests at Scale: Frequent, Computer-Based,
+    Proctored Assessments with Minimal Infrastructure Requirements
+  authors: >-
+    Anastasiya Markova, Anish Kasam, Bryce Hackel, Marina Langlois, Sam Lau
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Replacing a midterm with weekly 10-minute proctored programming quizzes
+    ("Skill Tests") run by course staff in ordinary campus rooms reduced
+    student anxiety without compromising final exam performance, offering a
+    practical blueprint for frequent assessment that doesn't require dedicated
+    institutional testing infrastructure.
+  type: full paper
+  pdf: /pubs/2026_skill-tests-at-scale_SIGCSE.pdf
+- id: analysis-of-90-genai-coding-tools
+  order: 3
+  year: 2025
+  title: >-
+    The Design Space of LLM-Based AI Coding Assistants: An Analysis of 90
+    Systems in Academia and Industry
+  authors: >-
+    Sam Lau and Philip J. Guo
+  venue: >-
+    IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)
+  blurb: >-
+    How have AI coding assistants evolved over the past few years, and where is
+    the field headed?
+  type: full paper
+  pdf: /pubs/2025_analysis-of-90-genai-coding-tools_VLHCC.pdf
+  links:
+    - name: O'Reilly Radar Article
+      url: https://www.oreilly.com/radar/from-autocomplete-to-agents-mapping-the-design-space-of-ai-coding-assistants/
+- id: experts-vs-novices-code-comprehension
+  order: 4
+  year: 2025
+  title: >-
+    “I’m not sure, but...”: Expert Practices that Enable Effective Code
+    Comprehension in Data Science
+  authors: >-
+    Christopher Lum*, Guoxuan Xu*, Sam Lau (*equal contribution)
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Expert data scientists apply a range of metacognitive practices to develop
+    deeper understanding of complicated dataframe code.
+  type: full paper
+  pdf: /pubs/2025_sigcse_experts_vs_novices_SIGCSE.pdf
+- id: pandas-tutor-novice-study
+  order: 5
+  year: 2025
+  title: >-
+    How Novices Use Program Visualizations to Understand Code that Manipulates
+    Data Tables
+  authors: >-
+    Ylesia Wu*, Qirui Zheng*, Sam Lau (*equal contribution)
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Program visualization tools like Pandas Tutor can help novices verify
+    assumptions and see salient information, but diagrams can become difficult
+    to understand without methods for managing cognitive load.
+  type: full paper
+  pdf: /pubs/2025_sigcse_pandas_tutor_SIGCSE.pdf
+- id: beyond-the-hype
+  order: 6
+  year: 2025
+  title: >-
+    Beyond the Hype: A Comprehensive Review of Current Trends in Generative AI
+    Research, Teaching Practices, and Tools
+  authors: >-
+    James Prather, Juho Leinonen, Natalie Kiesler, Jamie Gorson Benario, Sam
+    Lau, Stephen MacNeil, Narges Norouzi, Simone Opel, Vee Pettit, Leo Porter,
+    Brent N Reeves, Jaromir Savelka, David H Smith IV, Sven Strickroth, Daniel
+    Zingaro
+  venue: >-
+    ACM Conference on Innovation and Technology in Computer Science Education (ITiCSE)
+  blurb: >-
+    A systematic literature review, survey, and interviews with computer science
+    instructors highlight salient trends in GenAI usage and perceptions.
+  type: full paper
+  pdf: /pubs/beyond-the-hype-comprehensive-review-of-trends-generative-ai_ITICSE-2025.pdf
+- id: instructors-adapting-to-ai-tools
+  order: 7
+  year: 2023
+  title: >-
+    From "Ban It Till We Understand It" to "Resistance is Futile": How
+    University Programming Instructors Plan to Adapt as More Students Use AI
+    Code Generation and Explanation Tools such as ChatGPT and GitHub Copilot
+  authors: >-
+    Sam Lau, Philip J. Guo
+  venue: >-
+    ACM Conference on International Computing Education Research (ICER)
+  blurb: >-
+    Interviews with a diverse range of instructors reveal a broad range of
+    perspectives on how to approach effective teaching with – or in spite of
+    – AI coding tools.
+  type: full paper
+  pdf: /pubs/cs-instructors-adapting-to-chatgpt-copilot-ai-tools_ICER-2023.pdf
+  links:
+    - name: O'Reilly Radar Article
+      url: https://www.oreilly.com/radar/teaching-programming-in-the-age-of-chatgpt/
+- id: pandas-r-sql-tutors
+  order: 8
+  year: 2023
+  title: >-
+    Teaching Data Science by Visualizing Data Table Transformations: Pandas
+    Tutor for Python, Tidy Data Tutor for R, and SQL Tutor
+  authors: >-
+    Sam Lau*, Sean Kross*, Eugene Wu, Philip J. Guo (*equal contribution)
+  venue: >-
+    International Workshop on Data Systems Education (DataEd)
+  blurb: >-
+    The Pandas/Tidy Data/SQL Tutor tools automatically create diagrams for data
+    science code.
+  type: workshop paper
+  pdf: /pubs/Pandas_R_SQL_Tutors-DataEd_2023.pdf
+- id: codehound
+  order: 9
+  year: 2022
+  title: >-
+    Codehound: Helping Instructors Track Pedagogical Code Dependencies in
+    Course Materials
+  authors: >-
+    Sam Lau, Philip J. Guo
+  venue: >-
+    ACM SIGPLAN SPLASH-E Symposium (SPLASH-E)
+  blurb: >-
+    Tracking code use within course materials enables tools that give automated
+    help while refactoring a course.
+  type: workshop paper
+  pdf: /pubs/CodeHound_SPLASHE-2022.pdf
+- id: evolving-technical-courses-at-scale
+  order: 10
+  year: 2022
+  title: >-
+    The Challenges of Evolving Technical Courses at Scale: Four Case Studies of
+    Updating Large Data Science Courses
+  authors: >-
+    Sam Lau, Justin Eldridge, Shannon Ellis, Aaron Fraenkel, Marina Langlois,
+    Suraj Rampure, Janine Tiefenbruck, Philip J. Guo
+  venue: >-
+    ACM Conference on Learning @ Scale (L@S)
+  blurb: >-
+    Instructors of large technical courses run into major logistical challenges
+    that take time away from teaching.
+  type: full paper
+  pdf: /pubs/Challenges-of-Evolving-Data-Courses_L@S-2022.pdf
+- id: cs-stat-data-science-pedagogy
+  order: 11
+  year: 2022
+  title: >-
+    How Computer Science and Statistics Instructors Approach Data Science
+    Pedagogy Differently: Three Case Studies
+  authors: >-
+    Sam Lau, Deborah Nolan, Joseph Gonzalez, Philip J. Guo
+  venue: >-
+    ACM Technical Symposium on Computer Science Education (SIGCSE)
+  blurb: >-
+    Real-world case studies show tradeoffs in balancing computer science and
+    statistics in data science teaching.
+  type: full paper
+  pdf: /pubs/How-CS-Stat-Approach-Data-Science_SIGCSE-2022.pdf
+- id: tweakit
+  order: 12
+  year: 2021
+  title: >-
+    TweakIt: Supporting End-User Programmers Who Transmogrify Code
+  authors: >-
+    Sam Lau, Sruti Srinivasa Ragavan, Ken Milne, Titus Barik, Advait Sarkar
+  venue: >-
+    ACM Conference on Human Factors in Computing Systems (CHI)
+  blurb: >-
+    Placing live previews of code outputs directly in spreadsheets enables data
+    analysts to tweak and reuse Python examples without needing Python
+    expertise.
+  type: full paper
+  pdf: /pubs/tweakit_CHI-2021.pdf
+- id: computational-notebooks-design-space
+  order: 13
+  year: 2020
+  title: >-
+    The Design Space of Computational Notebooks: An
+    Analysis of 60 Systems in Academia and Industry
+  authors: >-
+    Sam Lau, Ian Drosos, Julia M. Markel, Philip J. Guo
+  venue: >-
+    IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)
+  blurb: >-
+    Computational notebooks vary widely in data import, code editing, code
+    execution, and output format.
+  type: full paper
+  pdf: /pubs/computational-notebooks-design-space_VLHCC-2020.pdf
+- id: data-theater
+  order: 14
+  year: 2020
+  title: >-
+    Data Theater: A Live Programming Environment for Prototyping Data-Driven
+    Explorable Explanations
+  authors: >-
+    Sam Lau, Philip Guo
+  venue: >-
+    Workshop on Live Programming (LIVE)
+  blurb: >-
+    Separating logic from presentation simplifies the process of creating
+    explorable explanations.
+  type: workshop paper
+  pdf: /pubs/Data-Theater-prototyping-explorable-explanations_LIVE-2020.pdf
+- id: experiment-reconstruction
+  order: 15
+  year: 2019
+  title: >-
+    Experiment Reconstruction Reduces Fixation on Surface Details of
+    Explanations
+  authors: >-
+    Sam Lau, Tricia Ngoon, Vineet Pandey, Scott Klemmer
+  venue: >-
+    Poster in ACM Conference on Creativity and Cognition (C&C)
+  blurb: >-
+    Asking people to mentally recreate an experiment briefly reduces the allure
+    of scientific terminology.
+  type: poster
+  pdf: /pubs/Experiment-reconstruction_CnC-2019.pdf
