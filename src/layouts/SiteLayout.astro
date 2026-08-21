@@ -4,10 +4,18 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  image?: string;
   fullHeight?: boolean;
 }
 
-const { title, description, fullHeight = false } = Astro.props;
+const {
+  title,
+  description = "Sam Lau is an Assistant Teaching Professor at UC San Diego researching data science education and human-computer interaction.",
+  image = "/sam_lau_headshot_xs.JPG",
+  fullHeight = false,
+} = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(image, Astro.site);
 const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
 
@@ -15,7 +23,22 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {description && <meta name="description" content={description} />}
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sam Lau" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content="Sam Lau" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+
     <title>{title}</title>
   </head>
   <body
