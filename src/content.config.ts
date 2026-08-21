@@ -11,6 +11,7 @@ const papers = defineCollection({
     title: z.string(),
     authors: z.string(),
     venue: z.string(),
+    award: z.string().optional(),
     blurb: z.string(),
     type: z.string(),
     pdf: z.string(),

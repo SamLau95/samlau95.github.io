@@ -10,6 +10,7 @@ export type Paper = {
   title: string;
   authors: string;
   venue: string;
+  award?: string;
   blurb: string;
   type: string;
   pdf: string;
@@ -25,6 +26,7 @@ type TimelineEntry = {
   title: string;
   authors: string;
   venue: string;
+  award?: string;
   description: string;
   type: string;
   pdf: string;
@@ -63,6 +65,7 @@ export default function PublicationTimeline({ papers }: PublicationTimelineProps
     authors: paper.authors,
     venue: shortVenue(paper.venue),
     fullVenue: paper.venue,
+    award: paper.award,
     description: paper.blurb,
     type: paper.type,
     pdf: paper.pdf,
@@ -86,16 +89,21 @@ export default function PublicationTimeline({ papers }: PublicationTimelineProps
               )}
               <TimelineBullet />
               <article className="min-w-0 border border-offblack bg-offwhite p-3">
-                <h3 className="text-xs leading-snug font-bold text-offblack">
-                  <a
-                    className="underline decoration-offblack/30 transition-colors hover:decoration-offblack hover:decoration-2"
-                    href={entry.pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {entry.title}
-                  </a>
-                </h3>
+                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2">
+                  <h3 className="text-xs leading-snug font-bold text-offblack">
+                    <a
+                      className="underline decoration-offblack/30 transition-colors hover:decoration-offblack hover:decoration-2"
+                      href={entry.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {entry.title}
+                    </a>
+                  </h3>
+                  <span className="hidden text-right text-xs text-stone-500 sm:inline">
+                    {entry.type}
+                  </span>
+                </div>
                 <p className="mt-1 text-xs text-stone-600">{entry.authors}</p>
                 <p className="mt-1 text-xs text-stone-600 italic">
                   <span title={entry.fullVenue}>{entry.venue}</span>{" "}
@@ -103,9 +111,12 @@ export default function PublicationTimeline({ papers }: PublicationTimelineProps
                     {entry.year}
                   </time>
                 </p>
-                <p className="mt-2 text-xs text-stone-600">{entry.description}</p>
+                {entry.award && (
+                  <p className="mt-1 text-xs font-bold text-red-800">{entry.award}</p>
+                )}
+                <p className="mt-1 text-xs text-stone-500 sm:hidden">{entry.type}</p>
+                <p className="mt-3 text-xs text-stone-600">{entry.description}</p>
                 <p className="mt-3 text-xs text-stone-600">
-                  {entry.type}{" "}
                   <a
                     className="underline decoration-offblack/30 transition-colors hover:decoration-offblack hover:decoration-2"
                     href={entry.pdf}

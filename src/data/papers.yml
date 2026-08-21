@@ -12,6 +12,7 @@
     Sam Lau, Kianoosh Boroojeni, Harry Keeling, Jenn Marroquin
   venue: >-
     ACM Conference on Human Factors in Computing Systems (CHI)
+  award: Honorable Mention Award
   blurb: >-
     Through interviews with 13 computing instructors and a survey of 169
     instructors, we identify five key barriers that instructors face when
@@ -38,7 +39,7 @@
   blurb: >-
     Iterative prompt engineering and careful context curation substantially
     improved the correctness, contextual fit, and coherence of auto-generated
-    programming practice problems in a JupyterLab tool (ContentGen).
+    programming practice problems in a JupyterLab tool.
   type: full paper
   pdf: /pubs/2026_contentgen_SIGCSE.pdf
 - id: skill-tests-at-scale
