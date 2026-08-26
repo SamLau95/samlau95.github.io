@@ -5,6 +5,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://lau.ucsd.edu",
+  redirects: {
+    "/zoom": "https://ucsd.zoom.us/my/samlau",
+  },
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
