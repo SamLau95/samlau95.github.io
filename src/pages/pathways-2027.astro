@@ -20,9 +20,6 @@ const mentors = [
     ],
     question:
       "How can you determine information about every element in a dataset from only a subset of the data?",
-    novelty:
-      "This project will be the first to incorporate multiple mathematical tools into a unified approach.",
-    success: "We will publish a paper in a top ML conference!",
     work: "Develop and implement algorithms, analyze graphs, and run experiments.",
     excitement:
       "Building mathematical tools that make algorithms more powerful and efficient.",
@@ -40,12 +37,26 @@ const mentors = [
     ],
     question:
       "How can we make privacy risk assessment more accessible and accurate?",
-    novelty:
-      "Past work has relied on lengthy free-form assessments—this project makes them simpler and more practical.",
-    success: "We will release an open-source tool that becomes widely adopted.",
     work: "Design and refine multiple-choice questions for privacy assessments and run user studies.",
     excitement:
       "Turning complex privacy concepts into simple, understandable tools.",
+  },
+  {
+    name: "Victor Minces",
+    website: "https://www.victorminces.com/",
+    area:
+      "Interactive applications for manipulating, learning about, and playing with sound",
+    papers: [
+      {
+        title:
+          "M-flow: A Flow-based Music Creation Platform Improves Underrepresented Children’s Attitudes toward Computer Programming",
+        url: "https://dl.acm.org/doi/10.1145/3585088.3589383",
+      },
+    ],
+    question:
+      "How can we design applications that let people interact with digital sound in ways that improve their lives?",
+    work: "Help create browser-based applications for manipulating and creating sound.",
+    excitement: "Seeing children excited to play with and learn about sound.",
   },
   {
     name: "Gal Mishne",
@@ -64,9 +75,6 @@ const mentors = [
     ],
     question:
       "How can we measure similarity between two potentially large graphs?",
-    novelty:
-      "We will use machine learning tools to measure graph similarity in a scalable way.",
-    success: "We will publish a paper in a top ML or neuroscience conference.",
     work: "Analyze large datasets, code in Python, and learn machine learning methods.",
     excitement: "Graphs, neural recordings, and ice cream.",
   },
@@ -88,13 +96,37 @@ const mentors = [
     ],
     question:
       "Can we support decision making informed by health data using AI?",
-    novelty:
-      "Tools like this can automate interpretation and provide support to historically underserved groups.",
-    success:
-      "We will release the product as a tool for both health care providers and individuals.",
     work: "Learn statistical methods for dissecting time-series health data.",
     excitement:
       "How new data sources empower historically underserved populations.",
+  },
+  {
+    name: "Yusu Wang",
+    website: "https://yusu.belkin-wang.org/",
+    area:
+      "Geometric deep learning, generative AI, graph learning, and neural algorithmic reasoning",
+    papers: [
+      {
+        title:
+          "General and Efficient Steering of Unconditional Diffusion Models",
+        url: "https://openreview.net/forum?id=TU63jmFEWN",
+      },
+      {
+        title:
+          "De-Coupled NeuroGF for Shortest Path Distance Approximations on Large Terrains",
+        url: "https://openreview.net/forum?id=PfyyEeVzQW",
+      },
+      {
+        title:
+          "Effective Neural Approximations for Geometric Optimization Problems",
+        url: "https://openreview.net/forum?id=i7LuLGc2mu",
+      },
+    ],
+    question:
+      "How do generative models form internal concepts, and how can that understanding steer them toward better outputs? Can neural networks learn generalizable algorithmic procedures, and how can classical algorithms be combined with machine learning?",
+    work: "Run experiments with machine learning models, implement improvements to existing models, analyze results, and contribute to paper writing when appropriate.",
+    excitement:
+      "Understanding what drives the behavior of modern machine learning models and using those insights to design better, more robust, and safer models.",
   },
   {
     name: "Duncan Watson-Parris",
@@ -113,11 +145,41 @@ const mentors = [
       },
     ],
     question: "Can we use machine learning to better model climate physics?",
-    novelty:
-      "Previous attempts to learn better representations have been limited—this project takes them further.",
-    success: "We will publish a paper describing the results.",
     work: "Build machine learning models of atmospheric physics, analyze results, and compare them with climate models.",
     excitement: "Thinking about new ways of modeling the Earth!",
+  },
+];
+
+const cohortPhotos = [
+  {
+    src: "/pathways-2027/2026-cohort.jpg",
+    alt: "The 2026 Pathways to Discovery cohort outside the Halıcıoğlu Data Science Institute",
+    width: 1000,
+    height: 750,
+  },
+  {
+    src: "/pathways-2027/2026-research-presentation.jpg",
+    alt: "A Pathways student presenting research to the 2026 cohort",
+    width: 1000,
+    height: 750,
+  },
+  {
+    src: "/pathways-2027/2026-cohort-lunch.jpg",
+    alt: "The 2026 Pathways cohort sharing a meal together",
+    width: 1000,
+    height: 750,
+  },
+  {
+    src: "/pathways-2027/2026-final-presentation.jpg",
+    alt: "A Pathways student sharing findings from a summer research project",
+    width: 1000,
+    height: 750,
+  },
+  {
+    src: "/pathways-2027/2026-climate-presentation.jpg",
+    alt: "A Pathways student presenting climate research to a mentor",
+    width: 1000,
+    height: 1333,
   },
 ];
 
@@ -348,9 +410,6 @@ const linkClass =
               mentors.map((mentor, index) => (
                 <details class="group py-5" open={index === 0}>
                   <summary class="flex cursor-pointer list-none items-start gap-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-offblack [&::-webkit-details-marker]:hidden">
-                    <span class="mt-1 min-w-5 text-xs text-offblack/50">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
                     <span class="min-w-0 flex-1">
                       <span class="block text-lg font-semibold">
                         {mentor.name}
@@ -367,7 +426,7 @@ const linkClass =
                     </span>
                   </summary>
 
-                  <div class="mt-6 space-y-5 pl-9 text-sm leading-relaxed">
+                  <div class="mt-6 space-y-5 text-sm leading-relaxed">
                     <p>
                       <a
                         class={linkClass}
@@ -382,20 +441,6 @@ const linkClass =
                     <div>
                       <h3 class="font-semibold">Main research question</h3>
                       <p class="mt-1">{mentor.question}</p>
-                    </div>
-
-                    <div>
-                      <h3 class="font-semibold">
-                        What makes the project novel
-                      </h3>
-                      <p class="mt-1">{mentor.novelty}</p>
-                    </div>
-
-                    <div>
-                      <h3 class="font-semibold">
-                        If the project is wildly successful
-                      </h3>
-                      <p class="mt-1">{mentor.success}</p>
                     </div>
 
                     <div>
@@ -447,9 +492,72 @@ const linkClass =
             <li><a class="hover:underline" href="#funding">Funding</a></li>
             <li><a class="hover:underline" href="#timeline">Timeline</a></li>
             <li><a class="hover:underline" href="#mentors">Mentors</a></li>
+            <li>
+              <a class="hover:underline" href="#past-cohorts">Past cohorts</a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#acknowledgements">
+                Acknowledgements
+              </a>
+            </li>
           </ol>
         </nav>
       </aside>
     </div>
+
+    <section
+      id="past-cohorts"
+      class="mt-14 sm:mt-20"
+      aria-labelledby="past-cohorts-heading"
+    >
+      <h2
+        id="past-cohorts-heading"
+        class="text-2xl font-semibold tracking-tight"
+      >
+        Past cohorts
+      </h2>
+      <p class="mt-4 max-w-2xl leading-relaxed">
+        In 2026, we successfully ran Pathways to Discovery for the first time,
+        bringing students and mentors together at UC San Diego for a summer of
+        research, learning, and community.
+      </p>
+
+      <div class="mt-7 columns-1 gap-4 sm:columns-2">
+        {
+          cohortPhotos.map((photo) => (
+            <img
+              class="mb-4 block w-full break-inside-avoid"
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              loading="lazy"
+              decoding="async"
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <section
+      id="acknowledgements"
+      class="mt-14 border-t border-offblack/20 pt-10 sm:mt-20"
+      aria-labelledby="acknowledgements-heading"
+    >
+      <h2
+        id="acknowledgements-heading"
+        class="text-2xl font-semibold tracking-tight"
+      >
+        Acknowledgements
+      </h2>
+      <p class="mt-4 leading-relaxed">
+        This program is generously funded by the <a
+          class={linkClass}
+          href="https://www.ucop.edu/uc-hbcu-initiative/index.html"
+          target="_blank"
+          rel="noreferrer">UC-HBCU Initiative</a
+        >.
+      </p>
+    </section>
   </main>
 </SiteLayout>
