@@ -1,0 +1,455 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const mentors = [
+  {
+    name: "Alex Cloninger",
+    website: "https://sites.google.com/ucsd.edu/alexandercloninger/home",
+    area: "Machine learning theory",
+    papers: [
+      {
+        title:
+          "Linear optimal transport embedding: provable Wasserstein classification for certain rigid transformations and perturbations",
+        url: "https://doi.org/10.1093/imaiai/iaac023",
+      },
+      {
+        title:
+          "A deep network construction that adapts to intrinsic dimensionality beyond the domain",
+        url: "https://doi.org/10.1016/j.neunet.2021.06.004",
+      },
+    ],
+    question:
+      "How can you determine information about every element in a dataset from only a subset of the data?",
+    novelty:
+      "This project will be the first to incorporate multiple mathematical tools into a unified approach.",
+    success: "We will publish a paper in a top ML conference!",
+    work: "Develop and implement algorithms, analyze graphs, and run experiments.",
+    excitement:
+      "Building mathematical tools that make algorithms more powerful and efficient.",
+  },
+  {
+    name: "Haojian Jin",
+    website: "https://www.haojianj.in/",
+    area: "Human-computer interaction and data privacy",
+    papers: [
+      {
+        title:
+          "Redesigning Privacy with User Feedback: The Case of Zoom Attendee Attention Tracking",
+        url: "https://www.haojianj.in/resource/pdf/zoomattention.pdf",
+      },
+    ],
+    question:
+      "How can we make privacy risk assessment more accessible and accurate?",
+    novelty:
+      "Past work has relied on lengthy free-form assessments—this project makes them simpler and more practical.",
+    success: "We will release an open-source tool that becomes widely adopted.",
+    work: "Design and refine multiple-choice questions for privacy assessments and run user studies.",
+    excitement:
+      "Turning complex privacy concepts into simple, understandable tools.",
+  },
+  {
+    name: "Gal Mishne",
+    website: "https://mishne.ucsd.edu/",
+    area: "Machine learning, applied math, and computational neuroscience",
+    papers: [
+      {
+        title:
+          "RATS: Unsupervised manifold learning using low-distortion alignment of tangent spaces",
+        url: "https://www.biorxiv.org/content/10.1101/2024.10.31.621292v1.abstract",
+      },
+      {
+        title: "Learning Cartesian Product Graphs with Laplacian Constraints",
+        url: "https://proceedings.mlr.press/v238/shi24a.html",
+      },
+    ],
+    question:
+      "How can we measure similarity between two potentially large graphs?",
+    novelty:
+      "We will use machine learning tools to measure graph similarity in a scalable way.",
+    success: "We will publish a paper in a top ML or neuroscience conference.",
+    work: "Analyze large datasets, code in Python, and learn machine learning methods.",
+    excitement: "Graphs, neural recordings, and ice cream.",
+  },
+  {
+    name: "Benjamin Smarr",
+    website: "https://smarr.ucsd.edu/",
+    area: "Time series in health AI and human–AI health collaboration",
+    papers: [
+      {
+        title:
+          "General feature selection technique supporting sex-debiasing in chronic illness algorithms validated using wearable device data",
+        url: "https://www.nature.com/articles/s44294-024-00041-z",
+      },
+      {
+        title:
+          "AI for precision medicine must keep non-random complexity in mind to support equity in outcomes",
+        url: "https://ieeexplore.ieee.org/abstract/document/10678664",
+      },
+    ],
+    question:
+      "Can we support decision making informed by health data using AI?",
+    novelty:
+      "Tools like this can automate interpretation and provide support to historically underserved groups.",
+    success:
+      "We will release the product as a tool for both health care providers and individuals.",
+    work: "Learn statistical methods for dissecting time-series health data.",
+    excitement:
+      "How new data sources empower historically underserved populations.",
+  },
+  {
+    name: "Duncan Watson-Parris",
+    website: "https://duncanwp.github.io/",
+    area: "Machine learning for climate",
+    papers: [
+      {
+        title:
+          "ClimateBench v1.0: A Benchmark for Data-Driven Climate Projections",
+        url: "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002954",
+      },
+      {
+        title:
+          "FaIRGP: A Bayesian Energy Balance Model for Surface Temperatures Emulation",
+        url: "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003926",
+      },
+    ],
+    question: "Can we use machine learning to better model climate physics?",
+    novelty:
+      "Previous attempts to learn better representations have been limited—this project takes them further.",
+    success: "We will publish a paper describing the results.",
+    work: "Build machine learning models of atmospheric physics, analyze results, and compare them with climate models.",
+    excitement: "Thinking about new ways of modeling the Earth!",
+  },
+];
+
+const linkClass =
+  "font-medium underline decoration-offblack/30 underline-offset-2 transition-colors hover:decoration-offblack hover:decoration-2";
+---
+
+<SiteLayout
+  title="Pathways to Discovery 2027 – UC San Diego"
+  description="Information about the 2027 Pathways to Discovery Program at UC San Diego's Halıcıoğlu Data Science Institute."
+>
+  <main class="mx-auto max-w-4xl px-4 pb-20">
+    <header class="border-b border-offblack/20 pb-10 sm:pb-12">
+      <h1
+        class="text-4xl leading-[1.05] font-semibold tracking-tight sm:text-6xl"
+      >
+        Pathways to Discovery 2027
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed sm:text-xl">
+        Calling undergraduate and master’s students at Prairie View A&amp;M
+        University and Morgan State University! Interested in AI research? Join
+        us in Summer 2027 at UC San Diego for a paid summer research internship.
+      </p>
+
+      <a
+        class="mt-8 inline-flex items-center gap-3 border border-offblack/25 px-4 py-3 text-sm font-semibold transition-colors hover:bg-offblack/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-offblack"
+        href="https://forms.gle/dS6ZgqFXhFkQTdw9A"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span class="text-base" aria-hidden="true">👉</span>
+        Applications due September 30, 2026. Click here to apply!
+      </a>
+
+      <div
+        class="mt-10 flex items-center gap-6"
+        aria-label="Program partner institutions"
+      >
+        <a
+          class="w-64 min-w-0 shrink transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-offblack"
+          href="https://datascience.ucsd.edu/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            class="max-h-15 w-full object-contain object-left"
+            src="/logos/hdsi.svg"
+            alt="UC San Diego Halıcıoğlu Data Science Institute"
+            width="612"
+            height="140"
+          />
+        </a>
+        <a
+          class="shrink-0 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-offblack"
+          href="https://www.pvamu.edu/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            class="size-20 object-contain"
+            src="/logos/pvamu.png"
+            alt="Prairie View A&M University"
+            width="239"
+            height="229"
+          />
+        </a>
+        <a
+          class="flex size-20 shrink-0 items-center justify-center bg-[#1b4383] p-2 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-offblack"
+          href="https://www.morgan.edu/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            class="max-h-16 w-full object-contain"
+            src="/logos/morgan-state.png"
+            alt="Morgan State University"
+            width="172"
+            height="174"
+          />
+        </a>
+      </div>
+    </header>
+
+    <div class="mt-10 grid gap-12 sm:mt-14 sm:grid-cols-[minmax(0,1fr)_10rem]">
+      <div class="space-y-14">
+        <section aria-labelledby="about-heading">
+          <h2 id="about-heading" class="text-2xl font-semibold tracking-tight">
+            Why apply?
+          </h2>
+          <p class="mt-4 leading-relaxed">
+            Some of best jobs in the world are in AI research. Think jobs like <a
+              href="https://openai.com/careers/research-scientist-san-francisco/"
+              class={linkClass}
+              target="_blank">Research Scientist at OpenAI</a
+            >, or becoming a university faculty studying AI. To get these jobs,
+            you need to have a strong track record of research in AI, which
+            often means getting a PhD. To get into a top PhD program, you'll
+            want to have experience doing AI research. That's where this program
+            comes in!
+          </p>
+          <p class="mt-4 leading-relaxed">
+            As a research intern in Pathways to Discovery, you will:
+            <ul class="mt-4 list-disc space-y-2 pl-5 marker:text-offblack/50">
+              <li>
+                Get hands-on experience doing cutting-edge AI research at UC San
+                Diego, <a
+                  href="https://csrankings.org/"
+                  class={linkClass}
+                  target="_blank"
+                  >a top-5 institution in the world in computer science and AI</a
+                >.
+              </li>
+              <li>
+                Work with world-class professors, researchers, and graduate
+                students.
+              </li>
+              <li>
+                Live on{" "}
+                <a
+                  href="https://www.google.com/search?q=living%20at%20uc%20san%20diego&udf=257&udm=2"
+                  class={linkClass}
+                  target="_blank">the beautiful UCSD campus</a
+                > for 8 weeks during Summer 2027.
+              </li>
+              <li>
+                Gain an advantage when applying to PhD programs, especially at
+                the University of California campuses.
+              </li>
+              <li>Get paid while doing so!</li>
+            </ul>
+          </p>
+        </section>
+
+        <section id="eligibility" aria-labelledby="eligibility-heading">
+          <h2
+            id="eligibility-heading"
+            class="text-2xl font-semibold tracking-tight"
+          >
+            Eligibility
+          </h2>
+          <ul class="mt-4 list-disc space-y-2 pl-5 marker:text-offblack/50">
+            <li>
+              Open to undergraduate and master’s students from Prairie View
+              A&amp;M University and Morgan State University.
+            </li>
+            <li>
+              Students should have some coursework or experience in data
+              science, computer science, statistics, or a related field.
+            </li>
+            <li>Prior research experience is a plus, but not required.</li>
+            <li>International students are eligible.</li>
+            <li>
+              Graduating seniors are eligible (e.g. you will not be a student
+              during Fall 2027).
+            </li>
+          </ul>
+        </section>
+
+        <section id="funding" aria-labelledby="funding-heading">
+          <h2
+            id="funding-heading"
+            class="text-2xl font-semibold tracking-tight"
+          >
+            Funding and support
+          </h2>
+          <p class="mt-4">Interns selected for the program will receive:</p>
+          <ul class="mt-3 list-disc space-y-2 pl-5 marker:text-offblack/50">
+            <li>A paid summer research fellowship with a $5,000 stipend.</li>
+            <li>Fully covered on-campus housing and dining.</li>
+            <li>Round-trip travel to UC San Diego.</li>
+            <li>
+              Mentorship, networking, and career development opportunities.
+            </li>
+            <li>Field trips to the San Diego Zoo, beaches, and more.</li>
+          </ul>
+        </section>
+
+        <section id="timeline" aria-labelledby="timeline-heading">
+          <h2
+            id="timeline-heading"
+            class="text-2xl font-semibold tracking-tight"
+          >
+            Timeline
+          </h2>
+          <dl
+            class="mt-4 divide-y divide-offblack/15 border-y border-offblack/15"
+          >
+            <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr]">
+              <dt class="font-medium">Applications due</dt>
+              <dd>
+                September 30, 2026, <a
+                  class={linkClass}
+                  href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"
+                  target="_blank">Anywhere on Earth</a
+                >
+              </dd>
+            </div>
+            <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr]">
+              <dt class="font-medium">Acceptance notification</dt>
+              <dd>October 31, 2026</dd>
+            </div>
+            <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr]">
+              <dt class="font-medium">Program dates</dt>
+              <dd>
+                June 20, 2027 - August 14, 2027 (tentative, exact dates to be
+                announced)
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="mentors" aria-labelledby="mentors-heading">
+          <h2
+            id="mentors-heading"
+            class="text-2xl font-semibold tracking-tight"
+          >
+            Mentors and projects
+          </h2>
+          <p class="mt-4 leading-relaxed">
+            Explore the potential research projects below. Mentors are listed in
+            alphabetical order by last name.
+          </p>
+
+          <div
+            class="mt-7 divide-y divide-offblack/20 border-y border-offblack/20"
+          >
+            {
+              mentors.map((mentor, index) => (
+                <details class="group py-5" open={index === 0}>
+                  <summary class="flex cursor-pointer list-none items-start gap-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-offblack [&::-webkit-details-marker]:hidden">
+                    <span class="mt-1 min-w-5 text-xs text-offblack/50">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span class="min-w-0 flex-1">
+                      <span class="block text-lg font-semibold">
+                        {mentor.name}
+                      </span>
+                      <span class="mt-0.5 block text-sm text-offblack/70">
+                        {mentor.area}
+                      </span>
+                    </span>
+                    <span
+                      class="mt-1 text-xl leading-none transition-transform group-open:rotate-45"
+                      aria-hidden="true"
+                    >
+                      +
+                    </span>
+                  </summary>
+
+                  <div class="mt-6 space-y-5 pl-9 text-sm leading-relaxed">
+                    <p>
+                      <a
+                        class={linkClass}
+                        href={mentor.website}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Visit {mentor.name}’s website
+                      </a>
+                    </p>
+
+                    <div>
+                      <h3 class="font-semibold">Main research question</h3>
+                      <p class="mt-1">{mentor.question}</p>
+                    </div>
+
+                    <div>
+                      <h3 class="font-semibold">
+                        What makes the project novel
+                      </h3>
+                      <p class="mt-1">{mentor.novelty}</p>
+                    </div>
+
+                    <div>
+                      <h3 class="font-semibold">
+                        If the project is wildly successful
+                      </h3>
+                      <p class="mt-1">{mentor.success}</p>
+                    </div>
+
+                    <div>
+                      <h3 class="font-semibold">
+                        What a summer intern will do
+                      </h3>
+                      <p class="mt-1">{mentor.work}</p>
+                    </div>
+
+                    <div>
+                      <h3 class="font-semibold">What excites the lab</h3>
+                      <p class="mt-1">{mentor.excitement}</p>
+                    </div>
+
+                    <div>
+                      <h3 class="font-semibold">Selected papers</h3>
+                      <ul class="mt-1 list-disc space-y-1 pl-5">
+                        {mentor.papers.map((paper) => (
+                          <li>
+                            <a
+                              class={linkClass}
+                              href={paper.url}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {paper.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </details>
+              ))
+            }
+          </div>
+        </section>
+      </div>
+
+      <aside class="hidden sm:block">
+        <nav class="sticky top-6 text-sm" aria-label="Page sections">
+          <p class="mb-3 text-xs font-semibold tracking-widest uppercase">
+            On this page
+          </p>
+          <ol class="space-y-2 border-l border-offblack/25 pl-4">
+            <li>
+              <a class="hover:underline" href="#eligibility">Eligibility</a>
+            </li>
+            <li><a class="hover:underline" href="#funding">Funding</a></li>
+            <li><a class="hover:underline" href="#timeline">Timeline</a></li>
+            <li><a class="hover:underline" href="#mentors">Mentors</a></li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+  </main>
+</SiteLayout>
