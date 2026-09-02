@@ -5,6 +5,7 @@ const mentors = [
   {
     name: "Emily Aiken",
     website: "https://emilylaiken.github.io/",
+    video: "https://www.youtube.com/watch?v=cnVzav_yws4",
     area: "Computational social science",
     papers: [
       {
@@ -26,6 +27,7 @@ const mentors = [
   {
     name: "Alex Cloninger",
     website: "https://sites.google.com/ucsd.edu/alexandercloninger/home",
+    video: "https://www.youtube.com/watch?v=en0H14EyTuQ",
     area: "Machine learning theory",
     papers: [
       {
@@ -48,6 +50,7 @@ const mentors = [
   {
     name: "Haojian Jin",
     website: "https://www.haojianj.in/",
+    video: "https://www.youtube.com/watch?v=x8301nQAw2M",
     area: "Human-computer interaction and data privacy",
     papers: [
       {
@@ -65,6 +68,7 @@ const mentors = [
   {
     name: "Victor Minces",
     website: "https://www.victorminces.com/",
+    video: "https://youtu.be/avxPIJmeePw?si=ZogIyw7h1OlzthSx",
     area:
       "Interactive applications for manipulating, learning about, and playing with sound",
     papers: [
@@ -82,6 +86,7 @@ const mentors = [
   {
     name: "Gal Mishne",
     website: "https://mishne.ucsd.edu/",
+    video: "https://www.youtube.com/watch?v=yqBTER3fhzI",
     area: "Machine learning, applied math, and computational neuroscience",
     papers: [
       {
@@ -102,6 +107,7 @@ const mentors = [
   {
     name: "Benjamin Smarr",
     website: "https://smarr.ucsd.edu/",
+    video: "https://www.youtube.com/watch?v=S-IjGrR7Kxg&t=431s",
     area: "Time series in health AI and human–AI health collaboration",
     papers: [
       {
@@ -124,6 +130,7 @@ const mentors = [
   {
     name: "Yusu Wang",
     website: "https://yusu.belkin-wang.org/",
+    video: "https://www.youtube.com/watch?v=ai0-PZ4aPjc",
     area:
       "Geometric deep learning, generative AI, graph learning, and neural algorithmic reasoning",
     papers: [
@@ -152,6 +159,7 @@ const mentors = [
   {
     name: "Duncan Watson-Parris",
     website: "https://duncanwp.github.io/",
+    video: "https://www.youtube.com/watch?v=i3C_fgRmoQU",
     area: "Machine learning for climate",
     papers: [
       {
@@ -448,16 +456,28 @@ const linkClass =
                   </summary>
 
                   <div class="mt-6 space-y-5 text-sm leading-relaxed">
-                    <p>
-                      <a
-                        class={linkClass}
-                        href={mentor.website}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Visit {mentor.name}’s website
-                      </a>
-                    </p>
+                    <div class="space-y-1">
+                      <p>
+                        <a
+                          class={linkClass}
+                          href={mentor.website}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Visit {mentor.name}’s website
+                        </a>
+                      </p>
+                      <p>
+                        <a
+                          class={linkClass}
+                          href={mentor.video}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Watch a video about this professor's research
+                        </a>
+                      </p>
+                    </div>
 
                     <div>
                       <h3 class="font-semibold">Main research question</h3>
