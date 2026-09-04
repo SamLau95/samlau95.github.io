@@ -1,7 +1,30 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
 
-const mentors = [
+interface Mentor {
+  name: string;
+  website: string;
+  websiteLabel?: string;
+  additionalWebsites?: { label: string; url: string }[];
+  video: string;
+  videoLabel?: string;
+  additionalVideos?: { label: string; url: string }[];
+  area: string;
+  projectBlurb?: {
+    title: string;
+    introduction: string;
+    bigPicture: string;
+    coreQuestion: string;
+    activities: string[];
+    skills: string[];
+  };
+  papers: { title: string; url: string }[];
+  question?: string;
+  work?: string;
+  excitement?: string;
+}
+
+const mentors: Mentor[] = [
   {
     name: "Emily Aiken",
     website: "https://emilylaiken.github.io/",
@@ -25,10 +48,46 @@ const mentors = [
       "Using data science methods to improve the efficiency of high-stakes humanitarian work.",
   },
   {
-    name: "Alex Cloninger",
+    name: "Alex Cloninger and Gal Mishne",
     website: "https://sites.google.com/ucsd.edu/alexandercloninger/home",
+    websiteLabel: "Visit Alex Cloninger’s website",
+    additionalWebsites: [
+      {
+        label: "Visit Gal Mishne’s website",
+        url: "https://mishne.ucsd.edu/",
+      },
+    ],
     video: "https://www.youtube.com/watch?v=en0H14EyTuQ",
-    area: "Machine learning theory",
+    videoLabel: "Watch a video about Alex Cloninger’s research",
+    additionalVideos: [
+      {
+        label: "Watch a video about Gal Mishne’s research",
+        url: "https://www.youtube.com/watch?v=yqBTER3fhzI",
+      },
+    ],
+    area: "Machine learning theory, applied math",
+    projectBlurb: {
+      title:
+        "Mapping How AI Learns — Visualizing the Hidden Geometry of Neural Networks",
+      introduction:
+        'This project explores what actually happens inside a neural network while it learns. Instead of treating an AI model as a "black box," students take mathematical snapshots of the network\'s internal activity during training and map how those internal representations evolve over time.',
+      bigPicture:
+        'When a neural network learns to recognize patterns, its hidden layers organize data into structured shapes. By saving these patterns at different stages of training, known as "neural artifacts", we can treat them like coordinates on a map. Watching how these points move over time reveals the "learning dynamics" of the network, showing the exact journey the AI takes from random initialization to accurate predictions. Understanding the geometry of learning gives us a diagnostic dashboard for AI.',
+      coreQuestion:
+        "Can the shape and movement of an AI's internal signals tell us when it actually understands a concept versus when it is just memorizing data?",
+      activities: [
+        "Collect snapshots: Train standard neural networks and save their internal layer outputs across different epochs to create a digital paper trail of the learning process.",
+        "Build visual maps: Use simple visualization tools to compress complex, high-dimensional data into readable 2D and 3D maps.",
+        "Track the journey: Connect the maps across epochs to trace the trajectories of different data classes as the network learns to separate them.",
+        "Spot failures early: Compare the geometric shapes of healthy models against models that are overfitting or struggling, finding early warning signs of training failure.",
+      ],
+      skills: [
+        "Practical Python programming using PyTorch and scikit-learn.",
+        "Hands-on experience with data visualization and dimensionality reduction techniques.",
+        "Intuitive understanding of linear algebra and geometry in modern machine learning.",
+        "Core research habits: designing experiments, plotting trajectories, and interpreting model behavior.",
+      ],
+    },
     papers: [
       {
         title:
@@ -40,12 +99,16 @@ const mentors = [
           "A deep network construction that adapts to intrinsic dimensionality beyond the domain",
         url: "https://doi.org/10.1016/j.neunet.2021.06.004",
       },
+      {
+        title:
+          "RATS: Unsupervised manifold learning using low-distortion alignment of tangent spaces",
+        url: "https://www.biorxiv.org/content/10.1101/2024.10.31.621292v1.abstract",
+      },
+      {
+        title: "Learning Cartesian Product Graphs with Laplacian Constraints",
+        url: "https://proceedings.mlr.press/v238/shi24a.html",
+      },
     ],
-    question:
-      "How can you determine information about every element in a dataset from only a subset of the data?",
-    work: "Develop and implement algorithms, analyze graphs, and run experiments.",
-    excitement:
-      "Building mathematical tools that make algorithms more powerful and efficient.",
   },
   {
     name: "Haojian Jin",
@@ -69,8 +132,7 @@ const mentors = [
     name: "Victor Minces",
     website: "https://www.victorminces.com/",
     video: "https://youtu.be/avxPIJmeePw?si=ZogIyw7h1OlzthSx",
-    area:
-      "Interactive applications for manipulating, learning about, and playing with sound",
+    area: "Interactive applications for manipulating, learning about, and playing with sound",
     papers: [
       {
         title:
@@ -82,27 +144,6 @@ const mentors = [
       "How can we design applications that let people interact with digital sound in ways that improve their lives?",
     work: "Help create browser-based applications for manipulating and creating sound.",
     excitement: "Seeing children excited to play with and learn about sound.",
-  },
-  {
-    name: "Gal Mishne",
-    website: "https://mishne.ucsd.edu/",
-    video: "https://www.youtube.com/watch?v=yqBTER3fhzI",
-    area: "Machine learning, applied math, and computational neuroscience",
-    papers: [
-      {
-        title:
-          "RATS: Unsupervised manifold learning using low-distortion alignment of tangent spaces",
-        url: "https://www.biorxiv.org/content/10.1101/2024.10.31.621292v1.abstract",
-      },
-      {
-        title: "Learning Cartesian Product Graphs with Laplacian Constraints",
-        url: "https://proceedings.mlr.press/v238/shi24a.html",
-      },
-    ],
-    question:
-      "How can we measure similarity between two potentially large graphs?",
-    work: "Analyze large datasets, code in Python, and learn machine learning methods.",
-    excitement: "Graphs, neural recordings, and ice cream.",
   },
   {
     name: "Benjamin Smarr",
@@ -130,9 +171,8 @@ const mentors = [
   {
     name: "Yusu Wang",
     website: "https://yusu.belkin-wang.org/",
-    video: "https://www.youtube.com/watch?v=ai0-PZ4aPjc",
-    area:
-      "Geometric deep learning, generative AI, graph learning, and neural algorithmic reasoning",
+    video: "https://youtu.be/Dv56aOAZIhg?si=gb98R5uniP7-zjiy",
+    area: "Geometric deep learning, generative AI, graph learning, and neural algorithmic reasoning",
     papers: [
       {
         title:
@@ -464,9 +504,22 @@ const linkClass =
                           target="_blank"
                           rel="noreferrer"
                         >
-                          Visit {mentor.name}’s website
+                          {mentor.websiteLabel ??
+                            `Visit ${mentor.name}’s website`}
                         </a>
                       </p>
+                      {mentor.additionalWebsites?.map((website) => (
+                        <p>
+                          <a
+                            class={linkClass}
+                            href={website.url}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {website.label}
+                          </a>
+                        </p>
+                      ))}
                       <p>
                         <a
                           class={linkClass}
@@ -474,27 +527,85 @@ const linkClass =
                           target="_blank"
                           rel="noreferrer"
                         >
-                          Watch a video about this professor's research
+                          {mentor.videoLabel ??
+                            "Watch a video about this professor's research"}
                         </a>
                       </p>
+                      {mentor.additionalVideos?.map((video) => (
+                        <p>
+                          <a
+                            class={linkClass}
+                            href={video.url}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {video.label}
+                          </a>
+                        </p>
+                      ))}
                     </div>
 
-                    <div>
-                      <h3 class="font-semibold">Main research question</h3>
-                      <p class="mt-1">{mentor.question}</p>
-                    </div>
+                    {mentor.projectBlurb ? (
+                      <div class="space-y-5">
+                        <p>
+                          <strong>Project Title:</strong>{" "}
+                          {mentor.projectBlurb.title}
+                        </p>
 
-                    <div>
-                      <h3 class="font-semibold">
-                        What a summer intern will do
-                      </h3>
-                      <p class="mt-1">{mentor.work}</p>
-                    </div>
+                        <p>{mentor.projectBlurb.introduction}</p>
 
-                    <div>
-                      <h3 class="font-semibold">What excites the lab</h3>
-                      <p class="mt-1">{mentor.excitement}</p>
-                    </div>
+                        <p>
+                          <strong>Big Picture:</strong>{" "}
+                          {mentor.projectBlurb.bigPicture}
+                        </p>
+
+                        <p>
+                          <strong>Core question:</strong>{" "}
+                          {mentor.projectBlurb.coreQuestion}
+                        </p>
+
+                        <div>
+                          <p>
+                            <strong>What students will do:</strong>
+                          </p>
+                          <ul class="mt-1 list-disc space-y-1 pl-5">
+                            {mentor.projectBlurb.activities.map((activity) => (
+                              <li>{activity}</li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div>
+                          <p>
+                            <strong>Skills students will gain:</strong>
+                          </p>
+                          <ul class="mt-1 list-disc space-y-1 pl-5">
+                            {mentor.projectBlurb.skills.map((skill) => (
+                              <li>{skill}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <div>
+                          <h3 class="font-semibold">Main research question</h3>
+                          <p class="mt-1">{mentor.question}</p>
+                        </div>
+
+                        <div>
+                          <h3 class="font-semibold">
+                            What a summer intern will do
+                          </h3>
+                          <p class="mt-1">{mentor.work}</p>
+                        </div>
+
+                        <div>
+                          <h3 class="font-semibold">What excites the lab</h3>
+                          <p class="mt-1">{mentor.excitement}</p>
+                        </div>
+                      </>
+                    )}
 
                     <div>
                       <h3 class="font-semibold">Selected papers</h3>
